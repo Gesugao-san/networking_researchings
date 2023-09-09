@@ -1,5 +1,7 @@
 {
-    "recommendations": [
+	"recommendations": [
 		"Gesugao-san.general-purpose-extension-pack",
+		"donjayamanne.python-extension-pack",
+		"VisualStudioExptTeam.intellicode-api-usage-examples"
 	]
 }

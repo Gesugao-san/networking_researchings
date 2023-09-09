@@ -1,0 +1,48 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install requirements",
+			"type": "shell",
+			//"command": "pip install -Ur requirements.txt",
+			// ↓ Helps when SSL is broken for some reason ↓
+			"command": "pip install -Ur requirements.txt  --trusted-host pypi.org --trusted-host files.pythonhosted.org",
+			"problemMatcher": [ "$tsc" ]
+		},
+		{
+			"label": "Run main project file",
+			"command": "py -m torrent_trackers_checker",
+			"type": "shell",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new",
+				"focus": true
+			},
+			"problemMatcher": [ "$tsc" ],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Run file...",
+			"command": "python ${file}",
+			"type": "shell",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new",
+				"focus": true
+			},
+			"problemMatcher": [ "$tsc" ]
+		},
+		{
+			"label": "Run pydoc",
+			"command": "python -m pydoc torrent_trackers_checker",
+			"type": "shell",
+			"presentation": {},
+			"problemMatcher": [ "$tsc" ]
+		}
+	]
+}

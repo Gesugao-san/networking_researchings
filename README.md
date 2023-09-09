@@ -1,14 +1,8 @@
 
 <p align="center">
 	<h2 align="center">
-		<a href="https://github.com/Gesugao-san/infrastructure-template-repository">Infrastructure</a> template
+		<a href="https://github.com/Gesugao-san/torrent_trackers_checker">BitTorrent trackers checker</a>
 	</h2>
-	<p align="center">
-		Origin:
-		<a href="https://github.com/BYOND/infrastructure-template-repository">
-			BYOND/infrastructure-template-repository
-		</a>
-	</p>
 </p>
 
 <p align="center">
@@ -28,13 +22,9 @@
 		Dinamic Badges
 		Note: "../.." for escaping "blob/master"
 	-->
-	<a href="./../../actions/workflows/main.yml">
-		<img alt="[CI status]"
-		src="./../../actions/workflows/main.yml/badge.svg"/>
-	</a>˙
 	<a href="./../../commits/">
 		<img alt="[Last Commit]"
-		src="https://img.shields.io/github/last-commit/Gesugao-san/infrastructure-template-repository"/>
+		src="https://img.shields.io/github/last-commit/Gesugao-san/torrent_trackers_checker"/>
 	</a>
 </p>
 
