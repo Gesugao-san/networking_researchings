@@ -87,7 +87,7 @@ def generate_addresses(db_in, db_gen1):
 
 							if not already_generated:
 								db_gen2.append(gen_address)
-					return db_gen2
+	return db_gen2
 	#
 
 
@@ -102,7 +102,7 @@ def cleanup_db(db_in):
 			pass
 """
 
-
+"""
 def _write2(path, db):
 	with open(path, 'w', newline='') as csvfile3:
 		writer3 = csv.DictWriter(csvfile3, fieldnames=list(db_gen_schema.keys()), delimiter=';')
@@ -110,7 +110,7 @@ def _write2(path, db):
 		for db_gen2_row in db_gen2:
 			writer3.writerow(db_gen2_row)
 	#
-
+ """
 
 
 if __name__ == "__main__":
@@ -131,12 +131,12 @@ if __name__ == "__main__":
 	print("db_gen1:", db_gen1)
 	print()
 
-	db_gen2 = generate_addresses(db_in, db_gen1)
-	print()
-	print("db_gen2:", db_gen2)
+	#db_gen2 = generate_addresses(db_in, db_gen1)
+	#print()
+	#print("db_gen2:", db_gen2)
 	#_write('data/2.csv')
 
-	_write2('data/db_output.csv', db_gen2)
+	#_write2('data/db_output.csv', db_gen2)
 
 	print()
 	print("stop")
