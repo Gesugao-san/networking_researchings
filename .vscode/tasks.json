@@ -20,14 +20,10 @@
 				"panel": "new",
 				"focus": true
 			},
-			"problemMatcher": [ "$tsc" ],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
+			"problemMatcher": [ "$tsc" ]
 		},
 		{
-			"label": "Run file...",
+			"label": "Run this file",
 			"command": "python ${file}",
 			"type": "shell",
 			"presentation": {
@@ -35,7 +31,11 @@
 				"panel": "new",
 				"focus": true
 			},
-			"problemMatcher": [ "$tsc" ]
+			"problemMatcher": [ "$tsc" ],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		},
 		{
 			"label": "Run pydoc",
