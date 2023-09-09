@@ -1,4 +1,5 @@
 import csv
+import time
 
 db_in_schema = {
 	"Protocols": None,
@@ -9,6 +10,8 @@ db_in_schema = {
 	"Pages": None,
 }
 db_gen_schema = {
+	"I": None,
+	"Time": None,
 	"Address": None,
 	"Status": None,
 	"Reason": None,
@@ -47,32 +50,45 @@ def read_db_in(path1):
 
 
 def read_db_gen(path2):
-	[i, ik] = [0, 0]
-	print("row_iterations:", i, "db_iterations:", ik)
+	i = 0
+	db_gen1 = []
+	print("row_iterations:", i)
 	with open(path2, newline='') as csvfile2:
-		reader2 = csv.DictReader(csvfile2, delimiter=';')
+		reader2 = csv.DictReader(csvfile2, fieldnames=list(db_gen_schema.keys()), delimiter=';')
 		for row in reader2:
 			i += 1
-			for key in db_gen1.keys():
-				ik += 1
-				db_gen1[key].append(row[key])
-		print("row_iterations:", i, "db_iterations:", ik)
+			if row["Address"] == "Address": continue  # delete head from csv
+			db_gen1.append({"I": int(row["I"]), "Time": int(row["Time"]), "Address": row["Address"], "Status": row["Status"], "Reason": row["Reason"]})
+		print("row_iterations:", i)
+	#if db_gen1[0]["Address"] == "Address": db_gen1.pop(0)
 	return db_gen1
 
 
-def generate_addresses(db_in):
+def generate_addresses(db_in, db_gen1):
+	i = 0
 	db_gen2 = []
+	cur_time = int(time.time())
+
 	for protocol in db_in["Protocols"]:
 		for subdomain in db_in["Subdomains"]:
 			for SDL in db_in["SDLs"]:
 				for TLD in db_in["TLDs"]:
 					for port in db_in["Ports"]:
 						for page in db_in["Pages"]:
-							db_gen2.append(protocol+"://"+subdomain+SDL+"."+TLD+port+page)
+							i += 1
+							gen_address = {'I': i, 'Time': cur_time, 'Address': protocol + "://" + subdomain + SDL + "." + TLD + port + page, 'Status': '', 'Reason': 'autogen'}
+							already_generated = False
+
+							#  Generate only missing addresses
+							for addr_gen1 in db_gen1:
+								if gen_address["Address"] == addr_gen1["Address"]:
+									already_generated = True
+									db_gen2.append(addr_gen1)
+
+							if not already_generated:
+								db_gen2.append(gen_address)
 					return db_gen2
-	#for key in db_in.keys():
-	#	for kkey in key:
-	#		pass
+	#
 
 
 """
@@ -89,14 +105,11 @@ def cleanup_db(db_in):
 
 def _write2(path, db):
 	with open(path, 'w', newline='') as csvfile3:
-		fieldnames1 = list(db_gen_schema.keys()) #['Num', 'Address', 'Status', 'Reason']
-		writer3 = csv.DictWriter(csvfile3, fieldnames=fieldnames1, delimiter=';')
-
+		writer3 = csv.DictWriter(csvfile3, fieldnames=list(db_gen_schema.keys()), delimiter=';')
 		writer3.writeheader()
-		for address in db_gen2:
-			writer3.writerow({'Address': address, 'Status': None, 'Reason': 'autogen'})
-		#writer.writerow({'Address': 'Baked', 'Status': '', 'Reason': ''})
-		#writer.writerow({'Address': 'Lovely', 'Status': '', 'Reason': ''})
+		for db_gen2_row in db_gen2:
+			writer3.writerow(db_gen2_row)
+	#
 
 
 
@@ -104,7 +117,6 @@ if __name__ == "__main__":
 	print("run")
 	print()
 	dict_populate(db_in_schema, db_in)
-	dict_populate(db_gen_schema, db_gen1)
 
 	db_in = read_db_in('data/db_input.csv')
 	print()
@@ -119,7 +131,7 @@ if __name__ == "__main__":
 	print("db_gen1:", db_gen1)
 	print()
 
-	db_gen2 = generate_addresses(db_in)
+	db_gen2 = generate_addresses(db_in, db_gen1)
 	print()
 	print("db_gen2:", db_gen2)
 	#_write('data/2.csv')
