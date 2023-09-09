@@ -1,5 +1,11 @@
+import asyncio
+import aiohttp
+import json
+
+import socket
 import csv
 import time
+
 
 db_in_schema = {
     "Protocols": None,
@@ -76,7 +82,14 @@ def generate_addresses(db_in, db_gen1):
                     for port in db_in["Ports"]:
                         for page in db_in["Pages"]:
                             i += 1
-                            gen_address = {'I': i, 'Time': cur_time, 'Address': protocol + "://" + subdomain + SDL + "." + TLD + port + page, 'Status': '', 'Reason': 'autogen'}
+                            gen_address = {
+                                'I': i,
+                                'Time': cur_time,
+                                'Address': protocol + ("://" if protocol else "") +
+                                    subdomain + SDL + "." + TLD +
+                                    (":" if port else "") + port + page,
+                                'Status': '',
+                                'Reason': 'autogen'}
                             already_generated = False
 
                             #  Generate only missing addresses
@@ -88,8 +101,26 @@ def generate_addresses(db_in, db_gen1):
 
                             if not already_generated:
                                 db_gen2.append(gen_address)
-    return db_gen2
+                        #return db_gen2  # ""
+                    return db_gen2  # ":60;*;http://archive.cc:6969/announce;;autogen"
+                #return db_gen2  # ""
+            #return db_gen2  # ""
+        #return db_gen2  # ""
+    #return db_gen2  # ""
     #
+
+
+def check(host, port, timeout=2):
+    # https://stackoverflow.com/a/70764172/8175291
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #presumably
+    sock.settimeout(timeout)
+    try:
+        sock.connect((host, port))
+    except:
+        return False
+    else:
+        sock.close()
+        return True
 
 
 """
@@ -103,15 +134,33 @@ def cleanup_db(db_in):
             pass
 """
 
-"""
-def _write2(path, db):
-    with open(path, 'w', newline='') as csvfile3:
+def _write2(path3, db):
+    with open(path3, 'w', newline='') as csvfile3:
         writer3 = csv.DictWriter(csvfile3, fieldnames=list(db_gen_schema.keys()), delimiter=';')
         writer3.writeheader()
-        for db_gen2_row in db_gen2:
-            writer3.writerow(db_gen2_row)
+        for db_row in db:
+            writer3.writerow(db_row)
     #
- """
+
+
+"""
+def fetch_trackers(db):
+    \"\"\" async with aiohttp.ClientSession() as session:
+        async with session.get("https://raw.githubusercontent.com/NDDDDDDDDD/TrackerChecker/main/trackers.json") as response:
+            trackers = await response.text()
+    return json.loads(trackers) \"\"\"
+    help = []
+    i = 0
+    for key in db:
+        #help.append(db[i])
+        help.append({
+            "name": db[i]["Address"],
+            "url": db[i]["Address"],
+            "search_term": db[i]["Address"]
+        })
+        i += 1
+    return json.loads(json.dumps(help))
+"""
 
 
 if __name__ == "__main__":
@@ -132,12 +181,15 @@ if __name__ == "__main__":
     print("db_gen1:", db_gen1)
     print()
 
-    #db_gen2 = generate_addresses(db_in, db_gen1)
-    #print()
-    #print("db_gen2:", db_gen2)
-    #_write('data/2.csv')
+    print(check('google.com', 1234, timeout=1))
+    print(check('google.com', 443, timeout=1))
 
-    #_write2('data/db_output.csv', db_gen2)
+    force_regenerate_db = True
+    if force_regenerate_db:
+        db_gen2 = generate_addresses(db_in, db_gen1)
+        print()
+        print("db_gen2:", db_gen2)
+        _write2('data/db_output.csv', db_gen2)
 
     print()
     print("stop")
