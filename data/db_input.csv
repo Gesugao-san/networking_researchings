@@ -1,4 +1,4 @@
-Protocol;Subdomain;SDL;TLD;Port;Page
+Protocols;Subdomains;SDLs;TLDs;Ports;Pages
 http;;archive;cc;;
 https;bt.;nnmclub;info;:80;/
 udp;bt01.;nnm-club;is;:443;/ann
