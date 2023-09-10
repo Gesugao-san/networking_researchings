@@ -2,27 +2,36 @@
 # -*- coding: utf-8 -*-
 
 
-import webbrowser
+import webbrowser, os, time
 
-filenames = ['./dsc_stable.txt', './dsc_unstable.txt', './dsc_unknown.txt']
+cwd = os.getcwd()
+filenames = [
+    #'dsc_stable.txt',
+    #'dsc_unstable.txt',
+    #'dsc_unknown.txt',
+    'dsc_unknown2.txt'
+]
+
 # https://stackoverflow.com/a/13214728/8175291
-#webbrowser.open_new('steam://defrag/440')
-webbrowser.open_new('dsc:kjawj6dwvcutvwddqw3uocudiaanrjdcofcwx3lo24fp2ns6vwua?dn=The%20Torrent%20Cache')
-
 def open_tixati_channel(url):
-    webbrowser.open_new('dsc:kjawj6dwvcutvwddqw3uocudiaanrjdcofcwx3lo24fp2ns6vwua?dn=The%20Torrent%20Cache')
+    url = url
+    print("Opening Tixati Channel URL: \"" + url + "\"")
+    webbrowser.open_new(url)
 
-for filename in filenames:
-    with open(filename) as file:
-        for line in file:
-            print(line.rstrip())
+def loop_open_files(filenames):
+    for filename in filenames:
+        with open(cwd + '\\tixati\\' + filename, 'r') as file:
+            for line in file:
+                if line.startswith('#'): continue
+                open_tixati_channel(line.rstrip())
+                time.sleep(1)
 
 
 
 if __name__ == "__main__":
     print("run")
+    #open_tixati_channel('dsc:kjawj6dwvcutvwddqw3uocudiaanrjdcofcwx3lo24fp2ns6vwua?dn=The%20Torrent%20Cache')
     print()
-    dict_populate(db_in_schema, db_in)
-    print()
+    loop_open_files(filenames)
     print("stop")
 
