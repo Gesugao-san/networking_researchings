@@ -123,6 +123,14 @@ def check(host, port, timeout=2):
         return True
 
 
+def checkcheck(db):
+    for addr in db:
+        print(addr["Address"])
+        host = addr["Address"].split(':')[0]
+        port = addr["Address"].split(':')[1].split('/')[0] if ':' in addr["Address"] else 80
+        print("addr", addr, check(host, port))
+
+
 """
 def cleanup_db(db_in):
     dirty_db = db_in
@@ -184,7 +192,9 @@ if __name__ == "__main__":
     print(check('google.com', 1234, timeout=1))
     print(check('google.com', 443, timeout=1))
 
-    force_regenerate_db = True
+    checkcheck(db_gen1)
+
+    force_regenerate_db = False
     if force_regenerate_db:
         db_gen2 = generate_addresses(db_in, db_gen1)
         print()
