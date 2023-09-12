@@ -40,7 +40,8 @@ udp;bt02;playground;me;8080;/announce
 ;ix7;;;;
 ;ix8;;;;
 ;ix9;;;;
+;torrent;;;;
+;tracker;;;;
 ;tracker-tcp;;;;
 ;tracker-udp;;;;
-;tracker;;;;
 ;xbtt;;;;
