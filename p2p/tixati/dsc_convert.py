@@ -34,11 +34,12 @@ db_gen1 = {}
 
 
 def line():
-    print('='*10)
+    return print('='*10)
 
 def dict_populate(schema, dict):
     for key in schema.keys():
         dict[key] = []
+    return
 
 def check_dsc_name(name):
     for sus_unit in sus_list:
@@ -51,7 +52,7 @@ def check_dsc_name(name):
 
 #  Tixati Channel URL
 # urllib.parse.urlsplit('dsc:hash1234?dn=Name'.replace(dsc, 'dsc://'))
-def parse_dsc_url(url):
+def parse_dsc(url):
     # reference: 'dsc:<hash>?dn=<url_encoded_name>'
     if ((not url.startswith(dsc)) or (not dn in url)):
         print('Skipping invalid line:', url)
@@ -78,27 +79,32 @@ def form_dsc_url(url):
     return data
 
 
-def loop_open_files(db_gen):
-    with open(paths.txt_alive, 'r') as file:
-        for line in file:
-            if not line.startswith('dsc:'): continue
-            line = line.rstrip()
-            _line = {
-                'alive': 1,
-                'hash': line.split('dsc:')[1].split('?dn=')[0],
-                'dn': urllib.parse.unquote(line.split('dsc:')[1].split('?dn=')[1]),
-            }
-            db_gen.append(_line)
-    return db_gen
+def read_txt(path):
+    data = []
+    with open(path, 'r') as file:
+        for url in file:
+            url = parse_dsc(url)
+            if not url: continue
+            data.append(url)
+    return data
+
+
+def read_csv(path):
+    data = []
+    with open(path, newline='') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=';')
+        for row in reader:
+            data.append(row)
+    return data
 
 
 def write_csv(path, dictionary):
-    with open(path, 'w', newline='') as csvfile1:
-        writer1 = csv.DictWriter(csvfile1, fieldnames=list(db_gen_schema.keys()), delimiter=';')
-        writer1.writeheader()
-        for db_row in dictionary:
-            writer1.writerow(db_row)
-    #
+    with open(path, 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=list(db_gen_schema.keys()), delimiter=';')
+        writer.writeheader()
+        for row in dictionary:
+            writer.writerow(row)
+    return
 
 
 
@@ -106,9 +112,16 @@ if __name__ == '__main__':
     print('run')
     line()
     #dict_populate(db_gen_schema, db_gen1)
-    db_gen1 = []
-    db_gen1 = loop_open_files(db_gen1)
+
+    csv_alive = read_csv(paths['csv_alive'])
+    csv_dead  = read_csv(paths['csv_dead'])
+
+    txt_alive = read_txt(paths['txt_alive'])
+    txt_dead  = read_txt(paths['txt_dead'])
+
     write_csv(paths.csv_alive, db_gen1)
+
     line()
     print('stop')
+    os.exit(0)
 
