@@ -1,6 +1,3 @@
-#And all known channels that are not connectable currently, 308 total:
-#(last update at 2023-04-20 19:20 UTC)
-#
 dsc:r35pzuskg367e632bvyz7emrysbbxnbv242u5ugp4pvnkbsawgta?dn=abc
 dsc:qrphru2taglbywhrbdwvv2cyzrpat3vw5vg6psha3ogyfbvnudyq?dn=Agora%20%7C%20Anime%20%26%20Manga
 dsc:vvgdyu4gejeewimnba4y7mhjb3kj33nn5zipbofu4vz2bpwugivq?dn=Alexis%21%20|Alexis!_

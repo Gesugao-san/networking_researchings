@@ -4,16 +4,17 @@
 
 import webbrowser, os, time
 import urllib.parse
-cwd = os.getcwd()
+cwd = os.getcwd() + '\\p2p\\tixati\\data'
 dsc = 'dsc:'
 dn = '?dn='
 
 
-
-filenames = [
-    #'dsc_alive.csv',
-    'dsc_unknown.csv'
-]
+paths = {
+    'txt_alive': cwd + '\\txt\\dsc_manual_in_alive.txt',
+    'txt_dead':  cwd + '\\txt\\dsc_manual_in_unknown.txt',
+    'csv_alive': cwd + '\\csv\\dsc_alive.csv',
+    'csv_dead':  cwd + '\\csv\\dsc_unknown.csv' # dsc_dead.csv'
+}
 sus_list = [
     'http',
     'https',
@@ -23,8 +24,15 @@ sus_list = [
     'magnet'
 ]
 sus_names = []
+paths_to_check = [
+    #paths['csv_alive'],
+    paths['csv_dead']
+]
 
 
+
+def line():
+    print('='*10)
 
 def check_dsc_name(name):
     for sus_unit in sus_list:
@@ -72,9 +80,9 @@ def open_tixati_channel(url):
     return
 
 
-def loop_main(filenames):
-    for filename in filenames:
-        with open(cwd + '\\tixati\\' + filename, 'r') as file:
+def read_dsc_files(paths):
+    for path in paths:
+        with open(path, 'r') as file:
             for url in file:
                 url = parse_dsc_url(url)
                 if not url: continue
@@ -92,11 +100,11 @@ def loop_main(filenames):
 
 if __name__ == '__main__':
     print('run')
-    #open_tixati_channel('dsc:kjawj6dwvcutvwddqw3uocudiaanrjdcofcwx3lo24fp2ns6vwua?dn=The%20Torrent%20Cache')
-    print()
-    loop_main(filenames)
-    print()
+    line()
+    read_dsc_files(paths_to_check)
+    line()
     print('sus_names:', sus_names)
+    line()
     print('stop')
     #os.exit(0)
 
