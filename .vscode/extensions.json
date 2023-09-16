@@ -2,6 +2,7 @@
 	"recommendations": [
 		"Gesugao-san.general-purpose-extension-pack",
 		"donjayamanne.python-extension-pack",
-		"VisualStudioExptTeam.intellicode-api-usage-examples"
-	]
+		"VisualStudioExptTeam.intellicode-api-usage-examples",
+        "cperezabo.routeros-syntax"
+    ]
 }
