@@ -8,7 +8,15 @@
 			"type": "shell",
 			//"command": "pip install -Ur requirements.txt",
 			// ↓ Helps when SSL is broken for some reason ↓
-			"command": "pip install -Ur requirements.txt  --trusted-host pypi.org --trusted-host files.pythonhosted.org",
+			"command": "pip install -Ur requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org",
+			"problemMatcher": [ "$tsc" ]
+		},
+		{
+			"label": "Install this requirements file",
+			"type": "shell",
+			//"command": "pip install -Ur requirements.txt",
+			// ↓ Helps when SSL is broken for some reason ↓
+			"command": "pip install -Ur ${file} --trusted-host pypi.org --trusted-host files.pythonhosted.org",
 			"problemMatcher": [ "$tsc" ]
 		},
 		{
@@ -41,7 +49,12 @@
 			"label": "Run pydoc",
 			"command": "python -m pydoc torrent_trackers_checker",
 			"type": "shell",
-			"presentation": {},
+			"problemMatcher": [ "$tsc" ]
+		},
+		{
+			"label": "pip install datrie",
+			"command": "pip install --upgrade setuptools\npip install --only-binary :all: mysqlclient\npip install datrie\npip install cpython",
+			"type": "shell",
 			"problemMatcher": [ "$tsc" ]
 		}
 	]

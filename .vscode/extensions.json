@@ -1,8 +1,10 @@
 {
-	"recommendations": [
-		"Gesugao-san.general-purpose-extension-pack",
-		"donjayamanne.python-extension-pack",
-		"VisualStudioExptTeam.intellicode-api-usage-examples",
-        "cperezabo.routeros-syntax"
+    "recommendations": [
+        "gesugao-san.general-purpose-extension-pack",
+        "donjayamanne.python-extension-pack",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "cperezabo.routeros-syntax",
+        "ms-vscode.cpptools-extension-pack",
+        "raits.python-development"
     ]
 }
