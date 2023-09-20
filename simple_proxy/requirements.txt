@@ -1,0 +1,7 @@
+#request  # - build in
+requests
+#http.server  # - build in
+#http  # - build in
+#socketserver  # - build in
+urllib3
+#webbrowser  # - build in
