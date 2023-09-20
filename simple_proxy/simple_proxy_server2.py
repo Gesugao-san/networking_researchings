@@ -9,8 +9,12 @@ import urllib.request
 class MyProxy(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
-        print(self.path)
         url = self.path
+        if url.startswith('/?info_hash=') or url.startswith('/?'):
+            #url = 'http://tracker.gbitt.info/announce' + url
+            url = 'http://tracker.openbittorrent.com/announce' + url
+            self.path = url
+        print(url)
         self.send_response(200)
         self.end_headers()
         self.copyfile(urllib.request.urlopen(url), self.wfile)
