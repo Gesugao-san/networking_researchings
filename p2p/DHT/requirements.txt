@@ -1,0 +1,8 @@
+#dht
+#DHT
+#bittorrent-dht  # thanks ai
+#datrie
+#netaddr
+btdht  # https://github.com/nitmir/btdht
+aio-btdht  # https://github.com/bashkirtsevich-llc/aiobtdht
+utils
