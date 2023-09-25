@@ -10,14 +10,29 @@ class MyProxy(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
         url = self.path
+        bt_client_detected = False
         if url.startswith('/?info_hash=') or url.startswith('/?'):
-            #url = 'http://tracker.gbitt.info/announce' + url
-            url = 'http://tracker.openbittorrent.com/announce' + url
-            self.path = url
-        print(url)
+            print('BitTorent client request detected, replacing URL.')
+            bt_client_detected = True
+            params = url
+            #url = 'http://tracker.gbitt.info/announce' + params
+            #url = 'http://tracker.openbittorrent.com/announce' + params
+            url = 'http://tracker.files.fm:6969/announce' + params
+            #self.path = url
+        print('url:', url)
+        #print('self:', str(self))
         self.send_response(200)
-        self.end_headers()
-        self.copyfile(urllib.request.urlopen(url), self.wfile)
+        self.end_headers()  # ConnectionAbortedError: [WinError 10053]
+        if bt_client_detected:
+            answer = urllib.request.urlopen('http://tracker.files.fm:6969/announce' + params)
+            print('data:', answer.getheaders())
+            print('data:', answer.info())
+            #self.copyfile(urllib.request.urlopen('http://tracker.openbittorrent.com/announce' + params), self.wfile)
+            self.copyfile(answer, self.wfile)
+            #self.copyfile(urllib.request.urlopen('http://tracker.gbitt.info/announce' + params), self.wfile)
+            self.copyfile(urllib.request.urlopen(url), self.wfile)
+        else:
+            self.copyfile(urllib.request.urlopen(url), self.wfile)
 
     def do_POST(self):
         url = self.path
@@ -53,8 +68,9 @@ except KeyboardInterrupt:
     print("Pressed Ctrl+C")
 #finally:
 if httpd:
+    if httpd.socket:
+        httpd.socket.close()
     httpd.shutdown()
-    #httpd.socket.close()
 
 
 # https://stackoverflow.com/a/71341150/8175291
