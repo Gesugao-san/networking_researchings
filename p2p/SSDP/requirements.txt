@@ -1,0 +1,3 @@
+ssdp
+ssdp[pymgments]
+ssdp[cli]
