@@ -1,1 +1,4 @@
-tkinter
+#tkinter
+pandas
+pandastable
+openpyxl

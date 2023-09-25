@@ -10,11 +10,13 @@ data = {
     "comments": [],
     "anomalies": []
 }
+path1 = os.getcwd() + '\\p2p\\tixati\\l18n\\tixati_language_template.txt'
+path2 = os.getcwd() + '\\p2p\\tixati\\l18n\\tixati_language_template.json'
 
 print('go')
 
 
-with open(os.getcwd() + '\\p2p\\tixati\\l18n\\tixati_language_template.txt', "r") as file:
+with open(path1, "r") as file:
     lines = file.readlines()
 #for _ in range(4):
 #    lines.append('\n')
@@ -66,6 +68,14 @@ for line in lines:
 #print('data', data)
 print('=' * 50)
 #print('categories', json.dumps(list(data['categories'].keys()), indent=2))
+
+
+
+json_object = json.dumps(list(data['categories'].values()), indent=4)
+# Writing to sample.json
+with open(path2, "w") as outfile:
+    outfile.write(json_object)
+
 
 
 exit(0)

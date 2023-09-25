@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
+import os
 import tkinter as tk
+
+
+path = os.getcwd() + '\\p2p\\tixati\\l18n\\data.json'
+
 
 # Создать функцию для отображения данных в формате "Ключ: Значение"
 def display_data():
