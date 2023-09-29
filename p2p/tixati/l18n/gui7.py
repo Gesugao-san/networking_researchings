@@ -8,11 +8,11 @@ from tkinter import ttk
 import json
 import pandas as pd
 
-path = os.getcwd() + '\\p2p\\tixati\\l18n\\tixati_language_template.json'
 
 # Глобальные переменные
 dataframe = None
 table = None
+path = os.getcwd() + '\\p2p\\tixati\\l18n\\tixati_language_template.json'
 
 # Функция для загрузки данных из JSON-файла и отображения их в таблице
 def load_data():
@@ -20,10 +20,11 @@ def load_data():
     try:
         with open(path, 'r') as file:
             data = json.load(file)
-            dataframe = pd.DataFrame(data)
+            # Создаем DataFrame с одним столбцом
+            dataframe = pd.DataFrame(data, columns=['Data'])
             display_table(dataframe)
     except FileNotFoundError:
-        dataframe = pd.DataFrame(columns=['Key', 'Value'])
+        dataframe = pd.DataFrame(columns=['Data'])
         display_table(dataframe)
 
 # Функция для отображения данных в виде таблицы
@@ -37,7 +38,16 @@ def display_table(df):
     table.heading('Value', text='Значение')
 
     for _, row in df.iterrows():
-        table.insert("", "end", values=row.tolist())
+        # Проверяем тип данных в столбце "Data"
+        if isinstance(row['Data'], str):
+            # Разбиваем данные на ключ и значение
+            key, value = row['Data'].split(':')
+        else:
+            # Если данные не являются строкой, просто используем их как значение
+            key = 'Value'
+            value = str(row['Data'])
+
+        table.insert("", "end", values=[key.strip(), value.strip()])
 
     # Добавляем возможность редактирования ячеек
     table.bind('<Double-1>', edit_cell)
@@ -71,7 +81,9 @@ def edit_cell(event):
     def save_edit():
         new_value = edit_entry.get()
         table.item(item, values=(table.item(item)['values'][0], new_value))
-        dataframe.at[int(item), col_name] = new_value
+        # Обновляем данные в DataFrame
+        key = table.item(item, 'values')[0]
+        dataframe.at[int(item), 'Data'] = f"{key}: {new_value}"
         edit_window.destroy()
 
     save_button = tk.Button(edit_window, text="Сохранить", command=save_edit)
@@ -81,7 +93,7 @@ def edit_cell(event):
 def save_data():
     global dataframe
     if dataframe is not None:
-        updated_data = dataframe.to_dict(orient='records')
+        updated_data = [row['Data'] for _, row in dataframe.iterrows()]
         with open(path, 'w') as file:
             json.dump(updated_data, file, indent=4)
 
@@ -105,6 +117,10 @@ table = None
 
 # Запуск цикла событий tkinter
 root.mainloop()
+
+
+
+
 
 
 

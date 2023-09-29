@@ -12,7 +12,7 @@ root = tk.Tk()
 root.title("Отображение значений из файла")
 
 # Создаем текстовое поле для вывода значений
-text_widget = tk.Text(root, height=20, width=40)
+text_widget = tk.Text(root, height=40, width=120)
 text_widget.pack()
 
 # Открываем и читаем файл
