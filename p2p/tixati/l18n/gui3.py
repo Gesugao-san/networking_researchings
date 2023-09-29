@@ -8,7 +8,7 @@ from tkinter import ttk
 import json
 
 
-path = os.getcwd() + '\\p2p\\tixati\\l18n\\data.json'
+path = os.getcwd() + '\\p2p\\tixati\\l18n\\data\\data1.json'
 
 
 # Функция для чтения и отображения данных из JSON-файла

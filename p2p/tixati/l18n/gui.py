@@ -6,7 +6,7 @@ import os
 import tkinter as tk
 
 
-path = os.getcwd() + '\\p2p\\tixati\\l18n\\data.json'
+path = os.getcwd() + '\\p2p\\tixati\\l18n\\data\\data1.json'
 
 
 # Создать функцию для отображения данных в формате "Ключ: Значение"

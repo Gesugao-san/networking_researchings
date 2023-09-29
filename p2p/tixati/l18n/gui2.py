@@ -9,7 +9,7 @@ import pandas as pd
 from pandastable import Table, TableModel
 
 
-path = os.getcwd() + '\\p2p\\tixati\\l18n\\data.json'
+path = os.getcwd() + '\\p2p\\tixati\\l18n\\data\\data1.json'
 
 
 # Функция для отображения данных в таблице

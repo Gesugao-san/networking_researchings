@@ -9,7 +9,7 @@ import json
 import pandas as pd
 
 
-path = os.getcwd() + '\\p2p\\tixati\\l18n\\data.json'
+path = os.getcwd() + '\\p2p\\tixati\\l18n\\data\\data1.json'
 
 
 # Функция для загрузки данных из JSON-файла и отображения их в таблице
