@@ -1,17 +1,17 @@
 {
-  "000. comments": [
-    "Tixati language template\n",
-    "Generated on 2021/05/17 02:46:52 PM\n",
-    "Put each key phrase on its own line, followed by the replacement text on",
-    "the next line, followed by one or more empty lines.\n",
-    "Key phrases must only contain words that start with an alphabetic character.",
-    "Key phrases can contain alphanumeric characters, hyphens (-), slashes (/),",
-    "commas (,), periods (.), or spaces.",
-    "Key phrase matching is case-sensitive.\n",
-    "Replacement text can contain any characters.\n",
-    "For more information, see https://support.tixati.com/language\n\n\n",
-    "The following fields will be displayed in the language selection window:\n"
-  ],
+  "000. comments": {
+    "00002": "Tixati language template\n",
+    "00004": "Generated on 2021/05/17 02:46:52 PM\n",
+    "00006": "Put each key phrase on its own line, followed by the replacement text on",
+    "00007": "the next line, followed by one or more empty lines.\n",
+    "00009": "Key phrases must only contain words that start with an alphabetic character.",
+    "00010": "Key phrases can contain alphanumeric characters, hyphens (-), slashes (/),",
+    "00011": "commas (,), periods (.), or spaces.",
+    "00012": "Key phrase matching is case-sensitive.\n",
+    "00014": "Replacement text can contain any characters.\n",
+    "00016": "For more information, see https://support.tixati.com/language\n\n\n",
+    "00020": "The following fields will be displayed in the language selection window:\n"
+  },
   "001. language_window": {
     ".title": "Language Name",
     ".author": "Author Name and/or Link",

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
 import json
 import tkinter as tk
 from tkinter import filedialog
@@ -22,7 +23,7 @@ text_widget.config(yscrollcommand=scrollbar.set)
 # Устанавливаем значение по умолчанию
 cat_num = 0
 parsed_data = {}  # Словарь для хранения данных после разбора файла
-parsed_data[f'{cat_num:03d}. comments'] = []
+parsed_data[f'{cat_num:03d}. comments'] = {}
 cat_num += 1
 category = f'{cat_num:03d}. language_window'
 parsed_data[category] = {}
@@ -45,7 +46,7 @@ def open_file_dialog():
     if not path:
         return
     filename = path.split('/')[len(path.split('/'))-1]
-    print(f"File \"{filename}\" was opened, see widget to more.")
+    print(f"File \"{filename}\" was opened, see app window to more.")
     widget_clear()
     widget_print(f"File \"{filename}\" content:\n")
     if path.endswith(".json"):
@@ -84,7 +85,7 @@ def parse_txt_file(lines):
                 if not lines[line_num + i].replace('\r', '').startswith('\n'):
                     break
                 comment += '\n'
-            parsed_data["000. comments"].append(comment)
+            parsed_data[f'{0:03d}. comments'][f'{line_num:05d}'] = comment
             continue
         key = line
         value = lines.pop(line_num + 1).strip()  # Получаем следующую строку (Значение)
@@ -109,6 +110,9 @@ save_button = tk.Button(root, text="Сохранить JSON", command=lambda: sa
 save_button.pack()
 
 print("Welcome.")
+
+# Завершение программы при закрытии окна
+root.protocol("WM_DELETE_WINDOW", lambda: sys.exit(0))
 
 # Запускаем главный цикл приложения
 root.mainloop()
