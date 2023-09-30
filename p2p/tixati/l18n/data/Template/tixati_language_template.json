@@ -1,23 +1,23 @@
 {
-  "comments": [
-    "Tixati language template",
-    "Generated on 2021/05/17 02:46:52 PM",
+  "000. comments": [
+    "Tixati language template\n",
+    "Generated on 2021/05/17 02:46:52 PM\n",
     "Put each key phrase on its own line, followed by the replacement text on",
-    "the next line, followed by one or more empty lines.",
+    "the next line, followed by one or more empty lines.\n",
     "Key phrases must only contain words that start with an alphabetic character.",
     "Key phrases can contain alphanumeric characters, hyphens (-), slashes (/),",
     "commas (,), periods (.), or spaces.",
-    "Key phrase matching is case-sensitive.",
-    "Replacement text can contain any characters.",
-    "For more information, see https://support.tixati.com/language",
-    "The following fields will be displayed in the language selection window:"
+    "Key phrase matching is case-sensitive.\n",
+    "Replacement text can contain any characters.\n",
+    "For more information, see https://support.tixati.com/language\n\n\n",
+    "The following fields will be displayed in the language selection window:\n"
   ],
-  "language_window": {
+  "001. language_window": {
     ".title": "Language Name",
     ".author": "Author Name and/or Link",
     ".description": "More information about this translation."
   },
-  "basic": {
+  "002. basic": {
     "Cancel": "",
     "Close": "",
     "Help": "",
@@ -29,7 +29,7 @@
     "Stop": "",
     "Yes": ""
   },
-  "common_buttons": {
+  "003. common_buttons": {
     "Add": "",
     "Clear": "",
     "Layout": "",
@@ -39,7 +39,7 @@
     "Remove": "",
     "Search": ""
   },
-  "days": {
+  "004. days": {
     "Friday": "",
     "Monday": "",
     "Saturday": "",
@@ -48,7 +48,7 @@
     "Tuesday": "",
     "Wednesday": ""
   },
-  "days_short": {
+  "005. days_short": {
     "Fri": "",
     "Mon": "",
     "Sat": "",
@@ -57,7 +57,7 @@
     "Tue": "",
     "Wed": ""
   },
-  "main_buttons": {
+  "006. main_buttons": {
     "Bandwidth": "",
     "Channels": "",
     "Home": "",
@@ -65,7 +65,7 @@
     "Share": "",
     "Transfers": ""
   },
-  "months": {
+  "007. months": {
     "April": "",
     "August": "",
     "December": "",
@@ -79,7 +79,7 @@
     "October": "",
     "September": ""
   },
-  "months_short": {
+  "008. months_short": {
     "Apr": "",
     "Aug": "",
     "Dec": "",
@@ -92,11 +92,11 @@
     "Oct": "",
     "Sep": ""
   },
-  "time": {
+  "009. time": {
     "AM": "",
     "PM": ""
   },
-  "countries": {
+  "010. countries": {
     "Afghanistan": "",
     "Aland Islands": "",
     "Albania": "",
@@ -336,7 +336,7 @@
     "Zambia": "",
     "Zimbabwe": ""
   },
-  "file_errors": {
+  "011. file_errors": {
     "access denied": "",
     "access denied, another program may have this file open": "",
     "corrupt data": "",
@@ -347,7 +347,7 @@
     "unexpected end of file": "",
     "unknown error": ""
   },
-  "socket_errors": {
+  "012. socket_errors": {
     "Address too long for proxy protocol": "",
     "Bad HTTP redirect": "",
     "Bad SSL data": "",
@@ -431,7 +431,7 @@
     "device not found": "",
     "proxy does not support IPv6": ""
   },
-  "ui/!layout/main": {
+  "013. ui/!layout/main": {
     "About Tixati": "",
     "Above Normal": "",
     "Action": "",
@@ -811,7 +811,7 @@
     "none": "",
     "on": ""
   },
-  "ui/!layout/bw_view_pingchart": {
+  "014. ui/!layout/bw_view_pingchart": {
     "Advanced": "",
     "Current": "",
     "Limit Incoming kB/s": "",
@@ -820,10 +820,10 @@
     "Presets": "",
     "Trading": ""
   },
-  "ui/!layout/bw_view_sidectrls": {
+  "015. ui/!layout/bw_view_sidectrls": {
     "Maximum kB/s": ""
   },
-  "ui/!layout/channel_list_view": {
+  "016. ui/!layout/channel_list_view": {
     "Alternate": "",
     "Announcing Managed Channels": "",
     "B/s In": "",
@@ -846,7 +846,7 @@
     "Shared": "",
     "Users": ""
   },
-  "ui/!layout/channel_tabs_view": {
+  "017. ui/!layout/channel_tabs_view": {
     "Add To Contacts": "",
     "Advertise": "",
     "Appear in channel list when other users gather channels.": "",
@@ -955,7 +955,7 @@
     "user access level to stream": "",
     "user id": ""
   },
-  "ui/!layout/channel_view": {
+  "018. ui/!layout/channel_view": {
     "Bytes": "",
     "Descriptions": "",
     "Match": "",
@@ -965,11 +965,11 @@
     "Web Links": "",
     "You may get better results with more specific terms.": ""
   },
-  "ui/!layout/channels_alt_view": {
+  "019. ui/!layout/channels_alt_view": {
     "Contacts": "",
     "List": ""
   },
-  "ui/!layout/channels_contacts_view": {
+  "020. ui/!layout/channels_contacts_view": {
     "Change Key": "",
     "Change Name": "",
     "Contact": "",
@@ -977,10 +977,10 @@
     "Float": "",
     "Remove Selected Contacts": ""
   },
-  "ui/!layout/channels_main_view": {
+  "021. ui/!layout/channels_main_view": {
     "Window": ""
   },
-  "ui/!layout/channels_search_view": {
+  "022. ui/!layout/channels_search_view": {
     "Click the Channels button at the top of this window and gather/join some channels.": "",
     "It may take several minutes for online channels to accumulate searchable links.": "",
     "Match Descriptions": "",
@@ -989,13 +989,13 @@
     "Shared Transfer Links": "",
     "Shared Web Links": ""
   },
-  "ui/!layout/channels_share_view": {
+  "023. ui/!layout/channels_share_view": {
     "Insert At Bottom": "",
     "Insert At Top": "",
     "Mirror": "",
     "Position": ""
   },
-  "ui/!layout/xfer_view_buttons_compact": {
+  "024. ui/!layout/xfer_view_buttons_compact": {
     "Add New Transfer": "",
     "Clear Filter": "",
     "Filter": "",
@@ -1008,13 +1008,13 @@
     "Show Seeds": "",
     "Show Standby Seeds": ""
   },
-  "ui/!layout/xfer_view_buttons_normal": {
+  "025. ui/!layout/xfer_view_buttons_normal": {
     "Offline": "",
     "Queued": "",
     "Running": "",
     "Standby": ""
   },
-  "ui/!layout/xferlayout_view_double_bottom": {
+  "026. ui/!layout/xferlayout_view_double_bottom": {
     "Abs Complete": "",
     "Abs Remaining": "",
     "Abs Total": "",
@@ -1036,17 +1036,17 @@
     "Time Left": "",
     "Total": ""
   },
-  "ui/!layout/xferlayout_view_tabs_bottom": {
+  "027. ui/!layout/xferlayout_view_tabs_bottom": {
     "Comments": ""
   },
-  "ui/!layout/xferprompts_locmoc_editablepaths": {
+  "028. ui/!layout/xferprompts_locmoc_editablepaths": {
     "Local Files Location": ""
   },
-  "ui/!layout/xfertab_bandwidth": {
+  "029. ui/!layout/xfertab_bandwidth": {
     "File Data": "",
     "Protocol": ""
   },
-  "ui/!layout/xfertab_details": {
+  "030. ui/!layout/xfertab_details": {
     "Download Time": "",
     "Local Avg. Download B/s": "",
     "Local Avg. Upload B/s": "",
@@ -1055,12 +1055,12 @@
     "Upload Ratio": "",
     "Upload Time": ""
   },
-  "ui/!layout/xfertab_eventlog": {
+  "031. ui/!layout/xfertab_eventlog": {
     "Include file events": "",
     "Include piece events": "",
     "Include tracker events": ""
   },
-  "ui/!layout/xfertab_options": {
+  "032. ui/!layout/xfertab_options": {
     "All peers stay unchoked": "",
     "Always seed and do not consume a seeding slot": "",
     "Base": "",
@@ -1096,17 +1096,17 @@
     "Web Seed URL": "",
     "recommended": ""
   },
-  "ui/!layout/xfertab_peers": {
+  "033. ui/!layout/xfertab_peers": {
     "Rem B/s": ""
   },
-  "ui/!layout/xfertab_pieces": {
+  "034. ui/!layout/xfertab_pieces": {
     "Index": ""
   },
-  "ui/!layout/xfertab_trackers": {
+  "035. ui/!layout/xfertab_trackers": {
     "Group": "",
     "URL": ""
   },
-  "ui/!layout/rss_tabs_view": {
+  "036. ui/!layout/rss_tabs_view": {
     "Allow items without episode or date numbers": "",
     "Auto-Start": "",
     "Auto-download item KB": "",
@@ -1144,7 +1144,7 @@
     "days": "",
     "min": ""
   },
-  "ui/!layout/autothrottle": {
+  "037. ui/!layout/autothrottle": {
     "Add a new rule, using selected rule as template.": "",
     "Adjust Based On Average Ping": "",
     "Alternate Rules": "",
@@ -1198,13 +1198,13 @@
     "leave blank for default": "",
     "seconds between pings": ""
   },
-  "ui/!layout/bw_profiles": {
+  "038. ui/!layout/bw_profiles": {
     "Bandwidth Presets": "",
     "Default For Downloading": "",
     "Default For Seeding": "",
     "Reset To Current": ""
   },
-  "ui/!layout/bw_quota": {
+  "039. ui/!layout/bw_quota": {
     "Clear Warning": "",
     "Next Reset": "",
     "On": "",
@@ -1229,7 +1229,7 @@
     "Stop Transfers": "",
     "Test Selected Items": ""
   },
-  "ui/!layout/categoryprop": {
+  "040. ui/!layout/categoryprop": {
     "Append a magnet link to this text file when a new transfer starts": "",
     "Append a magnet link to this text file when a transfer completes": "",
     "Capture": "",
@@ -1255,17 +1255,17 @@
     "start with": "",
     "to include time": ""
   },
-  "ui/!layout/channel_member_prop": {
+  "041. ui/!layout/channel_member_prop": {
     "Find": ""
   },
-  "ui/!layout/channel_member_recvmsg": {
+  "042. ui/!layout/channel_member_recvmsg": {
     "Read Next": ""
   },
-  "ui/!layout/channel_member_sendmsg": {
+  "043. ui/!layout/channel_member_sendmsg": {
     "Ctrl-Enter": "",
     "Send": ""
   },
-  "ui/!layout/channel_streamlist": {
+  "044. ui/!layout/channel_streamlist": {
     "Audio/Video File": "",
     "B/s": "",
     "Clear List": "",
@@ -1296,10 +1296,10 @@
     "audio or": "",
     "video file at its encoded bitrate": ""
   },
-  "ui/!layout/channel_streams": {
+  "045. ui/!layout/channel_streams": {
     "Size": ""
   },
-  "ui/!layout/chmsg_add": {
+  "046. ui/!layout/chmsg_add": {
     "New messages in this channel must be manually approved by a moderator": "",
     "Private User Message": "",
     "Public Message": "",
@@ -1308,10 +1308,10 @@
     "Your message may not be visible to other users in this channel due to insufficient remaining share capacity": "",
     "message can not be added until the channel is online": ""
   },
-  "ui/!layout/chmsg_add_sel_users": {
+  "047. ui/!layout/chmsg_add_sel_users": {
     "Select Target Users": ""
   },
-  "ui/!layout/config": {
+  "048. ui/!layout/config": {
     "Accept": "",
     "Accept Matches": "",
     "Accept Non-Matches": "",
@@ -1632,12 +1632,12 @@
     "week": "",
     "weeks": ""
   },
-  "ui/!layout/delayed_startup": {
+  "049. ui/!layout/delayed_startup": {
     "Delayed": "",
     "Delayed Startup": "",
     "Tixati": ""
   },
-  "ui/!layout/loadingprob": {
+  "050. ui/!layout/loadingprob": {
     "Delete config file and start fresh": "",
     "Do nothing and try again": "",
     "Error Loading Config File": "",
@@ -1648,103 +1648,103 @@
     "Revert to backup of last successfully loaded config file": "",
     "The config file could not be read from disk or is corrupt.": ""
   },
-  "ui/!layout/addipfilter": {
+  "051. ui/!layout/addipfilter": {
     "Add IP Filter": "",
     "IP List Source HTTP URL or Local File Path or": "",
     "Interval between automatic reloads from source": ""
   },
-  "ui/!layout/addmrusel": {
+  "052. ui/!layout/addmrusel": {
     "New Folder": "",
     "Select Folder For New Shortcut": ""
   },
-  "ui/!layout/addrssfeed": {
+  "053. ui/!layout/addrssfeed": {
     "Add RSS Feed": "",
     "Feed Parameters": "",
     "Item Title Filter": "",
     "put each on a separate line": ""
   },
-  "ui/!layout/addscheduleraction_bw_in_on": {
+  "054. ui/!layout/addscheduleraction_bw_in_on": {
     "Add Scheduler Action": "",
     "Set incoming bandwidth limit to": ""
   },
-  "ui/!layout/addscheduleraction_bw_out_on": {
+  "055. ui/!layout/addscheduleraction_bw_out_on": {
     "Set outgoing bandwidth limit to": ""
   },
-  "ui/!layout/addscheduleraction_bw_out_s_on": {
+  "056. ui/!layout/addscheduleraction_bw_out_s_on": {
     "Set outgoing seeding bandwidth allocation to": ""
   },
-  "ui/!layout/addscheduleraction_bw_out_t_on": {
+  "057. ui/!layout/addscheduleraction_bw_out_t_on": {
     "Set outgoing trading bandwidth allocation to": ""
   },
-  "ui/!layout/addscheduleraction_bw_ping_on": {
+  "058. ui/!layout/addscheduleraction_bw_ping_on": {
     "Set Auto Limit target ping RTT to": ""
   },
-  "ui/!layout/addschedulertask": {
+  "059. ui/!layout/addschedulertask": {
     "Add Scheduler Task": ""
   },
-  "ui/!layout/addschedulertask_chanmsg": {
+  "060. ui/!layout/addschedulertask_chanmsg": {
     "Add Channel Message To Scheduler Task": "",
     "Enter one or more messages on separate lines.": "",
     "Set message delay with": ""
   },
-  "ui/!layout/addschedulertask_chantopic": {
+  "061. ui/!layout/addschedulertask_chantopic": {
     "Add Channel Topic To Scheduler Task": ""
   },
-  "ui/!layout/addschedulertask_nodays_warn": {
+  "062. ui/!layout/addschedulertask_nodays_warn": {
     "No days selected": "",
     "You need to select at least one day for this weekly task or switch to once/daily cycle.": ""
   },
-  "ui/!layout/addschedulertask_noname_warn": {
+  "063. ui/!layout/addschedulertask_noname_warn": {
     "Name is blank": "",
     "You need to enter a name for the new task.": ""
   },
-  "ui/!layout/addschedulertask_speccat": {
+  "064. ui/!layout/addschedulertask_speccat": {
     "Add Category To Scheduler Task": ""
   },
-  "ui/!layout/addschedulertask_specchannel": {
+  "065. ui/!layout/addschedulertask_specchannel": {
     "Add Channel To Scheduler Task": ""
   },
-  "ui/!layout/addschedulertask_specfeed": {
+  "066. ui/!layout/addschedulertask_specfeed": {
     "Add Feed To Scheduler Task": ""
   },
-  "ui/!layout/addschedulertask_specxfer": {
+  "067. ui/!layout/addschedulertask_specxfer": {
     "Add Transfer To Scheduler Task": ""
   },
-  "ui/!layout/addtracker": {
+  "068. ui/!layout/addtracker": {
     "Add Tracker": "",
     "Put each tracker URL on a separate line.": "",
     "Separate groups with a blank line.": "",
     "Tracker URLs": ""
   },
-  "ui/!layout/assocok": {
+  "069. ui/!layout/assocok": {
     "Associated with": "",
     "File Association": "",
     "Tixati is the default": "",
     "file handler": ""
   },
-  "ui/!layout/assocprompt": {
+  "070. ui/!layout/assocprompt": {
     "Always check on startup": "",
     "Associate with": "",
     "Set Tixati as the default": "",
     "Tixati is not the default": ""
   },
-  "ui/!layout/autosavemetadirsel": {
+  "071. ui/!layout/autosavemetadirsel": {
     "Select Folder To Save Files": ""
   },
-  "ui/!layout/autosel_preset_add": {
+  "072. ui/!layout/autosel_preset_add": {
     "Preset Name": ""
   },
-  "ui/!layout/binderror": {
+  "073. ui/!layout/binderror": {
     "Change Port Number": "",
     "Could not listen for incoming connections": "",
     "Edit Connection Settings": "",
     "Retry": ""
   },
-  "ui/!layout/bw_outpropcontrol": {
+  "074. ui/!layout/bw_outpropcontrol": {
     "Reset to Default": "",
     "Select the percentage of outgoing bandwidth prioritized for trading and/or seeding.": ""
   },
-  "ui/!layout/bw_profile_add": {
+  "075. ui/!layout/bw_profile_add": {
     "Add Bandwidth Preset": "",
     "Auto Limit Minimum and Ratio": "",
     "Auto Limit On/Off": "",
@@ -1756,12 +1756,12 @@
     "Outgoing Trading/Seeding": "",
     "Save Current State Of": ""
   },
-  "ui/!layout/bw_profile_edit": {
+  "076. ui/!layout/bw_profile_edit": {
     "Edit Bandwidth Preset": "",
     "Reset All States To Current": "",
     "Store State Of": ""
   },
-  "ui/!layout/bw_quota_add": {
+  "077. ui/!layout/bw_quota_add": {
     "Add Bandwidth Quota": "",
     "Date": "",
     "Effective Hours": "",
@@ -1772,21 +1772,21 @@
     "Out": "",
     "use shift key to toggle range": ""
   },
-  "ui/!layout/bw_quota_warn": {
+  "078. ui/!layout/bw_quota_warn": {
     "Bandwidth Quota Exceeded": ""
   },
-  "ui/!layout/cat_dlloc_foldersel": {
+  "079. ui/!layout/cat_dlloc_foldersel": {
     "Select Downloading Location": ""
   },
-  "ui/!layout/cat_sdloc_foldersel": {
+  "080. ui/!layout/cat_sdloc_foldersel": {
     "Select Seeding Location": ""
   },
-  "ui/!layout/category_add_full": {
+  "081. ui/!layout/category_add_full": {
     "Downloading": "",
     "Standby Seed": "",
     "Uncategorized": ""
   },
-  "ui/!layout/channel_create": {
+  "082. ui/!layout/channel_create": {
     "Advertise in channel list": "",
     "Allow sharing by default": "",
     "Create": "",
@@ -1797,25 +1797,25 @@
     "Secret Key": "",
     "This setting can be changed later by editing the channel information.": ""
   },
-  "ui/!layout/channel_defusername": {
+  "083. ui/!layout/channel_defusername": {
     "Channel User Name": "",
     "Please enter a default user name": ""
   },
-  "ui/!layout/channel_entersk": {
+  "084. ui/!layout/channel_entersk": {
     "Enter Channel Secret Key": ""
   },
-  "ui/!layout/channel_info_edit_warn": {
+  "085. ui/!layout/channel_info_edit_warn": {
     "Are you sure you want to do": "",
     "Edit Channel Info": "",
     "Incomplete Channel Information": "",
     "You are attempting to edit channel information that has not been completely downloaded.": ""
   },
-  "ui/!layout/channel_info_unsaved_warn": {
+  "086. ui/!layout/channel_info_unsaved_warn": {
     "Click the Save Changes or Cancel Edit button before selecting another channel.": "",
     "Unsaved Changes": "",
     "You have not saved the changes made to the information for this channel.": ""
   },
-  "ui/!layout/channel_infosavetopicwarn": {
+  "087. ui/!layout/channel_infosavetopicwarn": {
     "Back To Editing": "",
     "Channel Topic": "",
     "If you continue, the topic will not have a matching signature and will not be visible until the owner re-saves the info.": "",
@@ -1823,7 +1823,7 @@
     "Unable to post new topic": "",
     "new topic must be signed by the channel owner.": ""
   },
-  "ui/!layout/channel_purge_messages": {
+  "088. ui/!layout/channel_purge_messages": {
     "Clean Channel Outgoing Messages": "",
     "Move all message directives to end of shared data": "",
     "Remove deep orphaned outgoing commands older than": "",
@@ -1837,32 +1837,32 @@
     "Remove outgoing messages older than": "",
     "Remove outgoing private messages older than": ""
   },
-  "ui/!layout/channel_purgechannels": {
+  "089. ui/!layout/channel_purgechannels": {
     "Clean Channel List": "",
     "Last time gathered over": "",
     "Last time online over": "",
     "Last time running over": "",
     "days ago": ""
   },
-  "ui/!layout/channel_purgeusers": {
+  "090. ui/!layout/channel_purgeusers": {
     "Apply continuously": "",
     "Clean Channel User List": "",
     "Remove non-sharing users that have been offline": "",
     "Remove sharing users that have been offline": ""
   },
-  "ui/!layout/channel_share_unsaved_warn": {
+  "091. ui/!layout/channel_share_unsaved_warn": {
     "You have not saved the changes made to your shared items for this channel.": ""
   },
-  "ui/!layout/channel_shareweb": {
+  "092. ui/!layout/channel_shareweb": {
     "Add Web Link": "",
     "optional": ""
   },
-  "ui/!layout/channel_sharexfer": {
+  "093. ui/!layout/channel_sharexfer": {
     "Add Selected Transfers": "",
     "Mirror Selected Categories": "",
     "Share Transfers": ""
   },
-  "ui/!layout/channel_stream_player_settings": {
+  "094. ui/!layout/channel_stream_player_settings": {
     "Channel Stream Player": "",
     "Custom player path": "",
     "Fallback Stream Play Method": "",
@@ -1872,10 +1872,10 @@
     "m3u playlist": "",
     "pls playlist": ""
   },
-  "ui/!layout/channel_streamlist_addfile": {
+  "095. ui/!layout/channel_streamlist_addfile": {
     "Add File": ""
   },
-  "ui/!layout/channel_streamlist_addfile_reminder": {
+  "096. ui/!layout/channel_streamlist_addfile_reminder": {
     "Don't show this reminder again": "",
     "Reminder": "",
     "This can be done using free open-source tools.": "",
@@ -1886,30 +1886,30 @@
     "file that is suitable for streaming.": "",
     "for simple instructions and examples, or press the help button or F1 key.": ""
   },
-  "ui/!layout/channel_streamlist_addsleep": {
+  "097. ui/!layout/channel_streamlist_addsleep": {
     "Add Intermission": "",
     "Seconds": ""
   },
-  "ui/!layout/channel_streamlist_addurl": {
+  "098. ui/!layout/channel_streamlist_addurl": {
     "Add Live Stream": "",
     "IMPORTANT": "",
     "Streaming HTTP URL": "",
     "The stream will be relayed in the channel as-is, in real-time, and will not be processed for pacing cues or other format-specific information.": "",
     "This must be a connection to a streaming media server or media player/transcoder, not an ordinary static file on a web site.": ""
   },
-  "ui/!layout/channel_streamlist_edittitle": {
+  "099. ui/!layout/channel_streamlist_edittitle": {
     "Edit Title": ""
   },
-  "ui/!layout/channel_streamlist_startoffset": {
+  "100. ui/!layout/channel_streamlist_startoffset": {
     "Start Streaming Item At Offset": ""
   },
-  "ui/!layout/channel_useredit": {
+  "101. ui/!layout/channel_useredit": {
     "Edit Local User": ""
   },
-  "ui/!layout/channeladd_url": {
+  "102. ui/!layout/channeladd_url": {
     "Add Channel From URL": ""
   },
-  "ui/!layout/channels_change_key": {
+  "103. ui/!layout/channels_change_key": {
     "Apply to all channels": "",
     "Apply to channels that use the default user name": "",
     "Apply to channels that use the previous key": "",
@@ -1917,33 +1917,33 @@
     "Private Key": "",
     "Public/private key pairs are used for message encryption and access level persistence within each channel.": ""
   },
-  "ui/!layout/channels_change_name": {
+  "104. ui/!layout/channels_change_name": {
     "Apply to channels that use the previous name": "",
     "Don't change the name used in any existing channel": "",
     "New channels will use this name by default": ""
   },
-  "ui/!layout/channels_empty_list": {
+  "105. ui/!layout/channels_empty_list": {
     "Channel List Empty": "",
     "Don't show this again": "",
     "Empty Channel List": "",
     "Would you like to gather a list of channels from other": ""
   },
-  "ui/!layout/channels_sk_warning": {
+  "106. ui/!layout/channels_sk_warning": {
     "Are you sure you want to copy the key to the": "",
     "Be careful with the channel secret": "",
     "The secret key allows anyone to fully control this channel.": "",
     "Warning": ""
   },
-  "ui/!layout/channels_time_reminder": {
+  "107. ui/!layout/channels_time_reminder": {
     "Accurate Time Is Important": "",
     "Channels will not work correctly if your computer's clock is off by more than five minutes.": ""
   },
-  "ui/!layout/checkud": {
+  "108. ui/!layout/checkud": {
     "Check For Update": "",
     "Checking For Updates": "",
     "Please stand": ""
   },
-  "ui/!layout/closeprompt": {
+  "109. ui/!layout/closeprompt": {
     "Close Button Action": "",
     "Completely exit the program": "",
     "Continue running in the": "",
@@ -1953,13 +1953,13 @@
     "from the popup menu.": "",
     "run in background": ""
   },
-  "ui/!layout/closewarn": {
+  "110. ui/!layout/closewarn": {
     "Click Cancel to continue using the program.": "",
     "Click OK to completely exit Tixati.": "",
     "The tray icon is not being displayed due to an error.": "",
     "Tray Icon Failure": ""
   },
-  "ui/!layout/config_autosel": {
+  "111. ui/!layout/config_autosel": {
     "Always Select": "",
     "Apply Filters To Single-File Transfers": "",
     "Default Preset For New Transfers": "",
@@ -1982,7 +1982,7 @@
     "of largest": "",
     "to use a custom sequential settings preset for match lines following it.": ""
   },
-  "ui/!layout/config_client_filter": {
+  "112. ui/!layout/config_client_filter": {
     "Always Allow": "",
     "Apply To Running Peers": "",
     "Client ID": "",
@@ -1992,7 +1992,7 @@
     "These filters are applied to all client IDs.": "",
     "These filters are applied to all peer IDs.": ""
   },
-  "ui/!layout/config_lan_peers": {
+  "113. ui/!layout/config_lan_peers": {
     "Default Off": "",
     "Default On": "",
     "Disabled": "",
@@ -2004,7 +2004,7 @@
     "This will use UDP multicast broadcasts to find other clients in common channels on the local network.": "",
     "This will use UDP multicast broadcasts to find other clients in common transfers on the local network.": ""
   },
-  "ui/!layout/config_notifications": {
+  "114. ui/!layout/config_notifications": {
     "Add Sound": "",
     "Download Completion Sound": "",
     "Each channel can have custom notifications": "",
@@ -2034,7 +2034,7 @@
     "Tray balloon click action": "",
     "second delay": ""
   },
-  "ui/!layout/config_sequential": {
+  "115. ui/!layout/config_sequential": {
     "Aggressiveness percent": "",
     "File tail MB": "",
     "File tail percent": "",
@@ -2042,7 +2042,7 @@
     "Progress limit percent": "",
     "Sequential Download Options": ""
   },
-  "ui/!layout/config_tooltips": {
+  "116. ui/!layout/config_tooltips": {
     "Channel Forum View": "",
     "Channel Users List": "",
     "Channels List": "",
@@ -2061,10 +2061,10 @@
     "Transfer Trackers Tab": "",
     "Transfers List": ""
   },
-  "ui/!layout/coresaveerror": {
+  "117. ui/!layout/coresaveerror": {
     "Error Saving Config File": ""
   },
-  "ui/!layout/dblclick": {
+  "118. ui/!layout/dblclick": {
     "Behavior section.": "",
     "Channel Forum Message": "",
     "Connect/Disconnect": "",
@@ -2088,7 +2088,7 @@
     "Zero": "",
     "under the User Interface": ""
   },
-  "ui/!layout/delconf": {
+  "119. ui/!layout/delconf": {
     "Change preferences relating to this window": "",
     "Delete Files": "",
     "Delete Local Files": "",
@@ -2100,32 +2100,32 @@
     "Trash Files": "",
     "Trash Only": ""
   },
-  "ui/!layout/deletemetadirsel": {
+  "120. ui/!layout/deletemetadirsel": {
     "Select Auto-Delete": ""
   },
-  "ui/!layout/dr": {
+  "121. ui/!layout/dr": {
     "If you enjoy using this software, please help us keep going.": "",
     "This software is made by an independent developer.": "",
     "Unlike other torrent apps, it has no ads, no spyware, and no sleazy tracking or mining schemes.": ""
   },
-  "ui/!layout/dscok": {
+  "122. ui/!layout/dscok": {
     "Associated with decentralized sharing channel links": "",
     "Channel Link Association": "",
     "Tixati is the default dsc": "",
     "link handler": ""
   },
-  "ui/!layout/dscprompt": {
+  "123. ui/!layout/dscprompt": {
     "Handle Channel Links": "",
     "Set Tixati as the default link handler": "",
     "Tixati is not the default decentralized sharing channel": ""
   },
-  "ui/!layout/duplicates": {
+  "124. ui/!layout/duplicates": {
     "Loaded Duplicate Transfers": "",
     "Merge trackers and web seed URLs into existing": "",
     "Merge trackers into existing": "",
     "Merge web seed URLs into existing": ""
   },
-  "ui/!layout/duplicates_conf": {
+  "125. ui/!layout/duplicates_conf": {
     "Auto-Created From RSS": "",
     "Contexts": "",
     "Created From Watched Folder": "",
@@ -2135,20 +2135,20 @@
     "Manually Created From RSS": "",
     "Merge Trackers Into Existing Transfers": ""
   },
-  "ui/!layout/edit_desc": {
+  "126. ui/!layout/edit_desc": {
     "Edit Description": ""
   },
-  "ui/!layout/edit_tracker": {
+  "127. ui/!layout/edit_tracker": {
     "Edit Tracker": ""
   },
-  "ui/!layout/editipfilter": {
+  "128. ui/!layout/editipfilter": {
     "Edit IP Filter": ""
   },
-  "ui/!layout/edittrackers": {
+  "129. ui/!layout/edittrackers": {
     "Edit Trackers": "",
     "Put a blank line between groups.": ""
   },
-  "ui/!layout/filecompletionshellcmds": {
+  "130. ui/!layout/filecompletionshellcmds": {
     "Completion of files with specific extension": "",
     "File Completion Shell Commands": "",
     "Multiple extensions": "",
@@ -2163,20 +2163,20 @@
     "placeholder is equivlent to": "",
     "will be substituted for the full path of the file or folder, in quotes.": ""
   },
-  "ui/!layout/filelocfoldersel": {
+  "131. ui/!layout/filelocfoldersel": {
     "Select File Location": ""
   },
-  "ui/!layout/filemocfoldersel": {
+  "132. ui/!layout/filemocfoldersel": {
     "Select MOC Location": ""
   },
-  "ui/!layout/incfoldersel": {
+  "133. ui/!layout/incfoldersel": {
     "Select Download Folder": ""
   },
-  "ui/!layout/incfolderwarn": {
+  "134. ui/!layout/incfolderwarn": {
     "Download Folder Not Found": "",
     "New Download Folder": ""
   },
-  "ui/!layout/initconfig": {
+  "135. ui/!layout/initconfig": {
     "Automatic Limiter": "",
     "Bandwidth Throttle": "",
     "Check for Tixati updates every week": "",
@@ -2189,10 +2189,10 @@
     "These settings will work on any system, so if you don't know what to do, just click": "",
     "recommended for ADSL/Cable internet": ""
   },
-  "ui/!layout/load_settingsarch_error": {
+  "136. ui/!layout/load_settingsarch_error": {
     "Error Importing Config From File": ""
   },
-  "ui/!layout/load_settingsarch_reminder": {
+  "137. ui/!layout/load_settingsarch_reminder": {
     "All current settings, transfers": "",
     "Continue": "",
     "Please be patient.": "",
@@ -2203,7 +2203,7 @@
     "but not downloaded": "",
     "seconds.": ""
   },
-  "ui/!layout/load_settingsarchive_catsel": {
+  "138. ui/!layout/load_settingsarchive_catsel": {
     "After this operation is complete, Tixati will restart.": "",
     "Bandwidth Auto-Limiter": "",
     "Select Import Categories": "",
@@ -2214,52 +2214,52 @@
     "UI Element Sizing, Position, Sorting": "",
     "not including downloaded files": ""
   },
-  "ui/!layout/menucustomize": {
+  "139. ui/!layout/menucustomize": {
     "Customize Menu": "",
     "Press F1 or the Help button for format details.": "",
     "Test": ""
   },
-  "ui/!layout/move_conflict": {
+  "140. ui/!layout/move_conflict": {
     "Apply to All": "",
     "Conflicting Local Files Already Exist": "",
     "Existing Files": ""
   },
-  "ui/!layout/move_file_conflict": {
+  "141. ui/!layout/move_file_conflict": {
     "Moving": "",
     "Name Conflict At Destination": "",
     "The destination location already contains a folder with the same name as the file you are trying to move.": ""
   },
-  "ui/!layout/move_file_dest_large": {
+  "142. ui/!layout/move_file_dest_large": {
     "The destination location already contains a larger file with the same name as the file you are trying to move.": ""
   },
-  "ui/!layout/move_file_merge_confirm": {
+  "143. ui/!layout/move_file_merge_confirm": {
     "File Already Exists At Destination": "",
     "The destination location contains a file with the same name as the one you are trying to move.": ""
   },
-  "ui/!layout/move_folder_conflict": {
+  "144. ui/!layout/move_folder_conflict": {
     "The destination location already contains a file with the same name as the folder you are trying to move.": ""
   },
-  "ui/!layout/move_folder_merge_confirm": {
+  "145. ui/!layout/move_folder_merge_confirm": {
     "Folder Already Exists At Destination": "",
     "The destination location contains a folder with the same name as the one you are trying to move.": ""
   },
-  "ui/!layout/mrucustomize": {
+  "146. ui/!layout/mrucustomize": {
     "Customize Location Shortcuts": "",
     "Location sub-menu.": "",
     "Path": "",
     "These folder shortcuts appear when a transfer is right clicked, under the Local Files": "",
     "Use the buttons at the bottom of this window to add or remove folders, and drag the folders in the list to customize the order.": ""
   },
-  "ui/!layout/newseedbrowseforfolder": {
+  "147. ui/!layout/newseedbrowseforfolder": {
     "Select folder for new seed": ""
   },
-  "ui/!layout/nodhtwarn": {
+  "148. ui/!layout/nodhtwarn": {
     "DHT Not Running": "",
     "DHT needs to be running for trackerless searching and magnet-links.": "",
     "Switch to the DHT window and press the": "",
     "button.": ""
   },
-  "ui/!layout/opentor": {
+  "149. ui/!layout/opentor": {
     "After the source files have been selected, they will be scanned to build meta-info.": "",
     "Browse for": "",
     "Create New Seed": "",
@@ -2283,15 +2283,15 @@
     "file can be saved and distributed for other users to join the swarm.": "",
     "piece size too small will cause excess protocol traffic within the swarm.": ""
   },
-  "ui/!layout/piecepathsel": {
+  "150. ui/!layout/piecepathsel": {
     "Select Piece Cache Folder": ""
   },
-  "ui/!layout/piecesfolderwarn": {
+  "151. ui/!layout/piecesfolderwarn": {
     "Unable to find": "",
     "Use Default Folder": "",
     "create partial piece storage folder": ""
   },
-  "ui/!layout/preload": {
+  "152. ui/!layout/preload": {
     "Apply To All": "",
     "Apply location, move on complete, and start/stop/remove to remaining freshly-loaded transfers": "",
     "Auto-continue non-activity timeout": "",
@@ -2304,7 +2304,7 @@
     "Show this window after loading single-file magnet link": "",
     "Use a blank line between tracker groups.": ""
   },
-  "ui/!layout/preload_conf": {
+  "153. ui/!layout/preload_conf": {
     "Conditions": "",
     "Load Transfer Prompt": "",
     "Location and MOC Controls": "",
@@ -2315,76 +2315,76 @@
     "Prompt Timeout": "",
     "Vertical Location and MOC Layout": ""
   },
-  "ui/!layout/preload_conflict": {
+  "154. ui/!layout/preload_conflict": {
     "Go Back": "",
     "Local Files Already Exist": ""
   },
-  "ui/!layout/preload_dupwarn": {
+  "155. ui/!layout/preload_dupwarn": {
     "Duplicate Transfer Name": "",
     "Each transfer should have a different name to eliminate the possibility of local file conflicts.": "",
     "Existing Transfer With Matching Name": ""
   },
-  "ui/!layout/prioritythrottlereminder": {
+  "156. ui/!layout/prioritythrottlereminder": {
     "Bandwidth Throttle Not Set": ""
   },
-  "ui/!layout/protook": {
+  "157. ui/!layout/protook": {
     "Associated with magnet links": "",
     "Magnet Link Association": "",
     "Tixati is the default magnet link handler": ""
   },
-  "ui/!layout/protoprompt": {
+  "158. ui/!layout/protoprompt": {
     "Handle magnet links": "",
     "Set Tixati as the default magnet link handler": "",
     "Tixati is not the default magnet link handler.": ""
   },
-  "ui/!layout/rename_conf": {
+  "159. ui/!layout/rename_conf": {
     "New Folder Name Already Exists": "",
     "Renaming": "",
     "Would you like to attempt to merge the": ""
   },
-  "ui/!layout/rename_file_conf": {
+  "160. ui/!layout/rename_file_conf": {
     "New File Name Already Exists": ""
   },
-  "ui/!layout/rename_file_conflict": {
+  "161. ui/!layout/rename_file_conflict": {
     "Name Already Exists": "",
     "The name you specified for this file already exists and can not be merged.": ""
   },
-  "ui/!layout/rename_file_too_large": {
+  "162. ui/!layout/rename_file_too_large": {
     "The name you specified is already in use by another file that is larger than the one being renamed.": ""
   },
-  "ui/!layout/rename_folder_conflict": {
+  "163. ui/!layout/rename_folder_conflict": {
     "The name you specified for this folder is already in use by a file.": ""
   },
-  "ui/!layout/replaceconfirm": {
+  "164. ui/!layout/replaceconfirm": {
     "Replace": ""
   },
-  "ui/!layout/rssediturls": {
+  "165. ui/!layout/rssediturls": {
     "Edit RSS Feed URLs": ""
   },
-  "ui/!layout/rsstestsaveprompt": {
+  "166. ui/!layout/rsstestsaveprompt": {
     "RSS Feed Test": "",
     "Would you like to save the updated": ""
   },
-  "ui/!layout/save_settingsarchive_catsel": {
+  "167. ui/!layout/save_settingsarchive_catsel": {
     "Select Export Categories": "",
     "Select Items To Export": ""
   },
-  "ui/!layout/save_settingsarchive_error": {
+  "168. ui/!layout/save_settingsarchive_error": {
     "Error Exporting Config To File": ""
   },
-  "ui/!layout/saved_debug_file": {
+  "169. ui/!layout/saved_debug_file": {
     "Report Saved": "",
     "Saved Report To File": ""
   },
-  "ui/!layout/savemetafiles": {
+  "170. ui/!layout/savemetafiles": {
     "To Folder": ""
   },
-  "ui/!layout/scheduler_catchup": {
+  "171. ui/!layout/scheduler_catchup": {
     "Run missed scheduler": "",
     "Run them now": "",
     "Skip them": ""
   },
-  "ui/!layout/shellassocprompt": {
+  "172. ui/!layout/shellassocprompt": {
     "File And Link Association": "",
     "Open Channel From": "",
     "Open Transfer From": "",
@@ -2392,20 +2392,20 @@
     "links": "",
     "portable mode": ""
   },
-  "ui/!layout/shutdownwarn": {
+  "173. ui/!layout/shutdownwarn": {
     "All downloads are complete.": "",
     "Auto Shutdown Activated": "",
     "Shut Down Now": "",
     "System Shutdown": ""
   },
-  "ui/!layout/socketparams_reminder": {
+  "174. ui/!layout/socketparams_reminder": {
     "Don't show this warning again": "",
     "Even small changes can greatly reduce your transfer speeds.": "",
     "Expert Users Only": "",
     "Please do not change any of the following settings unless you are very certain you understand them.": "",
     "Press F1 for more information at any time.": ""
   },
-  "ui/!layout/ta_addrule": {
+  "175. ui/!layout/ta_addrule": {
     "Add Rule": "",
     "IF": "",
     "IS": "",
@@ -2425,10 +2425,10 @@
     "success rate": "",
     "target ping RTT multiplied by": ""
   },
-  "ui/!layout/ta_editrule": {
+  "176. ui/!layout/ta_editrule": {
     "Edit Rule": ""
   },
-  "ui/!layout/testrssfeed": {
+  "177. ui/!layout/testrssfeed": {
     "Copy Formatted Results": "",
     "Copy Item Names Only": "",
     "Feed Retrieval": "",
@@ -2437,7 +2437,7 @@
     "Select All": "",
     "Test RSS Feed": ""
   },
-  "ui/!layout/throttlereminder": {
+  "178. ui/!layout/throttlereminder": {
     "Click the": "",
     "For best download performance, it is important to set the outgoing bandwidth throttle to approximately": "",
     "Outgoing Bandwidth Throttle Not Set": "",
@@ -2445,7 +2445,7 @@
     "button at the top of the main window to adjust the throttles.": "",
     "of total outgoing capacity, or activate the Bandwidth Auto-Limit feature.": ""
   },
-  "ui/!layout/trackerindividualsettings": {
+  "179. ui/!layout/trackerindividualsettings": {
     "Add to New": "",
     "Advanced Options": "",
     "All headers and peer IDs should be URL encoded.": "",
@@ -2473,33 +2473,33 @@
     "prefix can be used at the beginning of any match line.": "",
     "will reset to default.": ""
   },
-  "ui/!layout/trackers_replace": {
+  "180. ui/!layout/trackers_replace": {
     "Contains": "",
     "Find and Replace Trackers": "",
     "RegEx": "",
     "Wildcard": ""
   },
-  "ui/!layout/trayaltreminder": {
+  "181. ui/!layout/trayaltreminder": {
     "The menu normally accessed by right-clicking the tray icon can also be accessed by right-clicking the main window top toolbar.": "",
     "Tray Icon Disabled": ""
   },
-  "ui/!layout/traymenu_reminder": {
+  "182. ui/!layout/traymenu_reminder": {
     "Right-click the top toolbar or tray icon to select alternate toolbar layouts or enable extra features such as RSS, Scheduler, Auto Startup": "",
     "Shutdown, and Bandwidth Presets.": ""
   },
-  "ui/!layout/updateready": {
+  "183. ui/!layout/updateready": {
     "An updated Tixati is now": "",
     "Check for updates every week": "",
     "Update Available": "",
     "Visit the Tixati download page now": ""
   },
-  "ui/!layout/watchformetadirsel": {
+  "184. ui/!layout/watchformetadirsel": {
     "Select Folder To Monitor": ""
   },
-  "ui/!layout/webuitemplatefoldersel": {
+  "185. ui/!layout/webuitemplatefoldersel": {
     "Select Web Interface Template Folder": ""
   },
-  "ui/!layout/xfercols": {
+  "186. ui/!layout/xfercols": {
     "Abs Bytes Complete": "",
     "Abs Bytes Complete of Total": "",
     "Abs Bytes Remaining": "",
@@ -2517,37 +2517,37 @@
     "Transfers View": "",
     "UL Ratio": ""
   },
-  "ui/!layout/xferlocfoldersel": {
+  "187. ui/!layout/xferlocfoldersel": {
     "Select New Location": ""
   },
-  "ui/!layout/xfermanage": {
+  "188. ui/!layout/xfermanage": {
     "Load Defaults": "",
     "Standard": "",
     "Transfer Queue Management Parameters": ""
   },
-  "ui/!layout/xfermoclocfoldersel": {
+  "189. ui/!layout/xfermoclocfoldersel": {
     "Select Location": ""
   },
-  "ui/!layout/memspeedprofile": {
+  "190. ui/!layout/memspeedprofile": {
     "Allocations": "",
     "Clear All": "",
     "Memory Alloc Speed": "",
     "sec": ""
   },
-  "ui/!layout/memstateprofile": {
+  "191. ui/!layout/memstateprofile": {
     "Memory Alloc State": "",
     "Objs": ""
   },
-  "ui/!layout/memstateprofile_inactive": {
+  "192. ui/!layout/memstateprofile_inactive": {
     "Create an empty file named": "",
     "Memory state profiling is not active.": "",
     "in the directory with the main program executable and restart.": ""
   },
-  "ui/!layout/other_instance_wait": {
+  "193. ui/!layout/other_instance_wait": {
     "Starting Tixati": "",
     "Waiting for other instance of Tixati to save and": ""
   },
-  "ui/!layout/peerprop": {
+  "194. ui/!layout/peerprop": {
     "Connected": "",
     "Connection status and errors": "",
     "Current Status": "",
@@ -2569,10 +2569,10 @@
     "Transfer Name": "",
     "Upload": ""
   },
-  "ui/!layout/profile_d": {
+  "195. ui/!layout/profile_d": {
     "File Operations": ""
   },
-  "ui/!layout/profile_dir_access": {
+  "196. ui/!layout/profile_dir_access": {
     "Open Directories": "",
     "Open Watches": "",
     "Read Bytes": "",
@@ -2581,10 +2581,10 @@
     "Write Bytes": "",
     "Write Calls": ""
   },
-  "ui/!layout/profile_file_access": {
+  "197. ui/!layout/profile_file_access": {
     "Open Files": ""
   },
-  "ui/!layout/socketlog": {
+  "198. ui/!layout/socketlog": {
     "Ack Adj": "",
     "Loss Adj": "",
     "No Display": "",
@@ -2594,32 +2594,32 @@
     "Stat Dump": "",
     "UPC Socket Log": ""
   },
-  "ui/!layout/socketparams": {
+  "199. ui/!layout/socketparams": {
     "Compatible": "",
     "DEFAULT": "",
     "Network Parameters": "",
     "Save And Apply": "",
     "Strict": ""
   },
-  "ui/!layout/stream_prop": {
+  "200. ui/!layout/stream_prop": {
     "Play This Stream": "",
     "Playback": "",
     "Segment": "",
     "Segment Hashing": ""
   },
-  "ui/!layout/test_connpacer": {
+  "201. ui/!layout/test_connpacer": {
     "This test will cycle thousands of random simultaneous connection requests through the connection pacer.": "",
     "This will not create any network activity, but it will temporarily slow down connections and other program operations.": "",
     "crash during this test may be a sign of system instability.": ""
   },
-  "ui/!layout/upnp_log": {
+  "202. ui/!layout/upnp_log": {
     "Save Report To File": "",
     "UPNP/NATPMP Diagnostic Log": ""
   },
-  "ui/AddIPFilterWnd": {
+  "203. ui/AddIPFilterWnd": {
     "file": ""
   },
-  "ui/AddRSSWnd": {
+  "204. ui/AddRSSWnd": {
     "categories": "",
     "no location selected": "",
     "parameters": "",
@@ -2627,44 +2627,44 @@
     "setfilter": "",
     "urls": ""
   },
-  "ui/AddSchedulerTaskChanMsgWnd": {
+  "205. ui/AddSchedulerTaskChanMsgWnd": {
     "scheduler": ""
   },
-  "ui/AddSchedulerTaskSpecItemWnd": {
+  "206. ui/AddSchedulerTaskSpecItemWnd": {
     "channels": ""
   },
-  "ui/AddSchedulerTaskWnd": {
+  "207. ui/AddSchedulerTaskWnd": {
     "temp": ""
   },
-  "ui/AutoThrottleRuleEditWnd": {
+  "208. ui/AutoThrottleRuleEditWnd": {
     "template": ""
   },
-  "ui/AutoThrottleWnd": {
+  "209. ui/AutoThrottleWnd": {
     "Minimum Outgoing KB/s": "",
     "Minimum Outgoing KiB/s": "",
     "loadrules": "",
     "saverules": ""
   },
-  "ui/BWProfileAddWnd": {
+  "210. ui/BWProfileAddWnd": {
     "bwpresets": ""
   },
-  "ui/BWQuotaAddWnd": {
+  "211. ui/BWQuotaAddWnd": {
     "Edit Bandwidth Quota": "",
     "Noon": ""
   },
-  "ui/BWView": {
+  "212. ui/BWView": {
     "layout": ""
   },
-  "ui/CategoryAddWnd": {
+  "213. ui/CategoryAddWnd": {
     "No changes to default location": "",
     "no file selected": "",
     "no folder selected": ""
   },
-  "ui/ChannelListView": {
+  "214. ui/ChannelListView": {
     "Flash Tray Icon": "",
     "Show Tray Balloon": ""
   },
-  "ui/ChannelMemberPropWnd": {
+  "215. ui/ChannelMemberPropWnd": {
     "Channel is currently offline.": "",
     "No cached data for this user in this channel.": "",
     "Shared data is not cached locally for ignored users.": "",
@@ -2672,27 +2672,27 @@
     "This user is not sharing anything.": "",
     "Waiting for shared data, please stand": ""
   },
-  "ui/ChannelMemberRecvMsgWnd": {
+  "216. ui/ChannelMemberRecvMsgWnd": {
     "Received": "",
     "at": ""
   },
-  "ui/ChannelMemberSendMsgWnd": {
+  "217. ui/ChannelMemberSendMsgWnd": {
     "Message sent OK": "",
     "Message was not acknowledged": "",
     "Sending": ""
   },
-  "ui/ChannelMsgAddWnd": {
+  "218. ui/ChannelMsgAddWnd": {
     "Add Forum Message to": "",
     "Add Forum Reply to": "",
     "Currently sharing": "",
     "maximum capacity": "",
     "of": ""
   },
-  "ui/ChannelMsgView": {
+  "219. ui/ChannelMsgView": {
     "from": "",
     "removed": ""
   },
-  "ui/ChannelMsgsView": {
+  "220. ui/ChannelMsgsView": {
     "approve": "",
     "banned": "",
     "basic": "",
@@ -2710,7 +2710,7 @@
     "trusted": "",
     "vip": ""
   },
-  "ui/ChannelSearchNewView": {
+  "221. ui/ChannelSearchNewView": {
     "All Channels": "",
     "Channel Info": "",
     "Searched": "",
@@ -2725,16 +2725,16 @@
     "users so": "",
     "weblink": ""
   },
-  "ui/ChannelShareView": {
+  "222. ui/ChannelShareView": {
     "Default Shared Items": "",
     "Mirror what appears in the main Share view.": "",
     "edit": ""
   },
-  "ui/ChannelShareWebWnd": {
+  "223. ui/ChannelShareWebWnd": {
     "Bad Characters": "",
     "Bad Protocol or Semicolon": ""
   },
-  "ui/ChannelView": {
+  "224. ui/ChannelView": {
     "Channel is offline.": "",
     "Click here to add/remove files, links, text, and images": "",
     "Click the start button to join.": "",
@@ -2746,15 +2746,15 @@
     "Unknown Name": "",
     "Waiting for channel info, please stand": ""
   },
-  "ui/ChannelsMainView": {
+  "225. ui/ChannelsMainView": {
     "Channel List": ""
   },
-  "ui/CheckUDWnd": {
+  "226. ui/CheckUDWnd": {
     "Error Checking For Updates": "",
     "This is the newest version.": "",
     "Tixati Is Up To Date": ""
   },
-  "ui/ColorAdjView": {
+  "227. ui/ColorAdjView": {
     "Abandoned Pieces Text": "",
     "Active Channel": "",
     "Active Channel Link": "",
@@ -2947,34 +2947,34 @@
     "Xfer Prop Outgoing BW Chart Protocol Data": "",
     "nothing selected": ""
   },
-  "ui/ConfigNotificationsWnd": {
+  "228. ui/ConfigNotificationsWnd": {
     "Rate Limit": ""
   },
-  "ui/ConfigView": {
+  "229. ui/ConfigView": {
     "base": "",
     "decimal": "",
     "incomplete-pieces": "",
     "separator": "",
     "use default templates": ""
   },
-  "ui/ConfigView_B": {
+  "230. ui/ConfigView_B": {
     "HTTPS": "",
     "Resolving": "",
     "logging": "",
     "no presets exist": ""
   },
-  "ui/ConfigView_D": {
+  "231. ui/ConfigView_D": {
     "No interfaces found": "",
     "customize": "",
     "transfers": ""
   },
-  "ui/DupTorWnd": {
+  "232. ui/DupTorWnd": {
     "has the same info-hash as existing transfer named": ""
   },
-  "ui/EditDescWnd": {
+  "233. ui/EditDescWnd": {
     "selected transfers": ""
   },
-  "ui/FontAdjView": {
+  "234. ui/FontAdjView": {
     "Button": "",
     "Chat View": "",
     "Code View": "",
@@ -2986,13 +2986,13 @@
     "The quick brown fox jumps over the lazy dog.": "",
     "Toolbar": ""
   },
-  "ui/HomeView": {
+  "235. ui/HomeView": {
     "Listening": "",
     "Trying to": "",
     "Unconfirmed": "",
     "no port": ""
   },
-  "ui/LoadingProbWnd": {
+  "236. ui/LoadingProbWnd": {
     "COMPLETE WITH": "",
     "Copied": "",
     "Copy ERROR": "",
@@ -3011,7 +3011,7 @@
     "Removing current config file": "",
     "User has selected": ""
   },
-  "ui/MainWindow": {
+  "237. ui/MainWindow": {
     "Activity in": "",
     "BW": "",
     "BW Preset": "",
@@ -3031,10 +3031,10 @@
     "Private message from": "",
     "is online": ""
   },
-  "ui/MenuCustomizeWnd": {
+  "238. ui/MenuCustomizeWnd": {
     "Editing Menu": ""
   },
-  "ui/OpenTorWnd": {
+  "239. ui/OpenTorWnd": {
     "Not enough bytes to create swarm": "",
     "free": "",
     "links found": "",
@@ -3042,7 +3042,7 @@
     "no files have been selected": "",
     "total size": ""
   },
-  "ui/PreloadWnd": {
+  "240. ui/PreloadWnd": {
     "Auto": "",
     "Auto-select largest files and if only one remains move it to the outer download folder": "",
     "Automatic continue in": "",
@@ -3052,33 +3052,33 @@
     "an": "",
     "auto": ""
   },
-  "ui/ProcessMenuCommand": {
+  "241. ui/ProcessMenuCommand": {
     "Customize": "",
     "Error in menu XML on line": ""
   },
-  "ui/ProfileDWnd": {
+  "242. ui/ProfileDWnd": {
     "logging started": ""
   },
-  "ui/RSSDetailsView": {
+  "243. ui/RSSDetailsView": {
     "No Selection": "",
     "never": ""
   },
-  "ui/RSSView": {
+  "244. ui/RSSView": {
     "Move to": "",
     "Open current MOC location": "",
     "Open current location": "",
     "multiple locations": "",
     "no move on complete": ""
   },
-  "ui/ShutdownWarnWnd": {
+  "245. ui/ShutdownWarnWnd": {
     "Shutdown inhibited by OS": "",
     "Shutting down computer in": ""
   },
-  "ui/TestConnPacerWnd": {
+  "246. ui/TestConnPacerWnd": {
     "press the start button to begin": "",
     "testing": ""
   },
-  "ui/TestRSSWnd": {
+  "247. ui/TestRSSWnd": {
     "Accept-Encoding": "",
     "Code": "",
     "Connecting": "",
@@ -3109,43 +3109,43 @@
     "server reply overflow": "",
     "server responded with code": ""
   },
-  "ui/TorDetailsView": {
+  "248. ui/TorDetailsView": {
     "seed count exceeded": "",
     "seeding ratio exceeded": "",
     "seeding time exceeded": "",
     "to go": ""
   },
-  "ui/TorFilesMenu": {
+  "249. ui/TorFilesMenu": {
     "Change location to": "",
     "Default Location": "",
     "Files are in default location": "",
     "Files will not be individually moved on completion.": "",
     "Open current Move On Complete location": ""
   },
-  "ui/TorOptionsView": {
+  "250. ui/TorOptionsView": {
     "local files not yet created": "",
     "no selection": ""
   },
-  "ui/TrackersReplaceWnd": {
+  "251. ui/TrackersReplaceWnd": {
     "Match Test": "",
     "matching trackers were found.": ""
   },
-  "ui/XfersView": {
+  "252. ui/XfersView": {
     "Change downloading location to": "",
     "Change seeding location to": "",
     "Channel Default": "",
     "In Channels": "",
     "Share in default profile": ""
   },
-  "ui/lang_startup": {
+  "253. ui/lang_startup": {
     "Unknown author": "",
     "Unknown language file": ""
   },
-  "ui/lang_switch": {
+  "254. ui/lang_switch": {
     "No External Language Loaded": "",
     "Restart Tixati to apply the new language.": ""
   },
-  "RootObject": {
+  "255. RootObject": {
     "Error code": "",
     "FileTransfer": "",
     "Internal Error": "",
@@ -3189,7 +3189,7 @@
     "this version of Tixati is up to date": "",
     "updated version of Tixati is available": ""
   },
-  "acomponents/NotificationMenu": {
+  "256. acomponents/NotificationMenu": {
     "Bell": "",
     "Bike Bell": "",
     "Chime": "",
@@ -3200,7 +3200,7 @@
     "Xylo Down": "",
     "Xylo Up": ""
   },
-  "channel/Channel": {
+  "257. channel/Channel": {
     "Channel Log Level": "",
     "Channel Log Lines": "",
     "Comment": "",
@@ -3240,7 +3240,7 @@
     "waiting for meta info": "",
     "with ID": ""
   },
-  "channel/ChannelConnection": {
+  "258. channel/ChannelConnection": {
     "PEX": "",
     "PEX message ignored due to rate limit": "",
     "Peer Log Level": "",
@@ -3260,12 +3260,12 @@
     "rotating slowest connections": "",
     "sending handshake": ""
   },
-  "channel/ChannelConnections": {
+  "259. channel/ChannelConnections": {
     "connections": "",
     "online": "",
     "over limit": ""
   },
-  "channel/ChannelMember": {
+  "260. channel/ChannelMember": {
     "Error listening for stream client connections for": "",
     "Listening for stream client connections for": "",
     "Sharing": "",
@@ -3276,13 +3276,13 @@
     "unknown channel": "",
     "web links": ""
   },
-  "channel/ChannelMemberStreamPlayback": {
+  "261. channel/ChannelMemberStreamPlayback": {
     "Connection": ""
   },
-  "channel/ChannelMembers": {
+  "262. channel/ChannelMembers": {
     "exceeds channel limit": ""
   },
-  "channel/ChannelStreamFile": {
+  "263. channel/ChannelStreamFile": {
     "Building hash": "",
     "Need to build hash set": "",
     "Need to scan": "",
@@ -3293,15 +3293,15 @@
     "no segments in file": "",
     "unable to process file that is not": ""
   },
-  "channel/ChannelStreamItems": {
+  "264. channel/ChannelStreamItems": {
     "Hashing": "",
     "Ready": "",
     "Scanning": ""
   },
-  "channel/ChannelStreamPause": {
+  "265. channel/ChannelStreamPause": {
     "Waiting": ""
   },
-  "channel/ChannelStreamURL": {
+  "266. channel/ChannelStreamURL": {
     "CPU": "",
     "Live Stream": "",
     "Retry in": "",
@@ -3310,7 +3310,7 @@
     "direct connection": "",
     "local stream source": ""
   },
-  "channel/Channels": {
+  "267. channel/Channels": {
     "Empty URL": "",
     "Invalid Hash": "",
     "Invalid Protocol Name or Semicolon": "",
@@ -3326,12 +3326,12 @@
     "reply": "",
     "total in list": ""
   },
-  "channel/Contact": {
+  "268. channel/Contact": {
     "Last online": "",
     "Online in": "",
     "Online in Channels": ""
   },
-  "channel/channelconstants": {
+  "269. channel/channelconstants": {
     "Channel Hash": "",
     "InfoHash": "",
     "No media player available to launch stream.": "",
@@ -3341,7 +3341,7 @@
     "hash-link": "",
     "waiting for more lines": ""
   },
-  "dht/DHT": {
+  "270. dht/DHT": {
     "DHT Log Level": "",
     "DHT Log Lines": "",
     "DHT started": "",
@@ -3365,10 +3365,10 @@
     "waiting for network port": "",
     "waiting for port": ""
   },
-  "dht/DHTBucket": {
+  "271. dht/DHTBucket": {
     "table added node": ""
   },
-  "dht/DHTNode": {
+  "272. dht/DHTNode": {
     "Expired": "",
     "Expires in": "",
     "Uncertain": "",
@@ -3377,11 +3377,11 @@
     "refresh pinging": "",
     "timed out waiting for response": ""
   },
-  "dht/DHTPeers": {
+  "273. dht/DHTPeers": {
     "Cached Peers": "",
     "keys": ""
   },
-  "dht/DHTSearch": {
+  "274. dht/DHTSearch": {
     "IPv4": "",
     "IPv4 Node-gathering search": "",
     "IPv6 Node-gathering search": "",
@@ -3389,7 +3389,7 @@
     "search complete": "",
     "search started": ""
   },
-  "dht/DHTSearchNode": {
+  "275. dht/DHTSearchNode": {
     "Announce Failed": "",
     "Announced OK": "",
     "Searched OK": "",
@@ -3402,7 +3402,7 @@
     "requesting nodes": "",
     "requesting peers": ""
   },
-  "dht/DHTSearchTable": {
+  "276. dht/DHTSearchTable": {
     "IPv4 nodes": "",
     "IPv6 nodes": "",
     "failed to resolve backup hint": "",
@@ -3411,13 +3411,13 @@
     "trying backup hint": "",
     "trying search hint": ""
   },
-  "dht/DHTTable": {
+  "277. dht/DHTTable": {
     "Node Table": "",
     "buckets": "",
     "reverse-splitting bucket": "",
     "splitting bucket": ""
   },
-  "ipfilter/IPFilter": {
+  "278. ipfilter/IPFilter": {
     "Error reloading": "",
     "Invalid URL": "",
     "No context": "",
@@ -3425,14 +3425,14 @@
     "error reading file": "",
     "next update in": ""
   },
-  "misc/BWPresets": {
+  "279. misc/BWPresets": {
     "AL": "",
     "AL Min/Ratio": "",
     "AL Ping Setup": "",
     "AL RTT": "",
     "AL Rules Setup": ""
   },
-  "misc/BWQuotas": {
+  "280. misc/BWQuotas": {
     "Bandwidth Quota Log Level": "",
     "Bandwidth Quota Log Lines": "",
     "clearing warning dialog": "",
@@ -3456,7 +3456,7 @@
     "stopping feeds": "",
     "stopping transfers": ""
   },
-  "misc/Ports": {
+  "281. misc/Ports": {
     "BitTorrent protocol": "",
     "IPv4 TCP is disabled for peer connections and trackers in proxy settings": "",
     "IPv4 UDP is disabled for peer connections and DHT in proxy settings": "",
@@ -3499,13 +3499,13 @@
     "socket closed while listening on": "",
     "will be retried every": ""
   },
-  "misc/ThrottleAdjuster": {
+  "282. misc/ThrottleAdjuster": {
     "average": "",
     "loading rules": "",
     "starting": "",
     "stopping": ""
   },
-  "rss/RSSFeed": {
+  "283. rss/RSSFeed": {
     "Feed Log Level": "",
     "Feed Log Lines": "",
     "Last update failed, next in": "",
@@ -3517,7 +3517,7 @@
     "started feed": "",
     "stopped feed": ""
   },
-  "rss/RSSFeedEntries": {
+  "284. rss/RSSFeedEntries": {
     "Exceeds per episode max": "",
     "No meta-info link": "",
     "invalid title": "",
@@ -3530,7 +3530,7 @@
     "items from server": "",
     "items passed filter": ""
   },
-  "rss/RSSFeedEntry": {
+  "285. rss/RSSFeedEntry": {
     "Bad magnet link": "",
     "Below minimum total file size": "",
     "Exceeds maximum file count": "",
@@ -3555,7 +3555,7 @@
     "no auto-download, magnet link auto-download disabled": "",
     "no meta-info found": ""
   },
-  "rss/RSSFeedLink": {
+  "286. rss/RSSFeedLink": {
     "Update cancelled": "",
     "Updating": "",
     "refresh in": "",
@@ -3565,7 +3565,7 @@
     "update complete": "",
     "update failed": ""
   },
-  "scheduler/SchedulerTarget": {
+  "287. scheduler/SchedulerTarget": {
     "AL Off": "",
     "AL On": "",
     "Allow Suspend": "",
@@ -3660,7 +3660,7 @@
     "stopping transfer": "",
     "timestamp": ""
   },
-  "scheduler/SchedulerTask": {
+  "288. scheduler/SchedulerTask": {
     "Every day": "",
     "Fridays": "",
     "Mondays": "",
@@ -3676,22 +3676,22 @@
     "running task": "",
     "skipped missed task": ""
   },
-  "webui/WebUI": {
+  "289. webui/WebUI": {
     "Failed to listen on": "",
     "Listening on": "",
     "Listening socket failure on": "",
     "because this computer does not support IPv6": ""
   },
-  "webui/WebUIConnection": {
+  "290. webui/WebUIConnection": {
     "lines": ""
   },
-  "xfer/Categories": {
+  "291. xfer/Categories": {
     "in category": "",
     "load": "",
     "save": "",
     "set": ""
   },
-  "xfer/OutputFile": {
+  "292. xfer/OutputFile": {
     "Allocating": "",
     "Checking": "",
     "Destination file too large": "",
@@ -3767,12 +3767,12 @@
     "source file too large": "",
     "will retry for up to": ""
   },
-  "xfer/OutputFolders": {
+  "293. xfer/OutputFolders": {
     "Mixed": "",
     "fast-moving folder": "",
     "folder": ""
   },
-  "xfer/Peer": {
+  "294. xfer/Peer": {
     "Bad Data": "",
     "Bad infohash in handshake": "",
     "Bad protocol id in handshake": "",
@@ -3894,13 +3894,13 @@
     "sent bitfield": "",
     "unknown": ""
   },
-  "xfer/Peers": {
+  "295. xfer/Peers": {
     "available": "",
     "fast reconnect": "",
     "peers connected": "",
     "seeds connected": ""
   },
-  "xfer/PieceManager": {
+  "296. xfer/PieceManager": {
     "discarded": "",
     "for download": "",
     "incomplete pieces from old disk cache": "",
@@ -3910,14 +3910,14 @@
     "not needed": "",
     "scanned": ""
   },
-  "xfer/SLRD": {
+  "297. xfer/SLRD": {
     "Secure Local Resource Discovery could not open multicast socket": "",
     "Secure Local Resource Discovery listening for UDP multicast on": "",
     "Secure Local Resource Discovery multicast socket closed": "",
     "Secure Local Resource Discovery stopped listening": "",
     "will retry every": ""
   },
-  "xfer/Torrent": {
+  "298. xfer/Torrent": {
     "Error downloading": "",
     "Error opening meta-file": "",
     "Error parsing meta-file": "",
@@ -3951,14 +3951,14 @@
     "running shell command on transfer completion": "",
     "seeding initiated": ""
   },
-  "xfer/Torrents": {
+  "299. xfer/Torrents": {
     "SSDP Local Peer Discovery could not open multicast socket": "",
     "SSDP Local Peer Discovery listening for local UDP multicast on": "",
     "SSDP Local Peer Discovery multicast socket unexpectedly closed": "",
     "SSDP Local Peer Discovery stopped listening": "",
     "will retry in": ""
   },
-  "xfer/Tracker": {
+  "300. xfer/Tracker": {
     "Announce error from server": "",
     "Connect error from server": "",
     "HTTP responded with code": "",
@@ -3999,7 +3999,7 @@
     "tracker responded OK": "",
     "tracker stopped": ""
   },
-  "xfer/constants": {
+  "301. xfer/constants": {
     "AN": "",
     "Aggressive": "",
     "BN": "",

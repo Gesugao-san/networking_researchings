@@ -19,10 +19,12 @@ scrollbar = Scrollbar(root, command=text_widget.yview)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 text_widget.config(yscrollcommand=scrollbar.set)
 
-# Устанавливаем значение по умолчанию для category
-category = "language_window"
+# Устанавливаем значение по умолчанию
+cat_num = 0
 parsed_data = {}  # Словарь для хранения данных после разбора файла
-parsed_data["comments"] = []
+parsed_data[f'{cat_num:03d}. comments'] = []
+cat_num += 1
+category = f'{cat_num:03d}. language_window'
 parsed_data[category] = {}
 
 def widget_clear():
@@ -30,17 +32,6 @@ def widget_clear():
 
 def widget_print(data, index = tk.END):
     text_widget.insert(index, data)  # Выводим Категорию, Ключ, Значение
-
-def is_ignore_line(line):
-    global parsed_data
-    # Пропускаем разделители — пустые строки
-    if not line:
-        return True
-    # Игнорируем комментарии
-    if line.startswith("//"):
-        parsed_data["comments"].append(line[len("// "):])
-        return True
-    return False
 
 # Функция для открытия файла через диалоговое окно
 def open_file_dialog():
@@ -54,6 +45,7 @@ def open_file_dialog():
     if not path:
         return
     filename = path.split('/')[len(path.split('/'))-1]
+    print(f"File \"{filename}\" was opened, see widget to more.")
     widget_clear()
     widget_print(f"File \"{filename}\" content:\n")
     if path.endswith(".json"):
@@ -67,22 +59,37 @@ def open_file_dialog():
 
 # Функция для разбора файла и вывода данных
 def parse_txt_file(lines):
-    global category, parsed_data  # Сделаем category и parsed_data глобальными переменными
-    line_num = -1
-    for line in lines:
+    # Сделаем category и parsed_data глобальными переменными
+    global category, parsed_data, cat_num
+    #line_num = -1
+    for line_num, line in enumerate(lines, start = -1):
         line_num += 1
         line = line.strip()
         if line.startswith("///////"):
+            cat_num += 1
             widget_print(f"{json.dumps({category: parsed_data[category]}, indent=2)},\n")
-            category = line[len("/////// "):]  # Удаляем "/////// " из начала строки
+            category = f'{cat_num:03d}. ' + line[len("/////// "):]  # Удаляем "/////// " из начала строки
             if not category in parsed_data:
                 parsed_data[category] = {}
             continue
-        if is_ignore_line(line):
+        # Пропускаем разделители — пустые строки
+        if not line:
+            continue
+        # Игнорируем комментарии
+        if line.startswith("//"):
+            comment = line[len("// "):]
+            # Если следующая строка является разделителем -
+            # вставляем новую строку в комментарий
+            for i in range(1, 4):
+                if not lines[line_num + i].replace('\r', '').startswith('\n'):
+                    break
+                comment += '\n'
+            parsed_data["000. comments"].append(comment)
             continue
         key = line
         value = lines.pop(line_num + 1).strip()  # Получаем следующую строку (Значение)
         parsed_data[category][key] = value  # Добавляем данные в список
+    print(f"Items was parsed: Categories: {cat_num}; Lines: {line_num}.")
 
 # Кнопка для выбора файла через диалоговое окно
 open_button = tk.Button(root, text="Выбрать файл", command=open_file_dialog)
@@ -95,11 +102,15 @@ def save_json(data):
     if path:
         with open(path, "w") as json_file:
             json.dump(data, json_file, indent=2)
-        print(f"Данные сохранены в файл: {path}")
+        print(f"Данные сохранены в файл: \"{path}\".")
 
 # Кнопка для сохранения JSON файла
 save_button = tk.Button(root, text="Сохранить JSON", command=lambda: save_json(parsed_data))
 save_button.pack()
 
+print("Welcome.")
+
 # Запускаем главный цикл приложения
 root.mainloop()
+
+print("Goodbye.")
