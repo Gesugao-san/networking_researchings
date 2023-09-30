@@ -1,0 +1,12130 @@
+//# Глоссарий - Glossary
+// https://ru.wikipedia.org/wiki/BitTorrent_(%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB)
+// http://rutracker.wiki/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_BitTorrent_(%D0%91%D0%B8%D1%82%D0%A2%D0%BE%D1%80%D1%80%D0%B5%D0%BD%D1%82)
+// отличная и длинная статья. приводятся все термины и их употребляемые переводы (те же сиды, пиры). Статья с iguides - перепечатка отсюда
+
+// во многих местах используется англ. терминология (бестыжие кальки). Есть шанс улучшить. Но следует в конце концов сделать "умеренный" русский перевод, который будет допускать распространенные устоявшиеся термины
+
+// Протокол:
+// announce - анонс (как статья с вики рутрекера. ничего не остается)
+// seeder - раздающий
+// to seed - раздавать
+// transfer - передача (особ. Tix)
+// block - блок
+// piece - часть
+// bitfield - битовое поле
+// peer - участник. Есть какие-либо нормальные альтернативы? Этот термин уже неплох и использовался в переводах о протоколе
+// DHT - распределённая таблица хешей
+// node (DHT) - узел
+// search DHT - поиск по DHT (как место, пространство)
+// DHT Bootstrap Nodes - Загрузочные узлы DHT (Первичные?)
+// ratio - коэффициент (отдачи)
+// swarm - рой, раздача
+// find - поиск, обнаружение (PEX)
+// private трекер - закрытый трекер
+// private torrent - приватный торрент (по-моему остальные варианты не интуитивны в понимании)
+// meta-info - метаданные
+// choke - тормозить? соотв. choked - тормозящий
+
+// Информатика:
+// Sparse - Разрежённый
+// match - вхождение(, совпадение)
+// event logging - протоколирование
+// event log - журнал событий, протокол, логи событий
+// Передано байт, но счётчик байтов:
+    https://ru.wikipedia.org/wiki/%D0%A1%D1%87%D1%91%D1%82%D0%BD%D0%B0%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0
+    https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D1%82
+// URL - адрес (реже: ссылка)
+// (system) tray - (системный) трей (официально: область уведомлений)
+// view - окно, [прилагательное] вид
+// DNS resolve - преобразование
+// feature - функция
+// offset - смещение
+// Wildcards - Символы подстановки (неужели нет ничего лучше?)
+
+// Основное:
+// download - скачивать, загружать. В зависимости от контекста
+// upload - отдача
+// feed (RSS) - лента
+// throttle - ограничение
+// log - лог. Что насчет "журнал"?
+// bad - неверный, негожий
+// allocation - аллокация
+// item - элемент
+// selected - выделенный (если выделение элементов), выбранный в других случаях
+// level - степень, уровень
+// detail - подробно/сть, очень редко детали. Надо уточнить
+// Detail Level - Степень детализации
+// preset - преднастройка
+// system - когда имеется ввиду "shutdown system" - компьютер? В остальных случаях - система
+// suspend (system) - спящий режим, "system suspend" = "энергосбережение"?
+// complete - окончание/закончить (процесс скачивание, прогресс) || завершение
+// MOC (move on complete) - Перем. по Заверш.
+// set - задать, выставить, проставить (мн.)
+// default - по умолчанию, изначально
+// Reset to default - Сбросить до умолчаний
+// OS Default - Задано системой, (Задаётся ОС, -Настройка ОС-)
+// load / loading - подгрузка (ресурса), например .torrent файл, заряжаться, добавление
+// change ... to - поменять на
+
+// Tixati:
+// Home - Домашняя (страница/вкладка?)
+// Bandwidth - Трафик (-Скорость- в русском жаргоне видимо трафик используется и для bandwidth и для объема переданного трафика, что является интегралом скорости)
+// Bandwidth (quota) - Квота на трафик, Объем трафика, лимит по трафику
+// Auto Bandwidth Limiter - автоограничитель трафика
+// trade - Обмен
+// Share (Tixati) - Расшаренное. Плюсы: Устоявшийся термин, ложное сходство с "шарить(ся)", даже незнакомым будет казаться понятным и родным русским словом. Те кто будут использовать в речи "шара" - тем более верны в использовании.
+// Priority Group (Tix) - Приоритетная группа. Группа приоритетов - по смыслу группирует приоритеты, а не предметы
+// affected (scheduler) - затронутый (receiver), затрагивающий (actor)
+// ignore - блокировать
+// Include block activity - Включая операции с блоками
+// mirror - зеркало, глагол: дублировать
+// File Auto-Select Preset - Преднастройка автовыборки файлов
+// expert user - прошаренный/продвинутый пользователь
+// seed count - кол-во раздающих, раздающих больше ...
+// Stop on upload minutes above - Остановить после минут раздачи
+// Stop on upload ratio above - Остановить при коэфф. выше
+
+// Tixati - Interface general
+// Layout - оформление
+// Output Formatting - Оформление вывода
+// location (Tixati, folder) - локация
+// start/stop - старт/стоп. Желательно начать/остановить, надо аккуратно пройтись по интерфейсу
+// remove - удалить (убрать из клиента)
+// delete - снести (вместе с файлами)
+// Advanced - Дополнительно
+// Abs - статистика самого торрента, независимо от выбора пользователя (например: торрент в 20ГБ, а пользователь выбрал только половину файлов в 10ГБ. Размер = 10ГБ, но абс. размер = 20ГБ)
+
+
+// Tixati - Channels
+// broadcast (Tix) - вещание
+// gather channels (Tixati) - получить каналы
+// owner (Tixati) - хозяин
+// approve (Tixati) - одобрить
+// disapprove (Tix) - отклонить
+// topic (channel) - описание
+// browse (folder selection) - выбрать
+// intermission - перерыв
+// decentralized sharing channel - децентрализованный канал общения
+
+
+
+// Tixati channel ranks
+// Owner - хозяин.
+// Manager - менеджер
+// Operator - оператор
+// Moderator - модератор
+// Star - звезда
+// VIP - VIP
+// Trusted - проверенный
+// Normal - обычный
+// Basic - простой
+// Quiet - тихий
+// Silent - немой
+// Banned - забаненный
+
+// -- Заметки по программе во время перевода
+// On Manjaro Linux XFCE neither buttons "Layout" -> "Оформление" nor "Edit" -> "Редактировать" are resized to accomodate new text (iirc the Layout button was OK on Windows, I hadn't translated others yet to notice at that point)
+// Во вкладке Bandwidth, кнопки ограничить имеют свой перевод "kB/s", но на самом деле на Linux отображается "KB/s" 
+// ошибка с расцветкой "active" во вкладке DHT
+// Limit Incoming kB/s = Ограничить входящее, kB/s
+// L7467: cookie - shouldnt be translatable, placeholder
+// placeholder is equivlent to
+// L6566: The - I need to add an empty translation there actually
+// Line6871: "button." as "." will it work?
+// in "/////// ui/AutoThrottleWnd" and above - are the lower case strings really intended for translation?
+// Accept-Encoding
+// There were - По итогам -- TODO, in RSS part
+// L10064: translators should not translate "guest" for the sake of miniscule privacy and anonymity
+// DHT "%d nodes" count of main window is not available in translation
+// Settings > Web interface > Templates - the "Select Folder..." string is not exported
+// Settings > Update check > Check now > While waiting the "by" in "Stand by..." is not translatable
+// Transfer > Options > Peers > "(recommended)" is not translated although "recommended" is exported
+// there's still no proper explanation what "Peer Allowance" is and what it does
+// Settings > Transfers > Locations > The "Change..." button is not translated although "Change" is exported
+// Transfer > Details: Neither "Seeds" nor "No Selection" nor "Remaining" nor "Available copies" is translated
+// Bandwidth > Right click on graph - the graphs context menu is not at all translatable 
+// "time mismatch" (in channel connections) - not exported
+// Home tab > Incoming connections > "Incoming" is in-place replaced by a word match, but "Negotating" and "placed" are missing in export
+// Scheduler does not seem to pick up translations. Especially week days in the bottom panel and tablerized view: "Mon" and "Mondays @ 12:00AM"
+
+//# --
+// Tixati language template
+
+// Generated on 2021/05/17 02:46:52 PM
+
+// Put each key phrase on its own line, followed by the replacement text on
+// the next line, followed by one or more empty lines.
+
+// Key phrases must only contain words that start with an alphabetic character.
+// Key phrases can contain alphanumeric characters, hyphens (-), slashes (/), 
+// commas (,), periods (.), or spaces.
+// Key phrase matching is case-sensitive.
+
+// Replacement text can contain any characters.
+
+// For more information, see https://support.tixati.com/language
+
+
+
+// The following fields will be displayed in the language selection window:
+
+.title
+Russian (Русский)
+
+.author
+notaLamer
+
+.description
+Ссылка на канал Tixati: dsc:cxnedp53ijcofngz2wxsbtv4kyuhm4iwsizhiqdyqtpgz2c6dqwq?dn=Tixati%20Translation%20Hub%20Central
+
+
+
+/////// basic
+
+
+
+Cancel
+Отмена
+
+Close
+Закрыть
+
+Help
+Помощь
+
+No
+Нет
+
+OK
+ОК
+
+Open
+Открыть
+
+Quit
+Выйти
+
+Start
+Старт
+
+Stop
+Стоп
+
+Yes
+Да
+
+
+
+/////// common_buttons
+
+
+
+Add
+Добавить
+
+Clear
+Очистить
+
+Layout
+Оформление
+
+New
+Новый
+
+Properties
+Свойства
+
+Refresh
+Обновить
+
+Remove
+Удалить
+
+Search
+Поиск
+
+
+
+//# DAYS (both)
+Thursday
+четверг
+Thu
+Чт
+
+Friday
+пятница
+Fri
+Пт
+
+Saturday
+суббота
+Sat
+Сб
+
+Sunday
+воскресенье
+Sun
+Вс
+
+Monday
+понедельник
+Mon
+Пн
+
+Tuesday
+вторник
+Tue
+Вт
+
+Wednesday
+среда
+Wed
+Ср
+
+//# MONTHS (both)
+January
+Январь
+Jan
+янв
+
+February
+Февраль
+Feb
+фев
+
+March
+Март
+Mar
+мар
+
+April
+Апрель
+Apr
+апр
+
+May
+Май
+May
+май
+
+June
+Июнь
+Jun
+июн
+
+July
+Июль
+Jul
+июл
+
+August
+Август
+Aug
+авг
+
+September
+Сентябрь
+Sep
+сен
+
+October
+Октябрь
+Oct
+окт
+
+November
+Ноябрь
+Nov
+ноя
+
+December
+Декабрь
+Dec
+дек
+
+
+/////// main_buttons
+
+
+
+Bandwidth
+Трафик
+
+Channels
+Каналы
+
+Home
+Домашняя
+
+RSS Feeds
+Ленты RSS
+
+Share
+Расшаренное
+
+Transfers
+Передачи
+
+/////// time
+
+
+
+AM
+AM
+
+PM
+PM
+
+
+
+/////// countries
+
+Afghanistan
+Афганистан
+
+Aland Islands
+Аландские острова
+
+Albania
+Албания
+
+Algeria
+Алжир
+
+American Samoa
+Американское Самоа
+
+Andorra
+Андорра
+
+Angola
+Ангола
+
+Anguilla
+Ангилья
+
+Antigua and Barbuda
+Антигуа и Барбуда
+
+Argentina
+Аргентина
+
+Armenia
+Армения
+
+Aruba
+Аруба
+
+Asia/Pacific Region
+Азиатско-Тихоокеанский регион
+
+Australia
+Австралия
+
+Austria
+Австрия
+
+Azerbaijan
+Азербайджан
+
+Bahamas
+Багамские Острова
+
+Bahrain
+Бахрейн
+
+Bangladesh
+Бангладеш
+
+Barbados
+Барбадос
+
+Belarus
+Белоруссия
+
+Belgium
+Бельгия
+
+Belize
+Белиз
+
+Benin
+Бенин
+
+Bermuda
+Бермудские Острова
+
+Bhutan
+Бутан
+
+Bolivia
+Боливия
+
+Bonaire, Sint Eustatius and Saba
+Бонайре, Синт-Эстатиус и Саба
+
+Bosnia and Herzegovina
+Босния и Герцеговина
+
+Botswana
+Ботсвана
+
+Brazil
+Бразилия
+
+British Virgin Islands
+Виргинские Острова (Великобритания)
+
+Brunei
+Бруней
+
+Bulgaria
+Болгария
+
+Burkina Faso
+Буркина-Фасо
+
+Burundi
+Бурунди
+
+Cambodia
+Камбоджа
+
+Cameroon
+Камерун
+
+Canada
+Канада
+
+Cape Verde
+Кабо-Верде
+
+Cayman Islands
+Острова Кайман
+
+Central African Republic
+Центральноафриканская Республика
+
+Chad
+Чад
+
+Chagos Islands
+Чагос
+
+Chile
+Чили
+
+China
+Китай
+
+Colombia
+Колумбия
+
+Comoros
+Коморы
+
+Congo
+Конго
+
+Cook Islands
+Острова Кука
+
+Costa Rica
+Коста-Рика
+
+Croatia
+Хорватия
+
+Cuba
+Куба
+
+Cyprus
+Республика Кипр
+
+Czech Republic
+Чехия
+
+Denmark
+Дания
+
+Djibouti
+Джибути
+
+Dominica
+Доминика
+
+Dominican Republic
+Доминиканская Республика
+
+Ecuador
+Эквадор
+
+Egypt
+Египет
+
+El Salvador
+Сальвадор
+
+Equatorial Guinea
+Экваториальная Гвинея
+
+Eritrea
+Эритрея
+
+Estonia
+Эстония
+
+Ethiopia
+Эфиопия
+
+Europe
+Европа
+
+Falkland Islands
+Фолклендские острова
+
+Faroe Islands
+Фарерские острова
+
+Fiji
+Фиджи
+
+Finland
+Финляндия
+
+France
+Франция
+
+French Guiana
+Французская Гвиана
+
+French Polynesia
+Французская Полинезия
+
+Gabon
+Габон
+
+Gambia
+Гамбия
+
+Georgia
+Грузия
+
+Germany
+Германия
+
+Ghana
+Гана
+
+Gibraltar
+Гибралтар
+
+Greece
+Греция
+
+Greenland
+Гренландия
+
+Grenada
+Гренада
+
+Guadeloupe
+Гваделупа
+
+Guam
+Гуам
+
+Guatemala
+Гватемала
+
+Guernsey
+Гернси
+
+Guinea
+Гвинея
+
+Guinea-Bissau
+Гвинея-Бисау
+
+Guyana
+Гайана
+
+Haiti
+Гаити
+
+Honduras
+Гондурас
+
+Hong Kong
+Гонконг
+
+Hungary
+Венгрия
+
+Iceland
+Исландия
+
+India
+Индия
+
+Indonesia
+Индонезия
+
+Iran
+Иран
+
+Iraq
+Ирак
+
+Ireland
+Ирландия
+
+Isle of Man
+Остров Мэн
+
+Israel
+Израиль
+
+Italy
+Италия
+
+Ivory Coast
+Кот-д’Ивуар
+
+Jamaica
+Ямайка
+
+Japan
+Япония
+
+Jersey
+Джерси
+
+Jordan
+Иордания
+
+Kazakhstan
+Казахстан
+
+Kenya
+Кения
+
+Kiribati
+Кирибати
+
+Kuwait
+Кувейт
+
+Kyrgyzstan
+Киргизия
+
+Laos
+Лаос
+
+Latvia
+Латвия
+
+Lebanon
+Ливан
+
+Lesotho
+Лесото
+
+Liberia
+Либерия
+
+Libya
+Ливия
+
+Liechtenstein
+Лихтенштейн
+
+Lithuania
+Литва
+
+Luxembourg
+Люксембург
+
+Macao
+Макао
+
+Macedonia
+Македония
+
+Madagascar
+Мадагаскар
+
+Malawi
+Малави
+
+Malaysia
+Малайзия
+
+Maldives
+Мальдивы
+
+Mali
+Мали
+
+Malta
+Мальта
+
+Marshall Islands
+Маршалловы Острова
+
+Martinique
+Мартиника
+
+Mauritania
+Мавритания
+
+Mauritius
+Маврикий
+
+Mayotte
+Майотта
+
+Mexico
+Мексика
+
+Micronesia
+Микронезия
+
+Moldova
+Молдавия
+
+Monaco
+Монако
+
+Mongolia
+Монголия
+
+Montenegro
+Черногория
+
+Montserrat
+Монтсеррат
+
+Morocco
+Марокко
+
+Mozambique
+Мозамбик
+
+Myanmar
+Мьянма
+
+Namibia
+Намибия
+
+Nauru
+Науру
+
+Nepal
+Непал
+
+Netherlands
+Нидерланды
+
+New Caledonia
+Новая Каледония
+
+New Zealand
+Новая Зеландия
+
+Nicaragua
+Никарагуа
+
+Niger
+Нигер
+
+Nigeria
+Нигерия
+
+Niue
+Ниуэ
+
+Norfolk Island
+Остров Норфолк
+
+North Korea
+Северная Корея
+
+Northern Mariana Islands
+Северные Марианские Острова
+
+Norway
+Норвегия
+
+Oman
+Оман
+
+Pakistan
+Пакистан
+
+Palau
+Палау
+
+Palestinian Territory
+Палестинские территории
+
+Panama
+Панамские документы
+
+Papua New Guinea
+Папуа-Новая Гвинея
+
+Paraguay
+Парагвай
+
+Peru
+Перу
+
+Philippines
+Филиппины
+
+Poland
+Польша
+
+Portugal
+Португалия
+
+Puerto Rico
+Пуэрто-Рико
+
+Qatar
+Катар
+
+Reunion
+Реюньон
+
+Romania
+Румыния
+
+Russia
+Россия
+
+Rwanda
+Руанда
+
+Saint Barthelemy
+Сен-Бартелеми
+
+Saint Kitts and Nevis
+Сент-Китс и Невис
+
+Saint Lucia
+Сент-Люсия
+
+Saint Martin
+Сен-Мартен
+
+Saint Pierre and Miquelon
+Сен-Пьер и Микелон
+
+Saint Vincent and the Grenadines
+Сент-Винсент и Гренадины
+
+Samoa
+Самоа
+
+San Marino
+Сан-Марино
+
+Sao Tome and Principe
+Сан-Томе и Принсипи
+
+Saudi Arabia
+Саудовская Аравия
+
+Senegal
+Сенегал
+
+Serbia
+Сербия
+
+Seychelles
+Сейшельские Острова
+
+Sierra Leone
+Сьерра-Леоне
+
+Singapore
+Сингапур
+
+Sint Maarten
+Синт-Мартен
+
+Slovakia
+Словакия
+
+Slovenia
+Словения
+
+Solomon Islands
+Соломоновы Острова
+
+Somalia
+Сомали
+
+South Africa
+ЮАР
+
+South Korea
+Южная Корея
+
+South Sudan
+Южный Судан
+
+Spain
+Испания
+
+Sri Lanka
+Шри-Ланка
+
+Sudan
+Судан
+
+Suriname
+Суринам
+
+Swaziland
+Эсватини
+
+Sweden
+Швеция
+
+Switzerland
+Швейцария
+
+Syria
+Сирия
+
+Taiwan
+Тайвань
+
+Tajikistan
+Таджикистан
+
+Tanzania
+Танзания
+
+Thailand
+Таиланд
+
+Timor-Leste
+Восточный Тимор
+
+Togo
+Того
+
+Tokelau
+Токелау
+
+Tonga
+Тонга
+
+Trinidad and Tobago
+Тринидад и Тобаго
+
+Tunisia
+Тунис
+
+Turkey
+Турция
+
+Turkmenistan
+Туркмения
+
+Turks and Caicos
+Теркс и Кайкос
+
+Tuvalu
+Тувалу
+
+U.S. Virgin Islands
+Виргинские Острова (США)
+
+Uganda
+Уганда
+
+Ukraine
+Украина
+
+United Arab Emirates
+Объединённые Арабские Эмираты
+
+United Kingdom
+Великобритания
+
+United States
+США
+
+Unknown
+Неизвестно
+
+Uruguay
+Уругвай
+
+Uzbekistan
+Узбекистан
+
+Vanuatu
+Вануату
+
+Vatican City
+Ватикан
+
+Venezuela
+Венесуэла
+
+Vietnam
+Вьетнам
+
+Wallis and Futuna
+Уоллис и Футуна
+
+Yemen
+Йемен
+
+Zambia
+Замбия
+
+Zimbabwe
+Зимбабве
+
+
+
+
+
+/////// file_errors
+
+
+
+access denied
+доступ запрещён
+
+access denied, another program may have this file open
+доступ запрещён, может быть файл  открыт другой программой
+
+corrupt data
+повреждённые данные
+
+internal buffering error
+ошибка внутреннего буфера
+
+internal read error
+внутренняя ошибка при чтении
+
+missing data
+данные отсутствуют
+
+path removed
+путь удалён
+
+unexpected end of file
+неожиданный конец файла
+
+unknown error
+неизвестная ошибка
+
+
+
+/////// socket_errors
+
+
+
+Address too long for proxy protocol
+Слишком длинный адрес для протокола прокси
+
+Bad HTTP redirect
+Неверное перенаправление HTTP
+
+Bad SSL data
+Неверные данные SSL
+
+Bad reply after sending command
+Неверный ответ после отправленной команды
+
+Bad reply while fetching commands
+Неверный ответ при запросе команд
+
+Circular HTTP redirect
+Циклическое перенаправление HTTP
+
+Connection dropped during SSL negotiation
+Соединение сброшено во время установки SSL
+
+Connection failed from proxy
+Соединение не удалось со стороны proxy
+
+Connection refused from proxy
+Прокси отвергнул соединение
+
+Connection reset
+Соединение сброшено
+
+Connection timed out
+Таймаут соединения
+
+Control URL not found in reply
+Управляющий адрес отсутствует в ответе
+
+Could not access shell
+
+
+Could not find any router services
+Не удалось найти сервисы маршрутизации
+
+Empty destination address
+Пустой целевой адрес
+
+HTTP chunked encoding error
+Ошибка HTTP chunked encoding
+
+HTTP gzip encoding error
+Ошибка HTTP gzip encoding
+
+HTTP proxy does not support CONNECT method
+HTTP прокси не поддерживает метод CONNECT
+
+HTTP request body overflow
+Переполнение содержимого HTTP запроса
+
+HTTP request header overflow
+Переполнение заголовка HTTP запроса
+
+HTTP request path contains ctrl chars
+Путь HTTP запроса содержит контрольные символы
+
+HTTP request pipeline overflow
+
+
+HTTP response header overflow
+
+
+Host not found
+
+
+Host unreachable from proxy
+
+
+Insufficient router resources
+
+
+Invalid address for proxy protocol
+
+
+Invalid control URL
+
+
+Invalid device URL
+
+
+Invalid gateway address
+
+
+Invalid port
+
+
+Invalid proxy reply
+
+
+Invalid response
+
+
+Line overflow
+
+
+Login/pass too long for proxy protocol
+
+
+Mapping not on same port
+
+
+Max hops exceeded
+
+
+Missing port number
+
+
+Network unreachable from proxy
+
+
+No SSL cert available
+
+
+Operation failed on router
+
+
+Proxy auth failed
+
+
+Proxy auth method not supported
+
+
+Proxy bind command failed
+
+
+Proxy bind relay IP protocol mismatch
+
+
+Proxy connection SSL error
+
+
+Proxy connection refused
+
+
+Proxy connection timed out
+
+
+Proxy could not resolve host name
+Прокси не смог преобразовать имя хоста
+
+Proxy did not return remote IP
+
+
+Proxy dropped connection
+
+
+Proxy dropped connection while negotiating
+
+
+Proxy host not found
+
+
+Proxy host unreachable
+
+
+Proxy network unreachable
+
+
+Proxy permission denied
+
+
+Proxy protocol not supported
+
+
+Proxy refused UDP connection
+
+
+Proxy unsupported IP protocol
+
+
+Reply overflow after sending command
+
+
+Reply overflow while fetching commands
+
+
+SSL buffer overflow
+
+
+SSL error sending
+
+
+Session interrupted
+Сессия прервана
+
+Socks
+
+
+TCP disabled in proxy settings
+TCP отключен в настройках прокси
+
+Timed out
+
+
+Timed out in SSL negotiation
+
+
+Timed out resolving host
+Таймаут преобразования хоста
+
+Timed out resolving proxy host
+Таймаут преобразования хоста прокси
+
+Timed out searching for commands
+
+
+Timed out sending HTTP response
+
+
+Timed out waiting for HTTP request
+
+
+Timed out waiting for HTTP response
+
+
+Too many HTTP redirects
+
+
+UDP disabled in proxy settings
+
+
+Unexpected HTTP request
+
+
+Unexpected HTTP response
+
+
+Unsupported HTTP content encoding
+
+
+Unsupported HTTP transfer encoding
+
+
+device not found
+устройство не найдено
+
+proxy does not support IPv6
+Прокси не поддерживает IPv6
+
+
+
+/////// ui/!layout/main
+
+
+
+About Tixati
+О Tixati
+
+Above Normal
+Выше среднего
+
+Action
+Действие
+
+Actions
+Действия
+
+Active Transfers
+Активные передачи
+
+Add Category
+Добавить категорию
+
+Add Preset
+Добавить преднастройку
+
+Address
+Адрес
+
+Affected
+Затронуло
+
+All
+Все
+
+All Feeds
+Все ленты
+
+All RSS Feeds
+Все RSS ленты
+
+All Targets
+Все цели
+
+All Transfers
+Все передачи
+
+Allow Drags To Status
+Разрешить перетаскивание в статус
+
+Allow System Suspend
+Разрешить энергосбережение
+
+Allow System Suspend When All Downloads Complete
+Разрешить энергосбережение по окончанию закачек
+
+Allow System Suspend When All Transfers Complete
+Разрешить энергосбережение по окончанию передач
+
+Announce
+Анонсировать
+
+Any
+Любое
+
+Apply Locations To Existing Transfers
+Применить локации к существующим передачам
+
+Apply Preset
+Применить преднастройку
+
+Attached Peer Count
+Кол-во подключённых участников
+
+Auto Limit
+Автоограничение
+
+Auto Limit Details
+Подробности автоограничения
+
+Auto Limit Ping Chart
+Диаграмма пинга автоограничителя
+
+Auto-Shutdown
+Автовыключение
+
+Auto-Start New Feeds
+Автом. стартовать новые ленты
+
+Auto-Start New Transfers
+Автом. начинать новые передачи
+
+Auto-Startup
+Автозапуск
+
+Backscroll Lines
+Число строк
+
+Backup All Config Files
+Сделать копию всех конфиг. файлов
+
+Bandwidth Quotas
+Квота на трафик
+
+Basic events
+Простые события
+
+Basic status changes
+Простые изменения статуса
+
+Below Normal
+Ниже среднего
+
+Bottom Pane
+Нижняя панель
+
+Browse for new
+Выбрать новое
+
+Browse for new MOC location
+Выбрать новую локацию Перем. по Заверш.
+
+Browse for new downloading location
+Выбрать новую локацию для скачивания
+
+Browse for new location
+Выбрать новую локацию
+
+Browse for new seeding location
+Выбрать новую локацию для раздавания
+
+Bytes In
+Входящие байты
+
+Bytes Out
+Исходящие байты
+
+Bytes Per Second In
+Входящих байт в секунду
+
+Bytes Per Second Out
+Исходящих байт в секунду
+
+CPU Usage
+Загрузка процессора
+
+Cancel Download
+Отменить загрузку
+
+Cancel Move In Progress
+В процессе отмены перемещения
+
+Cancel Pending Announce
+
+
+Cancel Refresh
+Отменить обновление
+
+Categories
+Категории
+
+Category
+Категория
+
+Change Port
+Изменить порт
+
+Change location of selected files upon completion
+Изменить место выбранных файлов после завершения
+
+Channels Detail
+Подробности каналов
+
+Check For Updates
+Проверить обновления
+
+Close Tixati
+Закрыть Tixati
+
+Close Tixati Immediately
+Закрыть Tixati немедленно
+
+Close Tixati When All Downloads Complete
+Закрыть Tixati когда все скачивания завершатся
+
+Close Tixati When All Transfers Complete
+Закрыть Tixati когда все передачи завершатся
+
+Column
+Столбец
+
+Compact Buttons
+Компактные кнопки
+
+Complete Bytes
+Готово байт
+
+Complete Percent
+Готово процентов
+
+Composite
+Составной
+
+Connect
+Подключиться
+
+Connection Pacer
+Обработчик соединений
+
+Constant Seeding
+Постоянная раздача
+
+Constant Seeds
+Постоянные раздачи
+
+Context
+Контекст
+
+Controls on Right
+Кнопки справа
+
+Copy
+Копировать
+
+Copy Actions
+Действия копирования
+
+Copy Magnet Link
+Копировать магнетную ссылку
+
+Copy Magnet Links
+Копировать магнетные ссылки
+
+Create New Task
+Создать новую задачу
+
+Cycle
+Цикл
+
+DHT
+DHT
+
+DHT Detail
+Подробности DHT
+
+Daily
+Ежедневно
+
+Day
+День
+
+Days
+Дни/-ей
+
+Decentralized Tracking
+Децентрализованный трекинг
+
+Decrease
+Уменьшить
+
+Default
+По умолчанию
+
+Delay
+Задержка
+
+Delete
+Удалить
+
+Description
+Описание
+
+Detail Level
+Степень детализации
+
+Detailed
+В подробностях
+
+Details
+Подробности
+
+Diagnostics
+Диагностика
+
+Directory Access
+
+
+Disconnect
+Отключиться
+
+Distributed Hash Table
+Распределённая Хеш Таблица (DHT)
+
+Donate
+Пожертвование
+
+Download
+Качать
+
+Downloading Default
+Закачивать по умолчанию
+
+Downloading Location
+Локация скачивания
+
+Downloads
+Закачки
+
+Dropped
+Сброшено
+
+Edit
+Редактировать
+
+Edit Presets
+Преднастройки редактора
+
+Edit URLs
+Изменить ссылки
+
+Empty
+Пусто
+
+Episode
+Эпизод
+
+Error
+Ошибка
+
+Event Log
+Журнал событий
+
+Exact
+Точное
+
+Exclude
+Исключить
+
+Exclude Selected Categories
+Исключить выделенные категории
+
+Exclude Selected Feeds
+Исключить выделенные ленты
+
+Exclude Selected Transfers
+Исключить выделенные передачи
+
+Exit
+Выйти
+
+Feed Items
+Элементы ленты
+
+File
+Файл
+
+File Access
+
+
+File Bytes Transferred
+Файловых байт передано
+
+File Operations Log
+
+
+File Path
+Путь к файлу
+
+FileSys Wait Detail
+
+
+Files
+Файлы/-ов
+
+Find Nodes
+Найти узлы
+
+Find and Replace
+Найти и заменить
+
+Font Size
+Размер шрифта
+
+Force Announce
+Анонсировать
+
+Force Check
+Перепроверить
+
+Force Choke
+
+
+Force Reload
+Перезагрузить
+
+Force Unchoke
+
+
+From Other Task
+Из другой задачи
+
+Full Details
+Все подробности
+
+Full Height
+Полная высота
+
+GUI Detail
+
+
+Get Peers
+Получить участников
+
+Hasher Detail
+
+
+Hidden In Tray
+Скрыто в трей
+
+Hide
+Спрятать
+
+High
+Высокий
+
+Horizonal Text
+Горизонтальный текст
+
+Hour
+Час
+
+Hours
+Часа/-ов
+
+IP Filter
+IP-фильтр
+
+IPFilter Detail
+Подробности IP фильтра
+
+IPv4 Addrs
+IPv4 адрес
+
+IPv4 Node Table
+Таблица узлов IPv4
+
+IPv6
+IPv6
+
+IPv6 Node Table
+Таблица узлов IPv6
+
+Icon
+Иконка
+
+Icon Only
+Только иконки
+
+Icons
+Иконки
+
+Ignore
+Блокировать
+
+Include all message details
+Включая все подробности сообщений
+
+Include message errors
+Включая все сообщения об ошибках
+
+Include search events
+Включая все события поиска
+
+Include table changes
+Включая все изменения таблицы
+
+Include task details
+Включая все подробности задач
+
+Incoming Bytes
+Входящие байты
+
+Incoming Connections
+Входящие соединения
+
+Incoming Packets
+Входящие пакеты
+
+Incoming Peer Connections
+Входящие соединения участников
+
+Incoming Throttle
+Ограничение входящего
+
+Increase
+Увеличить
+
+Item Added Time
+Время добавления элемента
+
+Last New Item
+Последний новый элемент
+
+License Agreement
+Лицензионное соглашение
+
+Link To Actions
+
+
+Local Files
+Локальные файлы
+
+Location
+Локация
+
+Low
+Низкий
+
+Lower
+Ниже
+
+Main Toolbar Style
+Стиль главной панели инструментов
+
+Matches
+Совпадает
+
+Memory Allocation Rate
+
+
+Memory State
+
+
+Merge
+Объединить
+
+Message
+Сообщение
+
+Minimized In Taskbar
+Свернут в панель задач
+
+Minute
+Минута
+
+Minutes
+Минут/-а
+
+Mixed Size Buttons
+Кнопки разного размера
+
+Move Down
+Переместить вниз
+
+Move On Complete
+Переместить по завершении
+
+Move Up
+Переместить вверх
+
+Name
+Название
+
+NetBase Detail
+
+
+New Feeds
+Новые ленты
+
+New RSS Feeds
+Новые RSS ленты
+
+New Task
+Новая задача
+
+New Transfers
+Новая передача
+
+No Move On Complete
+Не перемещать по завершении
+
+No logging
+Не вести лог
+
+Node ID
+ID узла
+
+Non-Constant Seeds
+Непостоянные раздачи
+
+Non-constant Seeds
+Непостоянные раздачи
+
+None
+Ничего
+
+Normal
+Средний
+
+Notify On Complete
+Оповестить по окончанию
+
+OS Default
+Задано системой
+
+Off
+Откл.
+
+Once
+Единожды
+
+Online Help
+Онлайн помощь
+
+Open Folder
+Открыть папку
+
+Open In Web Browser
+Открыть в веб-браузере
+
+Open Web Link
+Открыть веб-ссылку
+
+Optional Features
+Дополнительные функции
+
+Ordered
+Последовательно
+
+Ordered View
+Упорядоченный вид
+
+Originated Transactions
+Начатые транзакции
+
+Outgoing Bytes
+Исходящие байты
+
+Outgoing Packets
+Исходящие пакеты
+
+Outgoing Peer Connections
+Исходящие соединения к участникам
+
+Outgoing Seeding/Trading
+Исходящая раздача/обмен
+
+Outgoing Throttle
+
+
+Override default location of selected files or folders
+
+
+Peer
+Участник
+
+Peer DB
+БД участников
+
+Peer DB IDs
+БД участников, ID
+
+Peer DB Peers
+БД участников, участники
+
+Peers
+Участники
+
+Peers Detail
+Подробности участников
+
+Percent Complete
+
+
+Persist After Restart
+Запомнить при перезапуске
+
+Phrase
+Фраза
+
+Piece Index
+Индекс части
+
+Pieces
+Части
+
+Pieces Detail
+Подробности частей
+
+Ping
+Пинг
+
+Ports Detail
+Подробности портов
+
+Priority
+Приоритет
+
+Processed Transactions
+Обработанных транзакций
+
+Progress
+Прогресс
+
+Queries
+Запросы
+
+Queue Next
+След. в очереди
+
+Queued Searches
+Поисков на очереди
+
+RSS
+RSS
+
+RSS Detail
+Подробности RSS
+
+RSS URLs
+Адреса RSS
+
+Raise
+Выше
+
+Randomize Incoming Port
+Случайный входящий порт
+
+Receive Message
+Полученное сообщение
+
+Refresh Selected Feeds
+Обновить выделенные ленты
+
+Regex
+Регулярка
+
+Remote Seed Limit
+Лимит по удалённым раздающим
+
+Removal is permanent after
+Удаляется навсегда через
+
+Remove And Delete Local Files
+Удалить и снести локальные файлы
+
+Remove Button Left-Click
+Убрать левый щелчок кнопок
+
+Remove Button Right-Click
+Убрать правый щелчок кнопок
+
+Remove Tracker
+Удалить трекер
+
+Rename
+Переименовать
+
+Reset
+Сбросить
+
+Reset All Windows
+Сбрость все окна
+
+Reset Byte Counters
+Сбросить счетчики байтов
+
+Reset Match Counters
+Сбросить счетчики совпаданий
+
+Reset To Default
+Сбросить до умолчаний
+
+Reset to default
+Сбросить до умолчаний
+
+Responses
+Ответы
+
+Restart All Transfers
+Перезапустить все передачи
+
+Reverse
+Обратный порядок
+
+Root Detail
+
+
+Run Now
+Запустить сейчас
+
+Run Task Now
+Запустить задачу сейчас
+
+Running Searches
+Текущих поисков
+
+Same Sized Buttons
+Кнопки одинакового размера
+
+Same as DL Location
+Такая же как локация скачивания
+
+Save
+Сохранить
+
+Scheduler
+Планировщик
+
+Search DHT
+Искать в DHT
+
+Searches
+Поиски
+
+Second
+Секунд(-у)
+
+Seeding
+Раздача
+
+Seeding Allocation
+Аллокация раздачи
+
+Seeding Default
+Умолчание раздач
+
+Seeding Location
+Локация при раздаче
+
+Seeds
+Раздающих
+
+Select
+Выбрать
+
+Selected Categories
+Выбранные категории
+
+Selected Feeds
+Выбранные ленты
+
+Selected Files
+Выбранные файлы
+
+Selected Items
+Выбранные элементы
+
+Selected Peers
+Выбранные участники
+
+Selected Trackers
+Выбранные трекеры
+
+Selected Transfers
+Выбранные передачи
+
+Selected URLs
+Выбранные ссылки
+
+Sequential
+Последовательно
+
+Set
+Задать
+
+Set Default
+Задать по умолчанию
+
+Set Rate
+Задать скорость
+
+Set Target Ping RTT
+Выставить целевой RTT пингов
+
+Settings
+Настройки
+
+Show
+Показать
+
+Show Active Channel
+Показать активный канал
+
+Show Buttons
+Показать кнопки
+
+Show Menu
+Показать меню
+
+Showing Normally
+Показываются обычно
+
+Shut Down System
+Выключить компьютер
+
+Shut Down System Immediately
+Выключить компьютер сейчас же
+
+Shut Down System When All Downloads Complete
+Выключить компьютер когда все скачивания завершатся
+
+Shut Down System When All Transfers Complete
+Выключить компьютер когда все передачи завершатся
+
+Shutdown
+Выключить
+
+Sidebar
+Боковая панель
+
+Simple
+Простой
+
+Skip Queue
+Вне очереди
+
+Small Icon
+Маленькая иконка
+
+Small Mixed Size Buttons
+Маленькие кнопки разных размеров
+
+Small Same Sized Buttons
+Маленькие кнопки одного размера
+
+Sort By
+Сортировать по
+
+Sortable View
+Сортированный вид
+
+Specific
+Определенный
+
+Specific RSS
+Определенный RSS
+
+Split DL/Seed View
+Пополам загрузки/раздачи
+
+Standard Layout
+Стандартное оформление
+
+Start Selected Categories
+Запустить выбранные категории
+
+Start Selected Feeds
+Запустить выбранные ленты
+
+Start Selected Transfers
+Запустить выбранные передачи
+
+Start/Stop
+Старт/Стоп
+
+Statistics
+Статистика
+
+Status
+Статус
+
+Status Filter
+Фильтр по статусу
+
+Stop All Transfers
+Остановить все передачи
+
+Stop Checking
+Остановить проверку
+
+Stop Selected Categories
+Остановить выбранные категории
+
+Stop Selected Feeds
+Остановить выбранные ленты
+
+Stop Selected Transfers
+Остановить выбранные передачи
+
+Stress Test
+Стресс-тест
+
+Super Seeding
+Супер-раздача
+
+Support Forum
+Форум поддержки
+
+Switch Language
+Изменить язык
+
+System Detail
+Подробности системы
+
+Tab View
+Табличное окно
+
+Table Buckets
+Ячейки таблицы
+
+Table Nodes
+Узлы таблицы
+
+Targets Affected By Last Run
+Цели затронутые последним исполнением
+
+Tasks Affecting New Feeds
+Задачи затрагивающие новые ленты
+
+Tasks Affecting New Transfers
+Задачи затрагивающие новые передачи
+
+Text
+Текст
+
+Text Filter
+Текстовый фильтр
+
+Text Only
+Только текст
+
+Time
+Время
+
+Tixati News
+Новости Tixati
+
+Topic
+Описание
+
+Total Bytes
+Всего байт
+
+Total Bytes Transferred
+Всего передано байт
+
+Tracker
+Трекер
+
+Trackers
+Трекеры
+
+Trading Allocation
+Аллокация обмена
+
+Transfer Counts
+Число передач
+
+Transfer Submenu
+Подменю передач
+
+Transfers Detail
+Подробности передач
+
+Tree View
+Древовидный
+
+Turn Off
+Выключить
+
+Turn On
+Включить
+
+UPC Sockets Log
+
+
+UPC Sockets Monitor
+
+
+UPNP/NAT-PMP Log
+
+
+Ultra High
+Сверхвысокий
+
+Ultra Low
+Сверхнизкий
+
+Undo Last Remove
+Отменить последнее удаление
+
+Unignore
+Разблокировать
+
+Upload Ratio Limit
+Лимит по коэффициенту отдачи
+
+Upload Time Limit
+Лимит по времени отдачи
+
+Use Default Setting
+Стандартная настройка
+
+Very High
+Очень высокий
+
+Very Low
+Очень низкий
+
+WebUI Detail
+Подробности веб-интерфейса
+
+Weekly
+Еженедельно
+
+When All Downloads Complete
+Когда все закачки закончатся
+
+When All Transfers Complete
+Когда все передачи закончатся
+
+hour
+час
+
+hours
+час(а)
+
+location
+локация
+
+minute
+минута
+
+minutes
+минут(ы)
+
+multiple
+несколько
+
+no presets
+нет преднастроек
+
+none
+без
+
+on
+на
+
+
+
+/////// ui/!layout/bw_view_pingchart
+
+
+
+Advanced
+Дополнительно
+
+Current
+Текущий
+
+Limit Incoming kB/s
+Ограничить входящее, kB/s
+
+Limit Outgoing kB/s
+Ограничить исходящее, kB/s
+
+Ping Round Trip Time in Milliseconds
+Время запрос-ответ пинга в миллисекундах
+
+Presets
+Преднастройки
+
+Trading
+Обмен
+
+
+
+/////// ui/!layout/bw_view_sidectrls
+
+
+
+Maximum kB/s
+Максимум kB/s
+
+
+
+/////// ui/!layout/channel_list_view
+
+
+
+Alternate
+Альтернативный
+
+Announcing Managed Channels
+
+
+B/s In
+B/s вх.
+
+B/s Out
+B/s исх.
+
+Classic
+Классический
+
+Clean
+Очистить
+
+Copy Link
+Скопировать ссылку
+
+Create New
+Создать новый
+
+Forum
+Форум
+
+Gather Channels
+Получить каналы
+
+Gathering Channels
+Получаю каналы
+
+Join
+Войти
+
+Leave
+Выйти
+
+Notifications
+Оповещения
+
+Open Link
+Открыть ссылку
+
+Opens a window with options to remove inactive channels
+Откроет окно с опциями для удаления неактивных каналов
+
+Private Message
+Личное сообщение
+
+Remove Selected Channels
+Удалить выбранные каналы
+
+Reply
+Ответить
+
+Shared
+Расшарено
+
+Users
+Пользователи
+
+
+
+/////// ui/!layout/channel_tabs_view
+
+
+
+Add To Contacts
+Добавить в контакты
+
+Advertise
+
+
+Appear in channel list when other users gather channels.
+Показывать в списке каналов когда другие пользователи их получают
+
+Approve
+Одобрить
+
+Banned
+Забанен
+
+Basic
+Простой
+
+Basic status and errors
+Кратко, статусы и ошибки
+
+Bitrate
+Битрейт
+
+Browse
+Выбрать
+
+Cancel Edit
+Отменить изменения
+
+Change
+Поменять
+
+Channel Secret Key
+Секретный ключ канала
+
+Channel URL
+Ссылка на канал
+
+Chat
+Чат
+
+Clean Outgoing Messages
+Очистить исходящие сообщения
+
+Client
+Клиент
+
+Closes the
+Закрывает
+
+Collapse
+Свернуть
+
+Commands
+Команды
+
+Connections
+Соединения
+
+Control
+Управление
+
+Copy ID
+Скопировать ID
+
+Copy Name
+Скопировать имя
+
+Create New Stream
+Создать новое вещание
+
+Currently Streaming
+Сейчас вещает
+
+Directive
+Директива
+
+Disapprove
+Отклонить
+
+Divides body segments.
+Разделяет содержимое на сегменты
+
+Ends the header portion.
+Ознаменовывает конец заголовка
+
+Enter
+Enter
+
+Expand
+Расширить
+
+Flag
+Флаг
+
+From
+Откуда
+
+Header End
+Конец заголовка
+
+If something is changed, it will only invalidate text up to the nearest segment boundaries.
+Если что-то изменяется, то обновление затрагивает только часть текста до границы следующего сегмента. 
+
+Include peer events
+
+
+Information
+Информация
+
+Last Reply From
+Последний ответ от
+
+Last Reply Time
+Время последнего ответа
+
+Last Segment
+Последний сегмент
+
+Link
+Ссылка
+
+MOTD
+Заметка дня
+
+Manager
+Менеджер
+
+Message Time
+Время сообщения
+
+Moderator
+Модератор
+
+Multiple
+Несколько
+
+Offset
+Смещение
+
+Only the owner can generate the required
+Только хозяин может сгенерировать нужный
+
+Opens a window with options to remove old and/or orphaned outgoing messages and commands
+Открывает окно с опциями для удаления старых и/или оставшихся исходящих сообщений и команд
+
+Operator
+Оператор
+
+Options
+Опции
+
+Outgoing message may not be currently visible to other users
+Исходящее сообщение может быть не видимо другим пользователям
+
+Owner
+Хозяин
+
+Paste
+Вставить
+
+Play
+Проиграть
+
+Play Stream
+Воспроизвести вещание
+
+Private message
+Личное сообщение
+
+Public Key
+Публичный ключ
+
+Quiet
+Тихий
+
+Read Message
+Прочесть сообщение
+
+Remove Selected Outgoing Messages
+Удалить выделенные исходящие сообщения
+
+Replies
+Ответы
+
+Reply to a message that has been removed
+Ответить на удаленное сообщение
+
+Save Changes
+Сохранить изменения
+
+Segment Divider
+Разделитель сегментов
+
+Send Message
+Отправить сообщение
+
+Set Level
+Задать уровень
+
+Set as default
+Сделать умолчанием
+
+Set topic for channel.
+Задать тему канала.
+
+Silent
+Немой
+
+Star
+Звезда
+
+Streaming
+Вещания
+
+Streams
+Вещания
+
+Subject
+Тема
+
+Text after this line will be shown to a user in the chat view upon entering the channel.
+Следующий за этой строкой текст будет показан в чате при каждом входе пользователя.
+
+The header is distributed with much higher priority, but it is recommended to limit it to essential directives and minimal information.
+Заголовок распространяется с намного большим приоритетом, поэтому лучше ограничиться необходимыми директивами и информацией внутри него.
+
+The limit to the header size is approximately
+Ограничение на размер заголовка примерно
+
+This is a moderation command message
+
+
+This message has not been approved by a moderator
+Это сообщение не было одобрено модератором
+
+This message no longer exists
+Этого сообщения больше нету
+
+This message was disapproved by a moderator
+Это сообщение было отвергнуто модератором
+
+To
+Кому
+
+Trusted
+Проверенный
+
+Unapprove
+Снять одобрение
+
+Up to
+до
+
+User
+Пользователь
+
+User Name
+Имя пользователя
+
+User Promotion
+Повышение пользователя
+
+User Restriction
+Ограничение пользователя
+
+VIP
+VIP
+
+View
+Вид
+
+Web Link
+Веб-ссылка
+
+avg interval between broadcasts, in
+средний промежуток между распространениями, для
+
+between basic ping broadcast
+распространения обычных пингов
+
+between info broadcasts
+распространения информации
+
+between share broadcasts for normal,trusted,vip,star
+распространения расшаренного для обычных,проверенных,vip,звёзд
+
+directive
+директива
+
+ids that are always allowed to stream, comma separated
+список ID, которым всегда разрешено вещать, разделенные запятой
+
+level
+уровень
+
+level, minimum user access level to have messages approved by default
+уровень, минимально необходимый уровень доступа, чтобы сообщения автоматически одобрялись
+
+of a second
+секунд
+
+seconds
+секунд(ы)
+
+segments are allowed.
+сегментов разрешено.
+
+stream bytes per
+байт вещания за
+
+to match, which is auto-added upon info save.
+для совпадений, которые автом. добавляются при сохранении.
+
+user access level to stream
+уровень доступа для вещаний
+
+user id
+ID пользователя
+
+
+
+/////// ui/!layout/channel_view
+
+
+
+Bytes
+Байт
+
+Descriptions
+Описания
+
+Match
+Совпадение
+
+Network
+Сеть
+
+Not all users were searched.
+Поиск обошел не всех пользователей.
+
+Search Result Overflow
+Слишком много результатов поиска.
+
+Web Links
+Веб-ссылки
+
+You may get better results with more specific terms.
+Можете уточнить запрос для улучшения результата поиска.
+
+
+
+/////// ui/!layout/channels_alt_view
+
+
+
+Contacts
+Контакты
+
+List
+Список
+
+
+
+/////// ui/!layout/channels_contacts_view
+
+
+
+Change Key
+Сменить ключ
+
+Change Name
+Изменить имя
+
+Contact
+Контакт
+
+Dock
+Прикрепленный
+
+Float
+Перемещаемый
+
+Remove Selected Contacts
+Удалить выделенные контакты
+
+
+
+/////// ui/!layout/channels_main_view
+
+
+
+Window
+Окно
+
+
+
+/////// ui/!layout/channels_search_view
+
+
+
+Click the Channels button at the top of this window and gather/join some channels.
+Нажмите на кнопку Каналы вверху окна и получите/войдите в каналы.
+
+It may take several minutes for online channels to accumulate searchable links.
+Может пройти пару минут, пока онлайн каналы не наберут ссылки для поиска.
+
+Match Descriptions
+Искать в описаниях
+
+No Searchable Channels
+Подходящих для поиска каналов нет
+
+Not all channels/users were searched.
+Поиск обошёл не все каналы или пользователей.
+
+Shared Transfer Links
+Расшаренные ссылки передач
+
+Shared Web Links
+Расшаренные веб-ссылки
+
+
+
+/////// ui/!layout/channels_share_view
+
+
+
+Insert At Bottom
+Добавлять в конце
+
+Insert At Top
+Добавлять в начале
+
+Mirror
+Зеркало
+
+Position
+Позиция
+
+
+
+/////// ui/!layout/xfer_view_buttons_compact
+
+
+
+Add New Transfer
+Добавить новую передачу
+
+Clear Filter
+Сбросить фильтр
+
+Filter
+Фильтр
+
+Show Downloads
+Показать закачки
+
+Show Offline Downloads
+Показать неактивные закачки
+
+Show Offline Seeds
+Показать неактивные раздачи
+
+Show Queued Downloads
+Показать закачки на очереди
+
+Show Running Downloads
+Показать активные закачки
+
+Show Running Seeds
+Показать активные раздачи
+
+Show Seeds
+Показать раздачи
+
+Show Standby Seeds
+Показать ожидающие раздачи
+
+
+
+/////// ui/!layout/xfer_view_buttons_normal
+
+
+
+Offline
+Неактивные
+
+Queued
+На очереди
+
+Running
+Активные
+
+Standby
+Ожидающие
+
+
+
+/////// ui/!layout/xferlayout_view_double_bottom
+
+
+Abs Complete
+Абс. готово
+
+Abs Remaining
+Абс. осталось
+
+Abs Total
+Абс. всего
+
+Absolute Bytes
+Абсолютно байт
+
+B/s IN
+B/s исх.
+
+B/s OUT
+B/s исх.
+
+Bytes DL
+Байт скачано
+
+Bytes UL
+Байт отдано
+
+Complete
+Завершено
+
+Completed
+Завершен
+
+Created
+Создан
+
+Last Activity
+Последняя активность
+
+Ratio
+Коэфф.
+
+Remaining
+Осталось
+
+Seeding Limit
+Лимит раздавания
+
+Seeding Time
+Время раздавания
+
+Source
+Источник
+
+Stop Ratio
+Стоп-коэфф.
+
+Time Left
+Оставшееся время
+
+Total
+Всего
+
+
+
+/////// ui/!layout/xferlayout_view_tabs_bottom
+
+
+
+Comments
+Комментарии
+
+
+
+/////// ui/!layout/xferprompts_locmoc_editablepaths
+
+
+
+Local Files Location
+Папка локальных файлов
+
+
+
+/////// ui/!layout/xfertab_bandwidth
+
+
+
+File Data
+Файловых данных
+
+Protocol
+Протокол
+
+
+
+/////// ui/!layout/xfertab_details
+
+
+
+Download Time
+Время скачивания
+
+Local Avg. Download B/s
+Среднее локальное скачивание B/s
+
+Local Avg. Upload B/s
+Средняя локальная отдача B/s
+
+Remaining Time
+Оставшееся время
+
+Swarm Avg. Download B/s
+Среднее скачивание роя B/s
+
+Upload Ratio
+Коэффициент отдачи
+
+Upload Time
+Время раздачи
+
+
+
+/////// ui/!layout/xfertab_eventlog
+
+
+
+Include file events
+Включая события файлов
+
+Include piece events
+Включая события частей
+
+Include tracker events
+Включая события трекера
+
+
+
+/////// ui/!layout/xfertab_options
+
+
+
+All peers stay unchoked
+
+
+Always seed and do not consume a seeding slot
+Раздавать всегда и не занимать слот раздачи
+
+Base
+Базовый
+
+Disabled in settings
+Выключено в настройках
+
+Force rarest-first distribution of pieces
+Принудительная раздача самых редких частей
+
+Forced DHT Search
+Принудительный поиск по DHT
+
+Hash-ID
+Хеш-ID
+
+Inactive
+Неактивно
+
+Local Peer Discovery
+LDP Поиск локальных участников
+
+Local Peer ID
+ID локального участника
+
+Magnet Links
+Магнет-ссылки
+
+Manually Add Peer
+Добавить участника вручную
+
+Maximum peer connections
+Макс. соединений с участниками
+
+Meta-Info
+Метаданные
+
+Meta-info File
+Файл метаданных
+
+Move On Completion
+Переместить по Завершении
+
+PEX Peer Exchange
+PEX Обмен участниками
+
+Port
+Порт
+
+Search DHT Now
+Искать по DHT сейчас
+
+Search and announce
+
+
+Search only
+Только поиск
+
+Search/Announce Mode
+
+
+Send And Receive LPD Messages
+Слать и получать LDP-сообщения
+
+Send And Receive PEX Messages
+Слать и получать PEX-сообщения
+
+Standby-queue if no seeding slots are available
+В очередь ожидания если нет слотов под раздачи
+
+Stop on remote seed count above
+Остановить если раздающих больше
+
+Stop on upload minutes above
+Остановить после минут раздачи
+
+Stop on upload ratio above
+Остановить при коэфф. выше
+
+Upload Maximization
+Максимизация отдачи
+
+Upon completion, move to this location
+По завершении, переместить туда
+
+Use default ID
+Использовать стандартный ID
+
+Use default setting
+Использовать стандартную настройку
+
+Web Seed URL
+Адрес веб-раздачи
+
+recommended
+рекомендуется
+
+
+
+/////// ui/!layout/xfertab_peers
+
+
+
+Rem B/s
+Удал. B/s
+
+
+
+/////// ui/!layout/xfertab_pieces
+
+
+
+Index
+Индекс
+
+
+
+/////// ui/!layout/xfertab_trackers
+
+
+
+Group
+Группа
+
+URL
+URL
+
+
+
+/////// ui/!layout/rss_tabs_view
+
+
+
+Allow items without episode or date numbers
+Допускать элементы без эпизода или дат
+
+Auto-Start
+Авто-старт
+
+Auto-download item KB
+Автозагрузка элементов KB
+
+Auto-download item KiB
+Автозагрузка элементов KiB
+
+Auto-download item file count limit
+Автозагрузка элементов, ограничение числом файлов
+
+Auto-download item kB
+Автозагрузка элементов kB
+
+Automatically download items
+Автоматически скачивать элементы
+
+Created Transfer Options
+Опции добавленных передач
+
+Downloaded Files Location
+Локация скачанных файлов
+
+Episode Range
+Диапазон эпизодов
+
+Feed Processing Options
+Опции обработки ленты
+
+Feed URLs
+Адреса лент
+
+Include item creation
+Включая время создания элемента
+
+Include update details
+Включая подробности обновления
+
+Include update summary
+Включая описание обновления
+
+Initial Update
+Первичное обновление
+
+Item history size
+Размер истории элементов
+
+Items In Feed
+Элементов в ленте
+
+Items Out Of Feed
+Элементов вне ленты
+
+Last Update
+Последнее обновление
+
+Magnet-link items eligible for auto-download
+Элементы с магнет-ссылок подлежат автозагрузке
+
+Max
+Макс.
+
+Maximum auto-downloads for same episode
+Максимум автозагрузок одного и того же эпизода
+
+Min
+Мин.
+
+Minimum feed update interval
+Мин. интервал обновления ленты
+
+Never
+Никогда
+
+New Items Today
+Новых элементов сегодня
+
+New Items Yesterday
+Новых элементов вчера
+
+New Items in Last
+Новых элементов за последний
+
+No limit
+Без ограничения
+
+Normal Update
+Обычное обновление
+
+Published Items
+Опубликованных элементов
+
+Total Items
+Всего элементов
+
+day
+день
+
+days
+дни
+
+min
+мин
+
+
+
+/////// ui/!layout/autothrottle
+
+
+
+Add a new rule, using selected rule as template.
+Добавить новое правило, выделенное взять за шаблон.
+
+Adjust Based On Average Ping
+Подстраивать на основе среднего пинга
+
+Alternate Rules
+Альтернативные правила
+
+Auto Bandwidth Limiter
+Автоограничитель трафика
+
+Current Ping RTT ms
+Текущий RTT пингов, мс
+
+Destination Host
+Целевой хост
+
+Edit selected rule.
+Изменить выбранное правило.
+
+Gate
+
+
+Gather up to
+Собрать до
+
+High Ping RTT ms
+Высокий RTT пингов, мс
+
+Higher
+Выше
+
+Higher Ping RTT
+Выше RTT пингов
+
+IPs
+IP
+
+IPv4 only
+Только IPv4
+
+IPv4 preferred
+Лучше IPv4
+
+IPv6 only
+Только IPv6
+
+IPv6 preferred
+Лучше IPv6
+
+Include pings
+Включая пинги
+
+Include throttle changes
+
+
+Include trace details
+Включая подробности трассировки
+
+Incoming
+Входящее
+
+Load
+Загрузить
+
+Load from a
+Загрузить с
+
+Local source IP address
+С локального IP адреса
+
+Longer Adjustment Intervals
+Более длинные интервалы корректировки
+
+Low Ping RTT ms
+Низкий RTT пингов, мс
+
+Lower Ping RTT
+Ниже RTT пингов
+
+Maximum
+Максимум
+
+Minimum
+Минимум
+
+Minimum Outgoing kB/s
+Минимум исходящего kB/s
+
+Much Higher
+Намного выше
+
+Narrower Ping Tolerances
+Меньшее отклонение пинга
+
+Network mode
+Режим сети
+
+Outgoing
+Исходящий
+
+Ping Setup
+Настройка пинга
+
+Ping exact host
+Пинговать заданный хост
+
+Ping first IP from traceroute
+Пинговать первый адрес из трассировки (traceroute)
+
+Remove selected rules.
+Удалить выбранные правила.
+
+Reset To Defaults
+Сбросить до умолчаний
+
+Reset rules to system defaults.
+Сбросить правила к системным умолчаниям.
+
+Restart Pinging
+Перезапустить пингование
+
+Rules
+Правила
+
+Save to a
+Сохранить в
+
+Skip first
+Пропустить первые
+
+Skip private IPs
+Пропускать частные IP
+
+Standard Rules
+Стандартные правила
+
+Target Ping RTT Milliseconds
+Целевой RTT пингов, миллисекунды
+
+Throttle
+Ограничить
+
+Throttle Ratio
+Коэфф. ограничения
+
+Wait
+жди
+
+leave blank for default
+оставьте пустым для умолчания
+
+seconds between pings
+секунд(ы) между пингами
+
+
+
+/////// ui/!layout/bw_profiles
+
+
+
+Bandwidth Presets
+Преднастройки сокрости
+
+Default For Downloading
+По умолчанию для скачивания
+
+Default For Seeding
+По умолчанию для раздачи
+
+Reset To Current
+Сбросить до текущих
+
+
+
+/////// ui/!layout/bw_quota
+
+
+
+Clear Warning
+Убрать предупреждение
+
+Next Reset
+Следующее обнуление
+
+On
+По
+
+On Limit Reached
+По достижении ограничения
+
+On Limit Reset
+По обнулении ограничения
+
+Quotas
+Квоты
+
+Remaining Bytes
+Оставшихся байт
+
+Remove Selected Items
+Удалить выбранные элементы
+
+Reset Selected Items
+Сбросить выбранные элементы
+
+Restart Channels
+Перезапустить каналы
+
+Restart DHT
+Перезапустить DHT
+
+Restart Feeds
+Перезапустить ленты
+
+Restart Transfers
+Перезапустить передачи
+
+Select Bandwidth Preset
+Выбрать преднастройку скорости
+
+Set Auto Limit
+Выставить автоограничение
+
+Set Incoming KB/s Limit
+Задать ограничение входящего KB/s
+
+Set Outgoing KB/s Limit
+Задать ограничение исходящего KB/s
+
+Show Warning
+Показать предупреждение
+
+Stop Channels
+Остановить каналы
+
+Stop DHT
+Остановить DHT
+
+Stop Feeds
+Остановить ленты
+
+Stop Transfers
+Остановить передачи
+
+Test Selected Items
+Протестировать выбранные элементы
+
+
+
+/////// ui/!layout/categoryprop
+
+
+
+Append a magnet link to this text file when a new transfer starts
+Добавить магнет-ссылку в этот текстовый файл при начале передачи
+
+Append a magnet link to this text file when a transfer completes
+Добавить магнет-ссылку в этот текстовый файл при завершении передачи
+
+Capture
+Захватывать
+
+Delete file immediately after loading
+Удалить файл сразу после подгрузки
+
+File Auto-Select Preset
+Преднастройка автовыборки файлов
+
+Format
+Формат
+
+Incoming B/s
+Входящие B/s
+
+Load magnet links from
+Загружать магнет-ссылки из
+
+Outgoing B/s
+Исходящие B/s
+
+Override new transfer default
+Переопределить умолчание для новых передач
+
+Save a
+Сохранить
+
+Standby Seeds
+Ожидающие раздачи
+
+Titles
+Заголовки
+
+Total Transfers
+Всего передач
+
+Transfer Complete
+Передача завершена
+
+Transfer Load
+Передача заряжается
+
+and
+и
+
+file in this folder when a new transfer starts
+файл в этой папке при начале новой передачи
+
+file in this folder when a transfer completes
+файл в этой папке при завершении передачи
+
+files
+файлы
+
+files created in or moved to this folder
+файлы созданные или перемещенные в эту папку
+
+or
+или
+
+start with
+начните с
+
+to include time
+для добавления времени
+
+
+
+/////// ui/!layout/channel_member_prop
+
+
+
+Find
+Искать
+
+
+
+/////// ui/!layout/channel_member_recvmsg
+
+
+
+Read Next
+Прочесть следующее
+
+
+
+/////// ui/!layout/channel_member_sendmsg
+
+
+
+Ctrl-Enter
+Ctrl-Enter
+
+Send
+Отправить
+
+
+
+/////// ui/!layout/channel_streamlist
+
+
+
+Audio/Video File
+Аудио/видео файл
+
+B/s
+B/s
+
+Clear List
+Очистить лист
+
+Display Title
+Отображающийся заголовок
+
+Duration
+Продолжительность
+
+Embedded ID3
+Вшитое ID3
+
+File Name
+Имя файла
+
+Folder
+Папка
+
+Intermission
+Перерыв
+
+Pause the stream for a specified duration
+Приостановить вещание на определённый срок
+
+Previous Item's Title
+Заголовок прошлого элемента
+
+Randomize Order
+В случайном порядке
+
+Refresh All
+Обновить всех
+
+Relay any live HTTP stream
+Передавать любое прямое HTTP-вещание
+
+Repeat List Continuously
+Закольцевать список возпроизведения
+
+Resume After Channel Restart
+Возобновлять после переподключения к каналу
+
+Save Playlist
+Сохранить плейлист
+
+Stop All
+Остановить всех
+
+Stop Streaming
+Остановить вещание
+
+Stream
+Вещать
+
+Stream From Offset
+Вещать со смещения
+
+Stream From Top
+Вещать с начала
+
+Stream ICY-MetaData
+Вещать ICY-метаданные
+
+Stream Selected Item
+Вещать выбранный элемент
+
+Stream any
+Вещать любой
+
+Streaming HTTP Connection
+Вещаю HTTP соединение
+
+Title
+Заголовок
+
+audio or
+аудио или
+
+video file at its encoded bitrate
+
+
+
+
+/////// ui/!layout/channel_streams
+
+
+
+Size
+Размер
+
+
+
+/////// ui/!layout/chmsg_add
+
+
+
+New messages in this channel must be manually approved by a moderator
+Новые сообщение в этом канале должны быть одобрены модератором вручную
+
+Private User Message
+Личное сообщение пользователю
+
+Public Message
+Публичное сообщение
+
+This channel is offline and your message will not be visible until it is started
+Канал в офлайне и ваше сообщение не будет видно пока он не запустится
+
+Your message may not be visible to other users due to insufficient permission to share in channel
+Ваше сообщение может быть не видимым другим пользователям из-за нехватки разрешения делиться в канале
+
+Your message may not be visible to other users in this channel due to insufficient remaining share capacity
+Ваше сообщение может быть не видимым другим пользователям канала из-за нехватки места в поделившемся
+
+message can not be added until the channel is online
+сообщение не может быть добавлено пока канал не включится
+
+
+
+/////// ui/!layout/chmsg_add_sel_users
+
+
+
+Select Target Users
+Выбрать целевых пользователей
+
+
+
+/////// ui/!layout/config
+
+
+
+Accept
+Принять
+
+Accept Matches
+Принимать вхождения
+
+Accept Non-Matches
+Принимать невхождения
+
+Accept either
+Принимать любое
+
+Activate Channels Feature
+Включить функцию каналов
+
+Activate IP Filter Feature
+Включить функцию IP-фильтра
+
+Activate RSS Feature
+Включить функцию RSS лент
+
+Activate Scheduler Feature
+Включить функцию планировщика
+
+Activate Web Interface
+Включить веб-интерфейс
+
+Activate main window when new transfers are loaded
+Активировать главное окно при добавлении новых передач
+
+Adjust close button action, view switching, property window behavior, and download completion notification
+Настроить действие кнопки Закрыть, переходы между окнами, окна настройки и уведомление в конце скачивания
+
+Adjust individual colors within the current scheme
+Настроить отдельные цвета текущей схемы
+
+Advanced Socket Options
+Расширенные настройки сокетов
+
+Advanced options for the allocation and handling of local files, including post-processing via external commands
+Расширенные настройки аллокации и работы над локальными файлами, включая постобработку внешними командами
+
+All groups
+Все группы
+
+Allow UDP tracker connections
+Разрешить соединения к трекеру по UDP
+
+Allow deletion of created transfer local files
+Разрешить удалять файлы созданных передач
+
+Applies To
+Применительно к
+
+Auto Start
+Автостарт
+
+Auto Torrent Downloader
+Автозагрузчик торрентов
+
+Auto node ID change interval
+Интервал автом. изменения ID узла
+
+Auto node ID change only on startup
+Автом. измененять ID узла только при запуске
+
+Auto-Deprioritize Bad Piece Threshold
+Автопонижение при кол-ве порченных частей
+
+Auto-Deprioritize Bandwidth
+Автопонижение трафика
+
+Auto-Ignore Bad Piece Threshold
+Автоблок при кол-ве порченных частей
+
+Auto-Reload
+Автоперезагрузка
+
+Auto-Start Delay
+Задержка автозапуска
+
+Auto-Start Options
+Опции автозапуска
+
+Auto-Start Tixati With Computer
+Запускать Tixati вместе с компьютером
+
+Auto-download KB
+Автоскачивать KB
+
+Auto-download KiB
+Автоскачивать KiB
+
+Auto-download items
+Автоскачивание элементов
+
+Auto-download kB
+Автоскачивать kB
+
+Auto-manage slots
+Автоуправление слотами
+
+Auto-select files in new transfers
+Автовыбор файлов в новых закачках
+
+Auto-start new item downloads
+Автостарт новых закачек
+
+Automatic reload interval
+Интервал автоматического обновления
+
+Automatically open or save
+Автоматически открывать или сохранять
+
+Backscroll Size
+Число строк
+
+Bandwidth Priority
+Приоритет трафика
+
+Batching
+Пакетный
+
+Behavior
+Поведение
+
+Buttons
+Кнопки
+
+Bytes In Charts
+Байты в диаграммах
+
+Change Now
+Поменять сейчас
+
+Change peer connection encryption preferences, maximum connections per transfer, maximum concurrent connection attemps, IPv6 mode, and local IP address binding
+Изменить настройки шифрованных соединений с участниками, максимум соеденинений у передач, максимум одновременно устанавливаемых соединений, режим IPv6, и закрепление за IP локальных интерфейсов
+
+Change queuing parameters, auto start/stop preferences, and other miscellaneous options
+Изменить параметры очередей, настройки автостарта/стопа, и ещё другие настройки
+
+Change the location where downloaded files are stored while in progress and on completion
+Изменить локацию куда сохраняются файлы во время скачивания и после завершения
+
+Change the port numbers used for peer connections and DHT messages
+Изменить номера портов используемых для соединений с участниками и сообщений DHT
+
+Change the way numbers are formatted and other minor output options
+Изменить отображение цифр и других схожих настроек отображения
+
+Changing these settings is NOT recommended unless you're an expert user.
+НЕ РЕКОМЕНДУЕТСЯ изменять эти настройки, если вы не прошаренный пользователь.
+
+Channel Stream Playback
+Воспроизведение вещания канала
+
+Check For Update Now
+Проверить обновления сейчас
+
+Check Now
+Проверить сейчас
+
+Check On Startup
+Проверять при запуске
+
+Check for new Tixati version every week
+Еженедельно проверять новые версии Tixati 
+
+Client Filter
+Фильтр клиентов
+
+Color
+Цвет
+
+Color Scheme
+Цветовая схема
+
+Completely Exit Program
+Полностью выйти из программы
+
+Configure
+Настроить
+
+Confirm Delete
+Подтверждать удаление
+
+Confirm Delete/Trash
+Подтверждать удаление и в корзину
+
+Confirm Trash
+Подтверждать удаление в корзину
+
+Control the announcing of multi-tracker torrents, and set filters to skip unwanted trackers
+Управление анонсами в торрентах с несколькими трекерами и добавление фильтров, чтобы пропускать ненужные трекеры
+
+Control the appearance of icons and text within menus, buttons, and toolbars
+Настроить вид иконок и текста внутри меню, кнопок и панелей задач.
+
+Create Examples
+Создать примеры
+
+Creates a transfer
+Создаст передачу
+
+Custom
+Пользовательский
+
+Custom Colors
+Настройки цвета
+
+Customized List
+Пользовательский список
+
+DHT Bootstrap Nodes
+Загрузочные узлы DHT
+
+DHT mode for normal transfers
+Режим DHT для обычных передач
+
+DHT mode for trackerless transfers
+Режим DHT для передач без трекера
+
+Dark Background
+Темный фон
+
+Decentralized Tracker
+Децентрализованный трекер
+
+Decimal Character
+Десятичный символ
+
+Default Channel Options
+Стандартные настройки канала
+
+Default Download Location
+Стандартная локация закачек
+
+Direct To Trash
+Сразу в корзину
+
+Direct reads
+Прямое чтение
+
+Directly move file/folder if possible when changing location
+Сразу перемещать файл/папку, если возможно, при смене локации
+
+Disable
+Отключить
+
+Disable TCP
+Откл. TCP
+
+Disable UDP
+Откл. UDP
+
+Display Join/Leave Notifications
+Показывать сообщения прихода/ухода
+
+Display Timestamps
+Показывать время
+
+Display encrypted
+Показывать шифрование
+
+Display full paths for all location shortcuts
+Показывать полный путь для всех ярлыков папок
+
+Double-click actions
+Действия по двойному нажатию
+
+Download slots
+Слоты скачивания
+
+Drop Matches
+Сбрасывать вхождения
+
+Drop Non-Matches
+Сбрасывать невхождения
+
+Dual conn attempt non-pref proto skip minimum margin
+Dual conn attempt non-pref proto skip minimum margin
+
+Duplicate transfer prompt
+Вопрос о дубликате передачи
+
+Encrypted only
+Только шифрованные
+
+Encrypted preferred
+Лучше шифрованные
+
+Error on missing downloaded files
+Ошибка ненайденных скачанных файлах
+
+Event Logging
+Протоколирование
+
+Every
+Каждый
+
+Every Day
+Ежедневно
+
+Every Hour
+Каждый час
+
+Every Week
+Еженедельно
+
+Export Configuration To File
+Экспортировать настройки в файл
+
+Fast Allocate
+Fast Allocate
+
+File Only
+Только файл
+
+File allocation
+Аллокация файлов
+
+File completion shell commands
+Консольные команды по завершении
+
+File delete method
+Метод удаления файлов
+
+First working group
+Первая работающая группа
+
+Font
+Шрифт
+
+Fonts
+Шрифты
+
+Force node ID change
+Сменить ID своего узла
+
+Forward Port On Router With UPNP
+Проброс порта на маршрутизаторе через UPnP
+
+Full Pre-Write
+Полная предзапись
+
+Fully independent property windows
+Полностью отдельные окна свойств
+
+General
+Основное
+
+Gi
+Gi
+
+HTML Templates
+Шаблоны HTTP
+
+HTTP
+HTTP
+
+Hidden
+Скрыт
+
+Hide In System Tray
+Скрыть в системном трее
+
+Horizontal Text
+Горизонтальный текст
+
+If you have a firewall or broadband router attached to your system, you may want to use port-forwarding for optimal performance.
+Если к системе подключен маршрутизатор или сетевой экран, то стоит настроить проброс портов для оптимальной работы.
+
+Import Configuration From File
+Импортировать конфигурацию из файла
+
+Import/Export
+Импорт/Экспорт
+
+Include block activity
+Включая операции с блоками
+
+Include local in swarm bitfield and availability display
+Учитывать своё в битовом поле роя и отображении доступного
+
+Include status changes
+Включая изменения состояний
+
+Include warnings
+Включая предупреждения
+
+Incoming Peer Connection Encryption
+Шифрование входящих соединений участников
+
+Incoming Peer Connection Protocol
+Протокол входящих соединений участников
+
+Incoming Peers
+Входящие участники
+
+Incoming Ports
+Входящие порты
+
+Incomplete Piece Storage Location
+Локация хранения незавершенных частей
+
+Incomplete file name format
+Формат названия незавершенных файлов
+
+Individual tracker options
+Опции индивидуальных трекеров
+
+Initial
+Изначальный
+
+Interface IPs For Incoming Web Connections
+IP интерфейсов для входящих веб-соединений
+
+It gives a more consistant look with other programs.
+Этот внешний вид будет больше похож на другие программы.
+
+It is more suitable for use in a dark environment and is easy on the eyes.
+Лучше подходит для использования в темноте и легче для глаз.
+
+Item
+Элемент
+
+KB blocks
+KB блоков
+
+Ki
+Ki
+
+Largest Unit
+Наибольшая величина
+
+Last
+Последнее
+
+Level
+Уровень
+
+Light Background
+Светлый фон
+
+Load Preset
+Загрузить преднастройку
+
+Load default color schemes or custom
+Загрузить стандартную цветовую схему или пользовательские
+
+Local IPv4 address or interface
+Локальный IPv4 адрес или интерфейс
+
+Local IPv6 address or interface
+Локальный IPv6 адрес или интерфейс
+
+Local Peers
+Локальные участники
+
+Location shortcuts in transfer context menu
+Ярлыки локаций в контекстном меню передач
+
+Locations
+Локации
+
+Log detailed tracker messages
+Протоколировать подробные сообщения трекера
+
+Log disk read-cache details
+Протоколировать подробности чтения из дискового кеша
+
+Login
+Войти
+
+MB blocks
+MB блоки
+
+Magnet link formats for transfer popup menu
+Формат магнет-ссылок в выпадающем меню передач
+
+Magnet-links eligible for auto-download
+Магнет-ссылки разрешённые к авто-загрузке
+
+Main log backscroll size
+Число строк главного лога
+
+Main window close button action
+Действие кнопки Закрыть главного окна
+
+Main window minimize button action
+Действие кнопки Свернуть главного окна
+
+Maximum concurrent outgoing TCP connection attempts
+Максимум одновременно исходящих попыток TCP соединений
+
+Maximum concurrent outgoing UDP connection attempts
+Максимум одновременно исходящих попыток UDP соединений
+
+Maximum peer connections per seed/download
+Макс. подключенных участников на раздаче/закачке
+
+Maximum simultaneous searches
+Максимум одновременных поисков
+
+Menus
+Меню
+
+Mi
+Mi
+
+Minimize To Taskbar
+Сворачивать в панель задачь
+
+Month
+Месяц
+
+Move individual files immediately upon completion
+Перемещать отдельные файлы сразу по завершении
+
+Multi-tracker announce mode
+Режим анонса при нескольких трекерах
+
+NAT-PMP
+NAT-PMP
+
+NAT-PMP to forward port on router
+NAT-PMP для проброса порта на маршрутизаторе
+
+New Feed Default Processing Options
+Стандартные настройки обработки новых лент
+
+New Filter Default Options
+Стандартные настройки для новых лент
+
+New Scheduler Task Default Options
+Стандартные настройки новых задач планировщика
+
+No Proxy
+Без прокси
+
+Non-default settings may slow your download performance significantly or cause other serious problems.
+Измененные настройки могут существенно замедлить скорость скачивания или повлечь за собой другие серьезные проблемы.
+
+Numbers
+Цифры
+
+Numbers In Charts
+Цифры диаграмм
+
+OS Default Colors
+Системные цвета
+
+Omit
+Опустить
+
+On some monitors this is easier to read.
+Лучше читается на некоторых мониторах.
+
+Opens a decentralized sharing channel
+Открывает децентрализованный канал общения
+
+Outgoing Peer Connection Encryption
+Шифрование исходящих соединений с участниками
+
+Outgoing Peer Connection Protocol
+Протокол исходящих соединений с участниками
+
+Outgoing Peers
+Исходящих участников
+
+Output Formatting
+Оформление вывода
+
+Password
+Пароль
+
+Peer B/s Display
+Отображение B/s участника
+
+Peer In/Out Bytes Display
+Отображение вх./исх. байт участника
+
+Peer connect/login timeouts
+Таймаут подсоединения/подключения участника
+
+Peer read caching
+Кеширование чтения для участников
+
+Placeholders
+Заглушки
+
+Predictive
+Прогнозирующий
+
+Press F1 for more information.
+Нажмите F1 для подробного описания.
+
+Prompt
+Запрос
+
+Prompt User To Hide/Exit
+Запрос пользователю о скрытии/выходе
+
+Proxy
+Прокси
+
+Queuing
+В очереди
+
+Raised Unit Decimal Places
+Десятичная точность чисел большего значения
+
+Random port interval
+Интервал смены случайного порта
+
+Random port range
+Диапазон случайного порта
+
+Really Simple Syndication
+Really Simple Syndication
+
+Recently Selected Folders
+Недавно выбранные папки
+
+Recycle unused download slots for uploads
+Переиспользовать незанятые слоты скачивания для раздач
+
+Recycle unused upload slots for downloads
+Переиспользовать незанятые слоты раздач для скачивания
+
+Redundant hash-check on completion
+Повторная проверка хеша по завершении
+
+Reset All
+Сбросить всё
+
+Reset All Objects
+Сбросить все объекты
+
+Revert
+Восстановить
+
+Revert associations on exit in portable mode
+Восстановить ассоциации при выходе в портативном режиме
+
+Run
+Запустить
+
+SOCKS4
+SOCKS4
+
+SOCKS5
+SOCKS5
+
+Save Preset
+Сохранить преднастройку
+
+Save a magnet link to a text file when transfers start or complete
+Сохранять магнет-ссылку в текстовый файл, когда начинается или заканчивается передача
+
+Scheduler Events
+События планоровщика
+
+Scheduler Options In Context Menus
+Опции планировщика в контекстных меню
+
+Search Only
+Только поиск
+
+Select a category
+Выберите категорию
+
+Send/Receive
+Отправлять/принимать
+
+Separator
+Разделитель
+
+Sequential download options
+Опции последовательного скачивания
+
+Shell Integration
+Интеграция с системой
+
+Show icon in system tray
+Показывать иконку в системном трее
+
+Skip
+Пропустить
+
+Skip last-write time checks
+Не проверять время последней записи
+
+Sparse
+Разрежённый
+
+Start new feeds
+Запускать новые ленты
+
+Start new transfers
+Запускать новые передачи
+
+Start previously running channels on program startup
+Запускать ранее активные каналы при загрузке программы
+
+Start previously running feeds on program startup
+Запускать ранее активные ленты при загрузке программы
+
+Start previously running transfers on program startup
+Запускать ранее активные передачи при загрузке программы
+
+Startup DHT mode
+Режим DHT при загрузке
+
+Startup on transfers page
+Запускаться в окне передач
+
+Status Bar
+Статусная строка
+
+Stop constant seeds on upload minutes above
+Останавливать постоянные раздачи после минут на раздаче
+
+Stop constant seeds on upload ratio above
+Останавливать постоянные раздачи при достижении коэфф. отдачи
+
+Stop created seeds on upload minutes above
+Останавливать созданные раздачи после минут на раздаче
+
+Stop created seeds on upload ratio above
+Останавливать созданные раздачи при достижении коэфф. отдачи
+
+Stop seeding on upload minutes above
+Останавливать раздачи после минут на раздаче
+
+Stop seeding on upload ratio above
+Останавливать раздачи при достижении коэфф. отдачи
+
+Strong batching
+Строго пакетный
+
+Strong predictive
+Строго прогнозирующий
+
+TCP
+TCP
+
+TCP Default
+TCP по умолчанию
+
+TCP Only
+Только TCP
+
+TCP Peers
+TCP участники
+
+TCP Port For Incoming Web Connections
+Порт TCP для входящих веб-соединений
+
+TCP Trackers
+TCP трекеры
+
+TCP/UDP port for peer connections and messages
+Порт TCP/UDP для передач и сообщений
+
+Tasks Missed Between Sessions
+Пропущенные между сессиями задачи
+
+Test In Web Browser
+Попробывать в веб-браузере
+
+These files can be used to save your customized color schemes, or to load color schemes that other users have created.
+Эти файлы нужны для сохранения настроенных вами цветовых схем или загрузки цветовых схем созданных другими пользователями.
+
+This scheme has bright text on a dark background.
+Это схема со светлым текстом на темном фоне.
+
+This scheme has dark text on a light background.
+Это схема с темным текстом на светлом фоне.
+
+This scheme uses the default operating system colors for most items.
+Эта схема использует стандартные цвета операционной системы для большинства эелементов.
+
+Toolbars
+Панели задач
+
+Tooltips
+Всплывающие подсказки
+
+Transfer B/s Display
+Отображение B/s передачи
+
+Transfer loading priority/location prompt
+Запрос о приоритете/локации передачи при загрузке
+
+Transfers/Feeds
+Передачи/ленты
+
+Type
+Тип
+
+UDP
+UDP
+
+UDP Default
+UDP по умолчанию
+
+UDP Only
+Только UDP
+
+UDP Peers And DHT
+UDP участники и DHT
+
+UDP Trackers
+UDP трекеры
+
+Unencrypted only
+Только незашифрованные
+
+Unencrypted preferred
+Лучше нешифрованные
+
+Update Check
+Проверка обновлений
+
+Upload slots
+Слотов отдачи
+
+Uploads
+Раздачи
+
+Use
+Использовать
+
+Use Default
+Использовать стандартное
+
+Use HTTPS To Secure Connections
+Использовать HTTPS для обезопашивания соединения
+
+Use SSL for control connection
+Использовать SSL для командного соединения
+
+Use SSL to connect to proxy
+Использовать SSL для подключения к прокси
+
+Use This Feature Carefully
+Используйте эту функцию внимательно
+
+Use UPNP
+Использовать UPnP
+
+Use a SOCKS4/5 or HTTP proxy server for outgoing tracker and/or peer connections
+Использовать SOCKS4/5 или HTTP-прокси сервер для исходящих соединений с трекером и/или участниками
+
+Use polling method to watch folders
+Использовать метод опроса для наблюдения за папками
+
+Use proxy to resolve names
+Преобр. имена через прокси
+
+User Authentication
+Аутентификация пользователей
+
+User Interface
+Интерфейс
+
+Using a proxy to resolve names is not recommended for UDP because it can be slow and very few proxy servers support it.
+Не рекомендуется использовать прокси по UDP для преобразования имен, потому что это может быть медленным и лишь некоторые прокси сервера это поддерживают.
+
+Visible
+Видимый
+
+Web Interface
+Веб-интерфейс
+
+Week
+Неделя
+
+Weekly Days
+Еженедельно по дням
+
+Weeks
+Неделя/-ель
+
+Widget Styles
+Стили виджетов
+
+You can automatically backup your configuration on a regular basis by using the scheduler.
+Планировщиком можно автоматически делать копию настроек на регулярной основе.
+
+You could potentially clear all your settings and transfers if you make a mistake.
+Вы можете поте все настройки и передачи, если сделаете ошибку.
+
+applied first time channel is started
+применяется при первом подключении
+
+comma
+запятая
+
+default
+умолчание
+
+file association
+файловая ассоциация
+
+files immediately after loading from this folder
+файлы сразу же при подгрузке с этой папки
+
+files when transfers start or complete
+файлы когда передачи начинаются или завершаются
+
+from Ki/Mi/Gi/Ti unit labels
+в обозначениях величин Ki/Mi/Gi/Ti
+
+in unit labels
+в обозначениях величин
+
+incoming flags with peer address
+входящие метки с адресом участника
+
+instead of
+вместо
+
+link association
+ссылочная ассоциация
+
+not recommended
+не рекомендуется
+
+of last
+из последних
+
+partial seeding
+неполная раздача
+
+period
+точка
+
+slower but more reliable
+медленнее, но надежнее
+
+space
+пробел
+
+to HTTP trackers when
+с HTTP-трекерами если
+
+username/password on each line
+логин/пароль на отдельных строках
+
+week
+неделя
+
+weeks
+неделя/-ель
+
+
+
+/////// ui/!layout/delayed_startup
+
+
+
+Delayed
+Отложенный
+
+Delayed Startup
+Отложенный запуск
+
+Tixati
+Tixati
+
+
+
+/////// ui/!layout/loadingprob
+
+
+
+Delete config file and start fresh
+Удалить настройки и начать с нуля
+
+Do nothing and try again
+Ничего не делать и попытаться снова
+
+Error Loading Config File
+Ошибка при загрузке конфигурационного файла
+
+Leave copy of broken config file on desktop
+Оставить копию неисправного конфигурационного файла на рабочем столе
+
+Make sure the disk is not full.
+Удостоверьтесь, что диск не полный
+
+Please select an action
+Выберите действие
+
+Problem Starting
+Проблема запуска
+
+Revert to backup of last successfully loaded config file
+Откатиться до копии последней удачно запущенной конфигурации
+
+The config file could not be read from disk or is corrupt.
+Конфигурационный файл не удалось прочесть с диска или он испорчен
+
+
+
+/////// ui/!layout/addipfilter
+
+
+
+Add IP Filter
+Добавить IP-фильтр
+
+IP List Source HTTP URL or Local File Path or
+Источник IP списка: HTTP-ссылка или путь локального файла или
+
+Interval between automatic reloads from source
+Интервал между автоматическими обновлениями из источника
+
+
+
+/////// ui/!layout/addmrusel
+
+
+
+New Folder
+Новая папка
+
+Select Folder For New Shortcut
+Выбрать папку для нового ярлыка
+
+
+
+/////// ui/!layout/addrssfeed
+
+
+
+Add RSS Feed
+Добавить ленту RSS
+
+Feed Parameters
+Параметры ленты
+
+Item Title Filter
+Фильтр по заголовкам элементов
+
+put each on a separate line
+по одному в каждой строке
+
+
+
+/////// ui/!layout/addscheduleraction_bw_in_on
+
+
+
+Add Scheduler Action
+Добавить действие планировщика
+
+Set incoming bandwidth limit to
+Задать ограничение входящей скорости как
+
+
+
+/////// ui/!layout/addscheduleraction_bw_out_on
+
+
+
+Set outgoing bandwidth limit to
+Задать ограничение исходящей скорости как
+
+
+
+/////// ui/!layout/addscheduleraction_bw_out_s_on
+
+
+
+Set outgoing seeding bandwidth allocation to
+Задать аллокацию исходящей скорости раздачи как
+
+
+
+/////// ui/!layout/addscheduleraction_bw_out_t_on
+
+
+
+Set outgoing trading bandwidth allocation to
+Задать аллокацию исходящей скорости обмена как
+
+
+
+/////// ui/!layout/addscheduleraction_bw_ping_on
+
+
+
+Set Auto Limit target ping RTT to
+Задать целевой RTT пинга автоограничителя как
+
+
+
+/////// ui/!layout/addschedulertask
+
+
+
+Add Scheduler Task
+Добавить задачу планировщика
+
+
+
+/////// ui/!layout/addschedulertask_chanmsg
+
+
+
+Add Channel Message To Scheduler Task
+Добавить сообщение на канале как задачу планировщика
+
+Enter one or more messages on separate lines.
+Введите одно или несколько сообщений в разных строках
+
+Set message delay with
+Задать задержку сообщения
+
+
+
+/////// ui/!layout/addschedulertask_chantopic
+
+
+
+Add Channel Topic To Scheduler Task
+Добавить описание канала как задачу планировщика
+
+
+
+/////// ui/!layout/addschedulertask_nodays_warn
+
+
+
+No days selected
+Дни не выбраны
+
+You need to select at least one day for this weekly task or switch to once/daily cycle.
+Надо выбрать хотя бы один день для еженедельнй задачи или изменить на ежедневный цикл/единожды.
+
+
+
+/////// ui/!layout/addschedulertask_noname_warn
+
+
+
+Name is blank
+Название пусто
+
+You need to enter a name for the new task.
+Надо ввести название новой задачи.
+
+
+
+/////// ui/!layout/addschedulertask_speccat
+
+
+
+Add Category To Scheduler Task
+Добавить категорию как задачу планировщика
+
+
+
+/////// ui/!layout/addschedulertask_specchannel
+
+
+
+Add Channel To Scheduler Task
+Добавить канал как задачу планировщика
+
+
+
+/////// ui/!layout/addschedulertask_specfeed
+
+
+
+Add Feed To Scheduler Task
+Добавить ленту как задачу планировщика
+
+
+
+/////// ui/!layout/addschedulertask_specxfer
+
+
+
+Add Transfer To Scheduler Task
+Добавить передачу как задачу планировщика
+
+
+
+/////// ui/!layout/addtracker
+
+
+
+Add Tracker
+Добавить трекер
+
+Put each tracker URL on a separate line.
+На каждой строке должен быть один адрес трекера
+
+Separate groups with a blank line.
+Разделите разные группы пустой строкой
+
+Tracker URLs
+URL трекеров
+
+
+
+/////// ui/!layout/assocok
+
+
+
+Associated with
+Ассоциировано с
+
+File Association
+Файловая ассоциация
+
+Tixati is the default
+Tixati является приложением для
+
+file handler
+по умолчанию
+
+
+
+/////// ui/!layout/assocprompt
+
+
+
+Always check on startup
+Всегда проверять при запуске
+
+Associate with
+Ассоциировать с
+
+Set Tixati as the default
+Задать Tixati по умолчанию
+
+Tixati is not the default
+Tixati не является умолчанием
+
+
+
+/////// ui/!layout/autosavemetadirsel
+
+
+
+Select Folder To Save Files
+Выбрать папку для сохранения файлов
+
+
+
+/////// ui/!layout/autosel_preset_add
+
+
+
+Preset Name
+Название преднастройки
+
+
+
+/////// ui/!layout/binderror
+
+
+
+Change Port Number
+Изменить номерпорта
+
+Could not listen for incoming connections
+Не могу слушать входящие соединения
+
+Edit Connection Settings
+Изменить настройки соединения
+
+Retry
+Повторить
+
+
+
+/////// ui/!layout/bw_outpropcontrol
+
+
+
+Reset to Default
+Сбросить до умолчаний
+
+Select the percentage of outgoing bandwidth prioritized for trading and/or seeding.
+Выберите процент исходящей скорости для расстановки приоритета между обменом и/или раздачей
+
+
+
+/////// ui/!layout/bw_profile_add
+
+
+
+Add Bandwidth Preset
+Добавить преднастройку скорости
+
+Auto Limit Minimum and Ratio
+Автоограничение минимум и коэфф.
+
+Auto Limit On/Off
+Автоограничение вкл./выкл.
+
+Auto Limit Ping Setup
+Настройка пингов автоограничения
+
+Auto Limit Rules
+Правила автоограничения
+
+Auto Limit Target RTT
+Автоограничение целевой RTT
+
+Incoming Limit
+Ограничение входящего
+
+Outgoing Limit
+Ограничение исходящего
+
+Outgoing Trading/Seeding
+Исходящее обмен/раздача
+
+Save Current State Of
+Сохранить текущую настройку
+
+
+
+/////// ui/!layout/bw_profile_edit
+
+
+
+Edit Bandwidth Preset
+Редактировать преднастройку скорости
+
+Reset All States To Current
+Сбросить все состояния до текущего
+
+Store State Of
+Сохранить состояние
+
+
+
+/////// ui/!layout/bw_quota_add
+
+
+
+Add Bandwidth Quota
+Добавить квоту трафика
+
+Date
+Дата
+
+Effective Hours
+Активно по часам
+
+Hourly
+Почасово
+
+In
+Вх.
+
+Maximum Data Transfered
+Макс. переданных данных
+
+Monthly
+Ежемесячно
+
+Out
+Исх.
+
+use shift key to toggle range
+нажмите клавишу shift для переключения периода
+
+
+
+/////// ui/!layout/bw_quota_warn
+
+
+
+Bandwidth Quota Exceeded
+Квота трафика исчерпана
+
+
+
+/////// ui/!layout/cat_dlloc_foldersel
+
+
+
+Select Downloading Location
+Выбрать локацию скачивания
+
+
+
+/////// ui/!layout/cat_sdloc_foldersel
+
+
+
+Select Seeding Location
+Выбрать локацию раздачи
+
+
+
+/////// ui/!layout/category_add_full
+
+
+
+Downloading
+Скачивается
+
+Standby Seed
+Ожидающие раздачи
+
+Uncategorized
+Без категории
+
+
+
+/////// ui/!layout/channel_create
+
+
+
+Advertise in channel list
+
+
+Allow sharing by default
+Разрешить расшаривать по умолчанию
+
+Create
+Создать
+
+Create New Channel
+Создать новый канал
+
+Hash
+Хеш
+
+Initial Configuration
+Изначальная конфигурация
+
+Randomize
+Случайный
+
+Secret Key
+Секретный ключ
+
+This setting can be changed later by editing the channel information.
+Эту настройку можно будет поменять в редактируя информацию о канале.
+
+
+
+/////// ui/!layout/channel_defusername
+
+
+
+Channel User Name
+Имя пользователя на каналах
+
+Please enter a default user name
+Введите имя пользователя по умолчанию
+
+
+
+/////// ui/!layout/channel_entersk
+
+
+
+Enter Channel Secret Key
+Введите секретный ключ канала
+
+
+
+/////// ui/!layout/channel_info_edit_warn
+
+
+
+Are you sure you want to do
+Уверены, что хотите
+
+Edit Channel Info
+Изменить информацию о канала
+
+Incomplete Channel Information
+Неполная информация о канале
+
+You are attempting to edit channel information that has not been completely downloaded.
+Вы пытаетесь редактировать информацию канала, которая не была полностью скачана.
+
+
+
+/////// ui/!layout/channel_info_unsaved_warn
+
+
+
+Click the Save Changes or Cancel Edit button before selecting another channel.
+Нажмите кнопку Сохранить изменения или Отменить изменения прежде чем перейти в другой канал.
+
+Unsaved Changes
+Несохраненные изменения.
+
+You have not saved the changes made to the information for this channel.
+Вы не сохранили изменения над информацией о канале.
+
+
+
+/////// ui/!layout/channel_infosavetopicwarn
+
+
+
+Back To Editing
+Назад к редактированию
+
+Channel Topic
+Описание канала
+
+If you continue, the topic will not have a matching signature and will not be visible until the owner re-saves the info.
+Если продолжить, описание не будет иметь подходящей подписи и не будет видно другим, пока хозяин не пересохранит информацию.
+
+Save Anyway
+Всё равно сохранить
+
+Unable to post new topic
+Не удалось опубликовать новое описание
+
+new topic must be signed by the channel owner.
+новое описание должно быть подписано хозяином канала.
+
+
+
+/////// ui/!layout/channel_purge_messages
+
+
+
+Clean Channel Outgoing Messages
+Очистить исходящие сообщения канала
+
+Move all message directives to end of shared data
+Переместить все директивы сообщений в конец расшаренных данных
+
+Remove deep orphaned outgoing commands older than
+
+
+Remove deep orphaned outgoing messages older than
+
+
+Remove deep orphaned outgoing private messages older than
+
+
+Remove invalid message directives from shared data
+
+
+Remove orphaned outgoing commands older than
+
+
+Remove orphaned outgoing messages older than
+
+
+Remove orphaned outgoing private messages older than
+
+
+Remove outgoing commands older than
+
+
+Remove outgoing messages older than
+
+
+Remove outgoing private messages older than
+
+
+
+
+/////// ui/!layout/channel_purgechannels
+
+
+
+Clean Channel List
+Очистить список каналов
+
+Last time gathered over
+Последнее получение было более
+
+Last time online over
+В последний раз онлайн более
+
+Last time running over
+Последний раз выполнялось более
+
+days ago
+дней назад
+
+
+
+/////// ui/!layout/channel_purgeusers
+
+
+
+Apply continuously
+Применять постоянно
+
+Clean Channel User List
+Очистка списка пользователей канала
+
+Remove non-sharing users that have been offline
+Удалять нерасшаривающих пользователей, которых не было
+
+Remove sharing users that have been offline
+Удалять расшаривающих пользователей, которых не было
+
+
+
+/////// ui/!layout/channel_share_unsaved_warn
+
+
+
+You have not saved the changes made to your shared items for this channel.
+Вы не сохранили изменения от расшаренного в этом канале.
+
+
+
+/////// ui/!layout/channel_shareweb
+
+
+
+Add Web Link
+Добавить веб-ссылку
+
+optional
+опционально
+
+
+
+/////// ui/!layout/channel_sharexfer
+
+
+
+Add Selected Transfers
+Добавить выбранные передачи
+
+Mirror Selected Categories
+Дублировать выбранные категории
+
+Share Transfers
+Расшаривать передачи
+
+
+
+/////// ui/!layout/channel_stream_player_settings
+
+
+
+Channel Stream Player
+Проигрыватель вещаний в каналах
+
+Custom player path
+Свой путь до проигрывателя
+
+Fallback Stream Play Method
+Запасной метод воспроизведения вещаний
+
+Try to launch streams in FFmpeg
+Пробывать запускать вещания в FFmpeg
+
+Try to launch streams in VLC Media Player
+Пробывать запускать вещания в VLC Media Player
+
+asx playlist
+asx плейлист
+
+m3u playlist
+m3u плейлист
+
+pls playlist
+pls плейлист
+
+
+
+/////// ui/!layout/channel_streamlist_addfile
+
+
+
+Add File
+Добавить файл
+
+
+
+/////// ui/!layout/channel_streamlist_addfile_reminder
+
+
+
+Don't show this reminder again
+Не напоминать снова
+
+Reminder
+Напоминание
+
+This can be done using free open-source tools.
+Это можно сделать свободно-открытыми программами.
+
+Video files
+Видео файлы
+
+Visit
+Перейдите
+
+and others
+и другие
+
+can be easily converted into a
+с легкостью конвертируемо в
+
+file that is suitable for streaming.
+файл, подходящий для вещания.
+
+for simple instructions and examples, or press the help button or F1 key.
+для простых инструкцих или примеров, или нажмите на кнопку помощи или клавишу F1.
+
+
+
+/////// ui/!layout/channel_streamlist_addsleep
+
+
+
+Add Intermission
+Добавить перерыв
+
+Seconds
+секунд(ы)
+
+
+
+/////// ui/!layout/channel_streamlist_addurl
+
+
+
+Add Live Stream
+Добавить прямое вещание
+
+IMPORTANT
+ВАЖНО
+
+Streaming HTTP URL
+HTTP-адрес вещания
+
+The stream will be relayed in the channel as-is, in real-time, and will not be processed for pacing cues or other format-specific information.
+Вещание будет передано в канал как есть в реальном времени и не будет тронуто для вставки временных меток или другой форматозависимой информации.
+
+This must be a connection to a streaming media server or media player/transcoder, not an ordinary static file on a web site.
+Это должно быть соединением к вещательному медиасервера или проигрывателю/транскодеру, не обычным статическим файлом на веб-сайте.
+
+
+
+/////// ui/!layout/channel_streamlist_edittitle
+
+
+
+Edit Title
+Изменить заголовок
+
+
+
+/////// ui/!layout/channel_streamlist_startoffset
+
+
+
+Start Streaming Item At Offset
+Начать вещание элемента со смещения
+
+
+
+/////// ui/!layout/channel_useredit
+
+
+
+Edit Local User
+Изменить локального пользователя
+
+
+
+/////// ui/!layout/channeladd_url
+
+
+
+Add Channel From URL
+Добавить канал по ссылке
+
+
+
+/////// ui/!layout/channels_change_key
+
+
+
+Apply to all channels
+Применить ко всем каналам
+
+Apply to channels that use the default user name
+Применить к каналам использующим стандартное имя пользователя
+
+Apply to channels that use the previous key
+Применить к каналам использующим старый ключ
+
+New channels will use this key by default
+Новые каналы будут использовать этот ключ по умолчанию
+
+Private Key
+Приватный ключ
+
+Public/private key pairs are used for message encryption and access level persistence within each channel.
+Публичная/приватная пара ключей используется для шифрования сообщений и поддержания уровней доступа в каждом канале.
+
+
+
+/////// ui/!layout/channels_change_name
+
+
+
+Apply to channels that use the previous name
+Применить к каналам использующим старое имя
+
+Don't change the name used in any existing channel
+Не менять имя ни в каких нынешних каналах
+
+New channels will use this name by default
+Новые каналы будут использовать это имя по умолчанию
+
+
+
+/////// ui/!layout/channels_empty_list
+
+
+
+Channel List Empty
+Список каналов пуст
+
+Don't show this again
+Не показывать снова
+
+Empty Channel List
+Пустой список каналов
+
+Would you like to gather a list of channels from other
+Хотите получить список каналов от других
+
+
+
+/////// ui/!layout/channels_sk_warning
+
+
+
+Are you sure you want to copy the key to the
+Точно уверены, что хотите скопировать ключ для
+
+Be careful with the channel secret
+Будьте осторожны с секретом от канала
+
+The secret key allows anyone to fully control this channel.
+Секретный ключ открывает любому полный контроль над каналом.
+
+Warning
+Предупреждение
+
+
+
+/////// ui/!layout/channels_time_reminder
+
+
+
+Accurate Time Is Important
+Важно точное время
+
+Channels will not work correctly if your computer's clock is off by more than five minutes.
+Каналы не будут нормально работать, если часы на компьютере сбились более чем на пять минут.
+
+
+
+/////// ui/!layout/checkud
+
+
+
+Check For Update
+Проверить обновления
+
+Checking For Updates
+Проверяю обновления
+
+Please stand
+Подождите
+
+
+
+/////// ui/!layout/closeprompt
+
+
+
+Close Button Action
+Действие кнопки Закрыть
+
+Completely exit the program
+Полностью выйти из программы
+
+Continue running in the
+Продолжить работать в
+
+Minimize to tray
+Свернуть в трей
+
+Set as default action
+Сделать стандартным действием
+
+You can exit the program at any time by right-clicking the tray icon and selecting
+Можно выйти из программу в любое время: правый клик по иконке в трее
+
+from the popup menu.
+из всплывающего меню.
+
+run in background
+работать в фоне
+
+
+
+/////// ui/!layout/closewarn
+
+
+
+Click Cancel to continue using the program.
+Нажмите Отмена, чтобы продолжить пользоваться программой.
+
+Click OK to completely exit Tixati.
+Нажмите ОК, чтобы полностью закрыть Tixati.
+
+The tray icon is not being displayed due to an error.
+Иконка в трее не отображается из-за ошибки.
+
+Tray Icon Failure
+Ошибка иконки трея
+
+
+
+/////// ui/!layout/config_autosel
+
+
+
+Always Select
+Всегда выбирать
+
+Apply Filters To Single-File Transfers
+Применять фильтры к однофайловым передачам
+
+Default Preset For New Transfers
+Стандартная преднастройка для новых передач
+
+File Auto-Select
+Автовыбор файлов
+
+If there are two or more files matching, they will be downloaded in order.
+Если два или более файлов совпадают, они будут скачаны по порядку.
+
+Match Case
+Регистрозависимость
+
+Matching files will be downloaded from beginning to end.
+Совпадающие файлы будут скачаны с начала до конца.
+
+Maximum Bytes
+Максимум байт
+
+Minimum Bytes
+Минимум байт
+
+Move Single File Out Of Containing Folder
+Переместить один файл из всей папки
+
+Never Select
+Никогда не выбирать
+
+One entry per line.
+Одна запись на строку.
+
+Only Select
+Только выбирать
+
+Preset
+Преднастройка
+
+Size Threshold
+Пороговый размер
+
+Specify a priority by itself on a line, in square brackets, followed by filename match lines.
+Укажите приоритет сам по себе на строке, в квадратных скобках, затем следуют строки с именами файлов.
+
+These filters are applied to all file names when a new transfer is loaded.
+Эти фильтры применяются ко всем названиям файлов когда добавляется новая передача.
+
+Valid priorities
+Допустимые приоритеты
+
+Wildcards
+Символы подстановки
+
+of largest
+из наибольших
+
+to use a custom sequential settings preset for match lines following it.
+для использования своих преднастроек последовательной загрузки для строк шаблонов, которые следуют за этим.
+
+
+
+/////// ui/!layout/config_client_filter
+
+
+
+Always Allow
+Всегда разрешать
+
+Apply To Running Peers
+Применить к текущим участникам
+
+Client ID
+Client ID
+
+Never Allow
+Никогда не разрешать
+
+Only Allow
+Разрешать только этим
+
+Peer ID
+Peer ID
+
+These filters are applied to all client IDs.
+Эти фильтры применяются ко всем client IDs.
+
+These filters are applied to all peer IDs.
+Эти фильтры применяются ко всем peer IDs.
+
+
+
+/////// ui/!layout/config_lan_peers
+
+
+
+Default Off
+Изначально выкл.
+
+Default On
+Изначально вкл.
+
+Disabled
+Выключено
+
+Enabled
+Включено
+
+Regularly add the following peers to every running channel
+Регулярно добавлять этих участников в каждый работающий канал
+
+Regularly add the following peers to every running transfer
+Регулярно добавлять этих участников в каждую работающую передачу
+
+SSDP Local Peer Discovery
+Обнаружение локальных участников по SSDP
+
+Secure Local Resource Discovery
+Secure Local Resource Discovery
+
+This will use UDP multicast broadcasts to find other clients in common channels on the local network.
+Это задействует мультивещание по UDP, чтобы найти клиентов обычных каналов в локальной сети.
+
+This will use UDP multicast broadcasts to find other clients in common transfers on the local network.
+Это задействует мультивещание по UDP, чтобы найти клиентов обычных передач в локальной сети.
+
+
+
+/////// ui/!layout/config_notifications
+
+
+
+Add Sound
+Добавить звук
+
+Download Completion Sound
+Звук завершения загрузки
+
+Each channel can have custom notifications
+Каждый канал может иметь отдельные уведомления
+
+Each contact can have custom notifications
+Каждый контакт может иметь отдельные уведомления
+
+Each file can have custom notifications
+Каждый файл может иметь отдельные уведомления
+
+Flash tray icon on add or reply
+Мигать иконкой в трее при добавлении или ответе
+
+Flash tray icon on chat activity
+Мигать иконкой в трее при активности в чате
+
+Flash tray icon on incoming private message
+Мигать иконкой в трее при новом личном сообщении
+
+Flash tray icon when a contact goes online
+Мигать иконкой в трее когда контакт выходит в онлайн.
+
+Flash tray icon when download completes
+Мигать иконкой в трее при завершении загрузки
+
+Join Sound
+Звук прихода
+
+Leave Sound
+Звук ухода
+
+Message Sound
+Звук сообщения
+
+Nothing
+Ничего
+
+Offline Sound
+Звук офлайн
+
+Online Sound
+Звук онлайн
+
+Private Message Sound
+Звук личного сообщения
+
+Remove Sound
+Убрать звук
+
+Reply Sound
+Звук ответа
+
+Show Transfers
+Показать загрузки
+
+Show full chat message in tray balloon
+Показывать полное сообщение из чата во всплывающем окошке трея
+
+Show full private message in tray balloon
+Показывать полное личное сообщение во всплывающем окошке трея
+
+Show tray balloon on chat activity
+Показывать всплывающее окошко в трее при активности в чате
+
+Show tray balloon on incoming private message
+Показывать всплывающее окошко в трее при входящем личном сообщении
+
+Show tray balloon when a contact goes online
+Показывать всплывающее окошко в трее когда контакт выходит в онлайн
+
+Show tray balloon when download completes
+Показывать всплывающее окошко в трее при завершении загрузки
+
+Tray balloon click action
+Действие при нажатии на окошко в трее
+
+second delay
+секунд(а) задержки
+
+
+
+/////// ui/!layout/config_sequential
+
+
+
+Aggressiveness percent
+Агрессивность в процентах
+
+File tail MB
+Хвост файл в MB
+
+File tail percent
+Хвост файла в процентах
+
+Minimum seed count
+Минимальное кол-во раздающих
+
+Progress limit percent
+Огранич. по прогрессу скачивания в процентах
+
+Sequential Download Options
+Настройки последовательного скачивания
+
+
+
+/////// ui/!layout/config_tooltips
+
+
+
+Channel Forum View
+Окно форума канала
+
+Channel Users List
+Список пользователей канала
+
+Channels List
+Список каналов
+
+DHT Views
+Окно DHT
+
+Ellipsized Text
+Эллиптический текст
+
+Extra Info
+Доп. информация
+
+IP Filters
+IP-фильтры
+
+RSS Feed URLs List
+Список адресов RSS ленты
+
+RSS Feeds List
+Список RSS лент
+
+RSS Published Items List
+Список опубликованных элементов RSS
+
+Search Results
+Результаты поиска
+
+Transfer Categories
+Категории передач
+
+Transfer Files Tab
+Вкладка файлов передачи
+
+Transfer Peers Tab
+Вкладка участников передачи
+
+Transfer Pieces Tab
+Вкладка частей передачи
+
+Transfer Trackers Tab
+Вкладка трекеров передачи
+
+Transfers List
+Список передач
+
+
+
+/////// ui/!layout/coresaveerror
+
+
+
+Error Saving Config File
+Ошибка при сохранении файла конфигурации
+
+
+
+/////// ui/!layout/dblclick
+
+
+
+Behavior section.
+Раздел поведения.
+
+Channel Forum Message
+Сообщение на форуме канала
+
+Connect/Disconnect
+Подключиться/Отключиться
+
+Download/Open Link
+Скачать/Открыть ссылку
+
+Expand/Collapse
+Развернуть/Свернуть
+
+Expand/Collapse All
+Развернуть/Свернуть всё
+
+Feed URL
+Адрес ленты
+
+Ignore/Unignore
+Игнорировать/Разигнорировать
+
+Objects Inside Property Tabs
+Объекты во вкладке Свойства
+
+Objects Inside Tree View
+Объекты в древовидн. списке
+
+Open File/Folder
+Открыть файл/папку
+
+Open Location/Folder
+Открыть локацию/папку
+
+Other
+Другое
+
+Published Item
+Опубликованный элемент
+
+RSS Feed
+RSS лента
+
+Scheduler Task
+Задача планировщика
+
+Select Double-Click Actions
+Выбрать действие двойного щелчка
+
+Shell Open
+Открыть оболочку
+
+This window can be accessed at any time from the main settings
+Это окно всегда доступно в настройках программы
+
+Transfer
+Передача
+
+Zero
+Ноль
+
+under the User Interface
+в разделе Интерфейс
+
+
+
+/////// ui/!layout/delconf
+
+
+
+Change preferences relating to this window
+Изменить настройки касающиеся этого окна
+
+Delete Files
+Снести файлы
+
+Delete Local Files
+Снести локальные файлы
+
+Delete Only
+Только снести
+
+Delete Or Trash
+Снести или в корзину
+
+Delete these local
+Удалить эти локальные
+
+Keep Files
+Не трогать файлы
+
+Some files may be merged with other transfers
+Некоторые файлы могут быть совмещены с другими передачами
+
+Trash Files
+Файлы в корзину
+
+Trash Only
+Только в корзину
+
+
+
+/////// ui/!layout/deletemetadirsel
+
+
+
+Select Auto-Delete
+Выбрать автоудаление
+
+
+
+/////// ui/!layout/dr
+
+
+
+If you enjoy using this software, please help us keep going.
+Если вам нравится наша программа, помогите нам остаться на плаву.
+
+This software is made by an independent developer.
+Эта программа разрабатывается независимым разработчиком.
+
+Unlike other torrent apps, it has no ads, no spyware, and no sleazy tracking or mining schemes.
+В отличие от других торрентокачалок, тут нет ни рекламы, ни слежки, и никаких стремных телеметрий или майнинга.
+
+
+
+/////// ui/!layout/dscok
+
+
+
+Associated with decentralized sharing channel links
+Ассоциировано со ссылками децентрализованных каналов общения
+
+Channel Link Association
+Ассоциация со ссылками на каналы
+
+Tixati is the default dsc
+Tixati является обработчиком для
+
+link handler
+по умолчанию
+
+
+
+/////// ui/!layout/dscprompt
+
+
+
+Handle Channel Links
+Обрабатывать ссылки на каналы
+
+Set Tixati as the default link handler
+Сделать Tixati обработчиком ссылок по умолчанию
+
+Tixati is not the default decentralized sharing channel
+Tixati не является обработчиком ссылок на каналы общения
+
+
+
+/////// ui/!layout/duplicates
+
+
+
+Loaded Duplicate Transfers
+Добавлены передачи-дубликаты
+
+Merge trackers and web seed URLs into existing
+Совместить трекеры и адреса веб-раздачи в текущую
+
+Merge trackers into existing
+Совместить трекеры в текущую
+
+Merge web seed URLs into existing
+Совместить адреса веб-радачи в текущую
+
+
+
+/////// ui/!layout/duplicates_conf
+
+
+
+Auto-Created From RSS
+Автом. созданное из RSS
+
+Contexts
+Контексты
+
+Created From Watched Folder
+Создано из наблюдаемой папки
+
+Created In Add Window Or Shell
+Создано в окне добавления или командой
+
+Default Action
+Стандартное действие
+
+Duplicate Transfer Prompt
+Запрос о дублирующей передаче
+
+Manually Created From RSS
+Вручную создано из RSS
+
+Merge Trackers Into Existing Transfers
+Совместить трекеры с текущими передачами
+
+
+
+/////// ui/!layout/edit_desc
+
+
+
+Edit Description
+Редактировать описание
+
+
+
+/////// ui/!layout/edit_tracker
+
+
+
+Edit Tracker
+Редактировать трекер
+
+
+
+/////// ui/!layout/editipfilter
+
+
+
+Edit IP Filter
+Редактировать IP-фильтр
+
+
+
+/////// ui/!layout/edittrackers
+
+
+
+Edit Trackers
+Редактировать трекеры
+
+Put a blank line between groups.
+Добавьте пустые строки между группами.
+
+
+
+/////// ui/!layout/filecompletionshellcmds
+
+
+
+Completion of files with specific extension
+Завершение файлов с определенными расширениями
+
+File Completion Shell Commands
+
+
+Multiple extensions
+Несколько расширений
+
+Only the first command that matches a particular file or transfer will be run.
+Только первая команда, которая находит определенный файл или передачу, будет исполнена
+
+Per file upon completion of whole transfer
+За каждый файл при завершении всей передачи
+
+Per file with specific extension upon completion of whole transfer
+За файл с определенным расширением при завершении всей передачи
+
+Placeholders for unquoted path components
+Заглушки для частей пути без кавычек
+
+Run command upon completion of whole transfer
+Исполнить команду при завершении всей передачи
+
+The
+
+
+The placeholder
+Заглушка
+
+Upon individual file completion
+По завершении отдельных файлов
+
+//# original
+placeholder is equivlent to
+заглушка эквивалентна
+//# ahead of time fix
+placeholder is equivalent to
+заглушка эквивалентна
+
+will be substituted for the full path of the file or folder, in quotes.
+будет замещена полным путем к файлу или папке, в кавычках
+
+
+
+/////// ui/!layout/filelocfoldersel
+
+
+
+Select File Location
+Выбрать локацию файла
+
+
+
+/////// ui/!layout/filemocfoldersel
+
+
+
+Select MOC Location
+Выбрать локацию Перем. по Заверш.
+
+
+
+/////// ui/!layout/incfoldersel
+
+
+
+Select Download Folder
+Выбрать папку для скачанного
+
+
+
+/////// ui/!layout/incfolderwarn
+
+
+
+Download Folder Not Found
+Папка скачанного не найдена
+
+New Download Folder
+Новая папка скачанного
+
+
+
+/////// ui/!layout/initconfig
+
+
+
+Automatic Limiter
+Автоматическое ограничение
+
+Bandwidth Throttle
+Ограничение скорости
+
+Check for Tixati updates every week
+Проверять обновления Tixati еженедельно
+
+Default Location To Save Downloaded Files
+Стандартная локация для скачанных файлов
+
+Incoming KB/s Limit
+Ограничение входящего KB/s
+
+Incoming Port
+Порт на прием
+
+Outgoing KB/s Limit
+Ограничение исходящего KB/s
+
+Please take a moment to review the default settings.
+Пожалуйста, уделите минуту посмотреть на стандартные настройки
+
+Randomize port every
+Выбирать случайный порт каждые
+
+These settings will work on any system, so if you don't know what to do, just click
+Эти настройки будут работать на любой системе, если не знаете что делать, нажмите
+
+recommended for ADSL/Cable internet
+рекомендуется для кабельного интернета или по ADSL
+
+
+
+/////// ui/!layout/load_settingsarch_error
+
+
+
+Error Importing Config From File
+Ошибка импорта файла конфигурации из файла
+
+
+
+/////// ui/!layout/load_settingsarch_reminder
+
+
+
+All current settings, transfers
+Все текущие настройки, передачи
+
+Continue
+Продолжить
+
+Please be patient.
+Пожалуйста, подождите.
+
+RSS feeds, IP filters, and scheduler events will be lost and overwritten with the contents of the archive file you load.
+RSS ленты, IP-фильтры, и задачи планировщика будут утеряны и перезаписаны содержанием загружаемого файла.
+
+THIS WILL OVERWRITE EVERYTHING IN TIXATI
+ЭТО ПЕРЕЗАПИШЕТ ВСЁ В TIXATI
+
+There may be a delay of up to
+Может быть задержка до
+
+Tixati will restart after importing the configuration archive.
+Tixati перезапустится после импорта конфигурационного пакета.
+
+but not downloaded
+но не скачан
+
+seconds.
+секунд(ы).
+
+
+
+/////// ui/!layout/load_settingsarchive_catsel
+
+
+
+After this operation is complete, Tixati will restart.
+После окончания этой операции, Tixati перезапустится
+
+Bandwidth Auto-Limiter
+Автоограничение скорости
+
+Select Import Categories
+Выбрать категории импорта
+
+Select Items To Import
+Выбрать элементы для импорта
+
+This Will Overwrite Current Config Files
+Это перезапишет текущие файлы конфигурации
+
+This may take a minute or two.
+Может понадобиться пару минут.
+
+UI Colors
+Цвета интерфейса
+
+UI Element Sizing, Position, Sorting
+Размер, размещение и сортировка интерфейса
+
+not including downloaded files
+не включая закачанные файлы
+
+
+
+/////// ui/!layout/menucustomize
+
+
+
+Customize Menu
+Настроить меню
+
+Press F1 or the Help button for format details.
+Нажмите F1 или кнопку Помощи для описания формата.
+
+Test
+Протестировать
+
+
+
+/////// ui/!layout/move_conflict
+
+
+
+Apply to All
+Применить ко всем
+
+Conflicting Local Files Already Exist
+Конфликтующие локальные файлы уже существуют
+
+Existing Files
+Существующие файлы
+
+
+
+/////// ui/!layout/move_file_conflict
+
+
+
+Moving
+Перемещение
+
+Name Conflict At Destination
+Конфликт имен в месте назначения
+
+The destination location already contains a folder with the same name as the file you are trying to move.
+В целевой локации уже есть папка с таким же именем как и у перемещаемого файла.
+
+
+
+/////// ui/!layout/move_file_dest_large
+
+
+
+The destination location already contains a larger file with the same name as the file you are trying to move.
+Целевая локация уже содержит больший файл с тем же именем как и перемещаемый файл.
+
+
+
+/////// ui/!layout/move_file_merge_confirm
+
+
+
+File Already Exists At Destination
+Файл уже существует в месте назначения
+
+The destination location contains a file with the same name as the one you are trying to move.
+Целевая локация уже содержит файл с тем же именем как и перемещаемый файл.
+
+
+
+/////// ui/!layout/move_folder_conflict
+
+
+
+The destination location already contains a file with the same name as the folder you are trying to move.
+Целевая локация уже содержит файл с тем же именем как и перемещаемая папка.
+
+
+
+/////// ui/!layout/move_folder_merge_confirm
+
+
+
+Folder Already Exists At Destination
+Папка уже существует в том месте
+
+The destination location contains a folder with the same name as the one you are trying to move.
+Целевая локация уже содержит папку с тем же именем как и перемещаемая.
+
+
+
+/////// ui/!layout/mrucustomize
+
+
+
+Customize Location Shortcuts
+Настроить ярлыки локация
+
+Location sub-menu.
+Подменю локаций.
+
+Path
+Путь
+
+These folder shortcuts appear when a transfer is right clicked, under the Local Files
+Эти ярлыки папок появляются при нажатии правой кнопкой мыши по передачам, в Локальных файлах
+
+Use the buttons at the bottom of this window to add or remove folders, and drag the folders in the list to customize the order.
+Используйте кнопки внизу окна, чтобы добавить или убрать папки, папки из списка можно поменять местами перетаскиванием мышкой.
+
+
+
+/////// ui/!layout/newseedbrowseforfolder
+
+
+
+Select folder for new seed
+Выбрать папку для новой раздачи
+
+
+
+/////// ui/!layout/nodhtwarn
+
+
+
+DHT Not Running
+DHT не работает
+
+DHT needs to be running for trackerless searching and magnet-links.
+DHT должен работать для бестрекерного поиска и магнет-ссылок.
+
+Switch to the DHT window and press the
+Перейдите в окно DHT и нажмите клавишу
+
+button.
+.
+
+
+
+/////// ui/!layout/opentor
+
+
+
+After the source files have been selected, they will be scanned to build meta-info.
+После выбора исходных файлов, они будут просканированы для генерации метаданных
+
+Browse for
+Выбрать
+
+Create New Seed
+Создать новую раздачу
+
+Default Tab
+Вкладка по умолчанию
+
+Editable Full Paths
+Редактируемые полные пути
+
+Folder Names
+Названия папок
+
+Full Paths
+Полные пути
+
+Horizontal Layout
+Горизонтальное оформление
+
+If the size is too large, the swarm will not operate efficiently.
+Если размер слишком большой, то рой не будет работать эффективно
+
+Last Active Tab
+Последняя активная вкладка
+
+Location/MOC Controls
+Управление локацией/Перем. по Заверш.
+
+Once the meta-info has been built, a magnet-link or
+После генерации метаданных, магнет-ссылка или
+
+Open Magnet-Link
+Открыть магнет-ссылку
+
+PEX peer exchange and DHT will not be used to find peers in any transfer that has the PRIVATE flag set.
+PEX обмен участниками и DHT не будут использоваться для обнаружения участников в любой передаче помеченной как PRIVATE.
+
+Piece size
+Размер части
+
+Select source file or folder
+Выбрать исходный файл или папку
+
+Set PRIVATE flag
+Проставить метку PRIVATE
+
+This option should be selected if a private access-controlled tracker will control this swarm.
+Эта опция должна быть выбрана, если закрытый трекер (с контролем доступа) будет заведовать этим роем.
+
+Use this option to create and seed a new swarm from a local file or folder.
+Используйте эту опцию для создания и раздачи новой раздачи локального файла или папки.
+
+Vertical Layout
+Вертикальное оформление
+
+file can be saved and distributed for other users to join the swarm.
+файл может быть сохранен и передан другим пользователям для подключения к раздаче.
+
+piece size too small will cause excess protocol traffic within the swarm.
+Размер части слишком мал и может привести к лишнему протокольному трафику у этой раздачи.
+
+
+
+/////// ui/!layout/piecepathsel
+
+
+
+Select Piece Cache Folder
+Выбрать папку для кеша частей
+
+
+
+/////// ui/!layout/piecesfolderwarn
+
+
+
+Unable to find
+Не могу найти
+
+Use Default Folder
+Использовать стандартную папку
+
+create partial piece storage folder
+создать папку для хранения неполных частей
+
+
+
+/////// ui/!layout/preload
+
+
+
+Apply To All
+Применить ко всем
+
+Apply location, move on complete, and start/stop/remove to remaining freshly-loaded transfers
+Применить локацию, перем. по заверш., и старт/стоп/удалить к оставшимся недавно добавленным передачам
+
+Auto-continue non-activity timeout
+Таймаут автом. продолжения при неактивности
+
+Don't move individual files/folders upon completion
+Не перемещать отдельные файлы/папки при завершении
+
+Load Transfer
+Добавление передачи
+
+Next In Queue
+Следующая в очереди
+
+Show this window after loading multi-file
+Показывать это окно при загрузке многих файлов
+
+Show this window after loading multi-file magnet link
+Показывать это окно при загрузке многофайловой магнет-ссылки
+
+Show this window after loading single-file
+Показывать это окно при загрузке одного файла
+
+Show this window after loading single-file magnet link
+Показывать это окно при загрузке однофайловой магнет-ссылки
+
+Use a blank line between tracker groups.
+Вставляйте пустую строку между группами трекеров.
+
+
+
+/////// ui/!layout/preload_conf
+
+
+
+Conditions
+Условия
+
+Load Transfer Prompt
+Запрос добавления передачи
+
+Location and MOC Controls
+Настройка локации и Перем. по Заверш.
+
+Magnet Link Resolving To Multiple Files
+Магнет-ссылка преобразуется в несколько файлов
+
+Magnet Link Resolving To Single File
+Магнет-ссылка преобразуется в один файл
+
+Meta-Data Containing Multiple Files
+Метаданные содержат несколько файлов
+
+Meta-Data Containing Single File
+Метаданные содержат один файл
+
+Prompt Timeout
+Таймаут запроса
+
+Vertical Location and MOC Layout
+Верт. оформление локации и Перем. по Заверш.
+
+
+
+/////// ui/!layout/preload_conflict
+
+
+
+Go Back
+Назад
+
+Local Files Already Exist
+Локальные файлы уже существуют
+
+
+
+/////// ui/!layout/preload_dupwarn
+
+
+
+Duplicate Transfer Name
+Дубликат названия передачи
+
+Each transfer should have a different name to eliminate the possibility of local file conflicts.
+Каждая передача должна иметь своё имя, чтобы исключить возможность конфликта файлов
+
+Existing Transfer With Matching Name
+Существующая передача с таким же названием
+
+
+
+/////// ui/!layout/prioritythrottlereminder
+
+
+
+Bandwidth Throttle Not Set
+Ограничение скорости не включено
+
+
+
+/////// ui/!layout/protook
+
+
+
+Associated with magnet links
+Ассоциировано с магнет-ссылками
+
+Magnet Link Association
+Ассоциация магнет-ссылок
+
+Tixati is the default magnet link handler
+Tixati — обработчик магнет-ссылок по умолчанию
+
+
+
+/////// ui/!layout/protoprompt
+
+
+
+Handle magnet links
+Обрабатывать магнет-ссылки
+
+Set Tixati as the default magnet link handler
+Задать Tixati стандартным обработчиком магнет-ссылок
+
+Tixati is not the default magnet link handler.
+Tixati сейчас не стандартный обработчик магнет-ссылок
+
+
+
+/////// ui/!layout/rename_conf
+
+
+
+New Folder Name Already Exists
+Новое имя папки уже существует
+
+Renaming
+Переименовываю
+
+Would you like to attempt to merge the
+Хотите попробывать совместить
+
+
+
+/////// ui/!layout/rename_file_conf
+
+
+
+New File Name Already Exists
+Новое имя файла уже существует
+
+
+
+/////// ui/!layout/rename_file_conflict
+
+
+
+Name Already Exists
+Имя уже существует
+
+The name you specified for this file already exists and can not be merged.
+Файл с заданным именем уже существует и не может быть совмещён.
+
+
+
+/////// ui/!layout/rename_file_too_large
+
+
+
+The name you specified is already in use by another file that is larger than the one being renamed.
+Заданное имя уже используется другим файлом, который больше того, что переименовывается.
+
+
+
+/////// ui/!layout/rename_folder_conflict
+
+
+
+The name you specified for this folder is already in use by a file.
+Имя заданное для папки уже используется файлом.
+
+
+
+/////// ui/!layout/replaceconfirm
+
+
+
+Replace
+Заменить
+
+
+
+/////// ui/!layout/rssediturls
+
+
+
+Edit RSS Feed URLs
+Редактировать адреса RSS лент
+
+
+
+/////// ui/!layout/rsstestsaveprompt
+
+
+
+RSS Feed Test
+Тест RSS лент
+
+Would you like to save the updated
+Хотите сохранить обновлённые
+
+
+
+/////// ui/!layout/save_settingsarchive_catsel
+
+
+
+Select Export Categories
+Выберите категории для экспорта
+
+Select Items To Export
+Выберите элементы для экспорта
+
+
+
+/////// ui/!layout/save_settingsarchive_error
+
+
+
+Error Exporting Config To File
+Ошибка экспорта конфигурации в файл
+
+
+
+/////// ui/!layout/saved_debug_file
+
+
+
+Report Saved
+Отчет сохранен
+
+Saved Report To File
+Отчет сохранен в файл
+
+
+
+/////// ui/!layout/savemetafiles
+
+
+
+To Folder
+В папке
+
+
+
+/////// ui/!layout/scheduler_catchup
+
+
+
+Run missed scheduler
+Выполнить пропущенные задачи
+
+Run them now
+Выполнить их сейчас
+
+Skip them
+Пропустить их
+
+
+
+/////// ui/!layout/shellassocprompt
+
+
+
+File And Link Association
+Ассоциация файлов и ссылок
+
+Open Channel From
+Открыть канал из
+
+Open Transfer From
+Открыть передачу из
+
+Revert on exit
+Восстановить при выходе
+
+links
+ссылки
+
+portable mode
+портативный режим
+
+
+
+/////// ui/!layout/shutdownwarn
+
+
+
+All downloads are complete.
+Все загрузки завершены.
+
+Auto Shutdown Activated
+Автовыключение активировано
+
+Shut Down Now
+Выключить сейчас
+
+System Shutdown
+Выключение системы
+
+
+
+/////// ui/!layout/socketparams_reminder
+
+
+
+Don't show this warning again
+Не показывать предупреждение снова
+
+Even small changes can greatly reduce your transfer speeds.
+Даже незначительные изменения могут сильно уменьшить скорость передач.
+
+Expert Users Only
+Только для продвинутых пользователей
+
+Please do not change any of the following settings unless you are very certain you understand them.
+Не меняйте тут никакие настройки, если только вы не твердо уверены, что понимаете их.
+
+Press F1 for more information at any time.
+Нажмите F1 в любой момент для подробного описания.
+
+
+
+/////// ui/!layout/ta_addrule
+
+
+
+Add Rule
+Добавление правила
+
+IF
+ЕСЛИ
+
+IS
+РАВЕН
+
+THEN
+ТОГДА
+
+WAIT
+ЖДИ
+
+average ping RTT
+средний RTT пингов
+
+from last
+за последние
+
+greater than
+больше чем
+
+high ping RTT
+пиковому RTT пинга
+
+less than
+меньше чем
+
+low ping RTT
+низкому RTT пинга
+
+lower
+уменьши
+
+outgoing throttle by
+исходящее ограничить на
+
+percent
+процента/-ов
+
+raise
+увеличь
+
+seconds before checking rules again
+секунд перед повторной проверкой правил
+
+success rate
+доля успешных
+
+target ping RTT multiplied by
+целевой RTT умноженный на
+
+
+
+/////// ui/!layout/ta_editrule
+
+
+
+Edit Rule
+Редактировать правило
+
+
+
+/////// ui/!layout/testrssfeed
+
+
+
+Copy Formatted Results
+Скопировать форматированные результаты
+
+Copy Item Names Only
+Скопировать только названия элементов
+
+Feed Retrieval
+Получение ленты
+
+Item Filtering
+Фильтрация элементов
+
+Pass
+В порядке
+
+Select All
+Выбрать все
+
+Test RSS Feed
+Тестировать RSS-ленту 
+
+
+
+/////// ui/!layout/throttlereminder
+
+
+
+Click the
+Нажмите
+
+For best download performance, it is important to set the outgoing bandwidth throttle to approximately
+Для наилучшей скорости скачивания требуется выставить ограничение скорости отдачи примерно в
+
+Outgoing Bandwidth Throttle Not Set
+Ограничение исходящей скорости не включено
+
+Press F1 now for more information.
+Нажмите сейчас F1 для подробной информации.
+
+button at the top of the main window to adjust the throttles.
+кнопку вверху основного окна для настройки регулировки.
+
+of total outgoing capacity, or activate the Bandwidth Auto-Limit feature.
+от полной пропускной способности, или включить Автоограничитель скорости.
+
+
+
+/////// ui/!layout/trackerindividualsettings
+
+
+
+Add to New
+Добавлять к новым
+
+Advanced Options
+Расширенные настройки
+
+All headers and peer IDs should be URL encoded.
+Все заголовки и ID участников должны быть в URL-кодировке
+
+An empty
+Пустой
+
+If a match line is found anywhere in a tracker URL, the option lines will apply to that tracker.
+Если найдено соотвествие где-либо в адресе трекера, то параметры будут применены к трекеру.
+
+Individual Tracker Options
+Опции отдельных трекеров
+
+Match lines are followed by one or more option lines, and then a blank line.
+За строками с поисковым шаблоном следуют одна или несколько строк с опциями, а затем пустая строка.
+
+Remove From New
+Удалять из новых
+
+Separate tracker groups with a blank line.
+Разделяйте группы трекеров пустой строкой
+
+Skip Announce
+Пропустить анонс
+
+The regex
+Регулярка
+
+This is the default.
+Это является умолчанием.
+
+Trackers that match any of these lines will not make announcements.
+Трекеры, которые совпадают с любой из строк не будут делать анонсы.
+
+When a new transfer is loaded, these trackers will be added if not already present.
+Когда новая передача добавляется, эти трекеры будут добавлены если их ещё нет.
+
+When a new transfer is loaded, trackers that match any of these lines will be removed.
+Когда новая передача добавляется, трекеры, совпадающие с любой из строк
+
+alias
+alias
+
+cookie
+cookie
+
+header
+header
+
+on its own line to apply the following lines to created torrents.
+на отдельных строках, чтобы применять следующие строки к создаваемым торрентам.
+
+on its own line to apply the following lines to private torrents.
+на отдельных строках, чтобы применять следующие строки к приватным торрентам.
+
+on its own line to not apply the following lines to created torrents.
+на отдельных строках, чтобы не применять следующие строки к создаваемым торрентам.
+
+on its own line to not apply the following lines to private torrents.
+на отдельных строках, чтобы не применять следующие строки к приватным торрентам.
+
+peerid
+peerid
+
+prefix can be used at the beginning of any line.
+префикс может быть в начале любой строки.
+
+prefix can be used at the beginning of any match line.
+префикс может быть в начале любой строки с шаблоном.
+
+will reset to default.
+будет сброшен до умолчаний.
+
+
+
+/////// ui/!layout/trackers_replace
+
+
+
+Contains
+Содержит
+
+Find and Replace Trackers
+Найти и заменить трекеры
+
+RegEx
+Регулярка
+
+Wildcard
+Символ подстановки
+
+
+
+/////// ui/!layout/trayaltreminder
+
+
+
+The menu normally accessed by right-clicking the tray icon can also be accessed by right-clicking the main window top toolbar.
+Это меню обычно доступно по правому щелчку по иконке в трее, а также по правому щелчку по панели инструментов главного окна.
+
+Tray Icon Disabled
+Иконка в трее отключена
+
+
+
+/////// ui/!layout/traymenu_reminder
+
+
+
+Right-click the top toolbar or tray icon to select alternate toolbar layouts or enable extra features such as RSS, Scheduler, Auto Startup
+Нажмите правой кнопкой мыши по панели инструментов или иконке в трее, чтобы выбрать другое расположение панелей или включить дополнительные функции как RSS, планировщик, автозапуск.
+
+Shutdown, and Bandwidth Presets.
+Выключение и преднастройки скорости.
+
+
+
+/////// ui/!layout/updateready
+
+
+
+An updated Tixati is now
+Обновленный Tixati теперь
+
+Check for updates every week
+Проверять обновления еженедельно
+
+Update Available
+Доступно обновление
+
+Visit the Tixati download page now
+Перейти на страницу скачивания Tixati
+
+
+
+/////// ui/!layout/watchformetadirsel
+
+
+
+Select Folder To Monitor
+Выбрать папку для наблюдения
+
+
+
+/////// ui/!layout/webuitemplatefoldersel
+
+
+
+Select Web Interface Template Folder
+Выбрать папку с шаблонами для веб-интерфейса
+
+
+
+/////// ui/!layout/xfercols
+
+
+
+Abs Bytes Complete
+Абс. байт готово
+
+Abs Bytes Complete of Total
+Абс. байт готово от всего
+
+Abs Bytes Remaining
+Абс. байт осталось
+
+Abs Bytes Total
+Абс. байт всего
+
+Bytes Complete
+Байт готово
+
+Bytes Complete of Total
+Байт готово от всего
+
+Bytes Downloaded
+Байт скачано
+
+Bytes Remaining
+Байт осталось
+
+Bytes Total
+Байт всего
+
+Bytes Uploaded
+Байт отдано
+
+Peers In Tree
+Участников в древе
+
+Peers View
+Окно участников
+
+Seeds View
+Окно раздающих
+
+Select Columns
+Выбрать столбцы
+
+Transfers View
+Окно передач
+
+UL Ratio
+Коэфф. отдачи
+
+
+
+/////// ui/!layout/xferlocfoldersel
+
+
+
+Select New Location
+Выбрать новую локацию
+
+
+
+/////// ui/!layout/xfermanage
+
+
+
+Load Defaults
+Подгрузить умолчания
+
+Standard
+Стандартный
+
+Transfer Queue Management Parameters
+Параметры управления очередью передач
+
+
+
+/////// ui/!layout/xfermoclocfoldersel
+
+
+
+Select Location
+Выбрать локацию
+
+
+
+/////// ui/!layout/memspeedprofile
+
+
+
+Allocations
+Аллокации
+
+Clear All
+Очистить всё
+
+Memory Alloc Speed
+Скорость аллокации памяти
+
+sec
+сек
+
+
+
+/////// ui/!layout/memstateprofile
+
+
+
+Memory Alloc State
+Состояние аллокации памяти
+
+Objs
+Объектов
+
+
+
+/////// ui/!layout/memstateprofile_inactive
+
+
+
+Create an empty file named
+Создайте пустой файл и именем
+
+Memory state profiling is not active.
+Профилирование памяти не включено.
+
+in the directory with the main program executable and restart.
+в папке рядом с исполняемым файлом программы и перезапустите.
+
+
+
+/////// ui/!layout/other_instance_wait
+
+
+
+Starting Tixati
+Запуск Tixati
+
+Waiting for other instance of Tixati to save and
+Ожидаю сохранения от другого процесса экземпляра Tixati и
+
+
+
+/////// ui/!layout/peerprop
+
+
+
+Connected
+Подключен
+
+Connection status and errors
+Статус соединения и ошибки
+
+Current Status
+Текущий статус
+
+Download Ratio
+Коэфф. скачанного
+
+File Bytes Received
+Файловых байт получено
+
+File Bytes Sent
+Файловых байт отправлено
+
+Implied Remote DL B/s
+Оценочное удал. вх. B/s
+
+Incoming File B/s
+Входящее файлов B/s
+
+Incoming Protocol B/s
+Входящее протокола B/s
+
+Incoming Total B/s
+Входящего всего B/s
+
+Outgoing File B/s
+Исходящее файлов B/s
+
+Outgoing Protocol B/s
+Входящее протокола B/s
+
+Outgoing Total B/s
+Исходящего всего B/s
+
+Protocol Bytes Received
+Байт протокола получено
+
+Protocol Bytes Sent
+Байт протокола отправлено
+
+Remote Address
+Удаленный адрес
+
+Total Bytes Received
+Всего байт получено
+
+Total Bytes Sent
+Всего байт отправлено
+
+Transfer Name
+Название передачи
+
+Upload
+Отдано
+
+
+
+/////// ui/!layout/profile_d
+
+
+
+File Operations
+Операции с файлами
+
+
+
+/////// ui/!layout/profile_dir_access
+
+
+
+Open Directories
+Открытые папки
+
+Open Watches
+Открытые наблюдения
+
+Read Bytes
+Прочитано байт
+
+Read Calls
+Вызовов чтения
+
+Sec
+Сек
+
+Write Bytes
+Записано байт
+
+Write Calls
+Вызовов записи
+
+
+
+/////// ui/!layout/profile_file_access
+
+
+
+Open Files
+Открытые файлы
+
+
+
+/////// ui/!layout/socketlog
+
+
+
+Ack Adj
+Ack Adj
+
+Loss Adj
+Loss Adj
+
+No Display
+Нет показаний
+
+Packets
+Пакеты
+
+Params
+Параметры
+
+Save Sorted By IP
+Сохранить в сортировке по IP
+
+Stat Dump
+Дамп стат.
+
+UPC Socket Log
+Лог UPC сокета
+
+
+
+/////// ui/!layout/socketparams
+
+
+
+Compatible
+Совместимо
+
+DEFAULT
+УМОЛЧАНИЕ
+
+Network Parameters
+Параметры сети
+
+Save And Apply
+Сохранить и применить
+
+Strict
+Строго
+
+
+
+/////// ui/!layout/stream_prop
+
+
+
+Play This Stream
+Воспроизвести вещание
+
+Playback
+Воспроизведение
+
+Segment
+Сегмент
+
+Segment Hashing
+Хеширование сегмента
+
+
+
+/////// ui/!layout/test_connpacer
+
+
+
+This test will cycle thousands of random simultaneous connection requests through the connection pacer.
+Этот тест произведет тысячи случайных одновременных соединений через обработчик соединений.
+
+This will not create any network activity, but it will temporarily slow down connections and other program operations.
+Это не создаст нагрузки на сеть или трафик, но временно замедлит соединения и другую работу программы.
+
+crash during this test may be a sign of system instability.
+Падение во время этого теста может означать нестабильность системы.
+
+
+
+/////// ui/!layout/upnp_log
+
+
+
+Save Report To File
+Сохранить отчет в файл
+
+UPNP/NATPMP Diagnostic Log
+Лог диагностики UPNP/NATPMP
+
+
+
+/////// ui/AddIPFilterWnd
+
+
+
+file
+файл
+
+
+
+/////// ui/AddRSSWnd
+
+
+
+categories
+категории
+
+no location selected
+не выбрана локация
+
+parameters
+параметры
+
+rss
+rss
+
+setfilter
+выбранный фильтр
+
+urls
+адреса
+
+
+
+/////// ui/AddSchedulerTaskChanMsgWnd
+
+
+
+scheduler
+планировщик
+
+
+
+/////// ui/AddSchedulerTaskSpecItemWnd
+
+
+
+channels
+каналы
+
+
+
+/////// ui/AddSchedulerTaskWnd
+
+
+
+temp
+временный
+
+
+
+/////// ui/AutoThrottleRuleEditWnd
+
+
+
+template
+шаблон
+
+
+
+/////// ui/AutoThrottleWnd
+
+
+
+Minimum Outgoing KB/s
+Минимум исходящее KB/s
+
+Minimum Outgoing KiB/s
+Минимум исходящее KiB/s
+
+loadrules
+загрузить правила
+
+saverules
+сохранить правила
+
+
+
+/////// ui/BWProfileAddWnd
+
+
+
+bwpresets
+преднастр. скорости
+
+
+
+/////// ui/BWQuotaAddWnd
+
+
+
+Edit Bandwidth Quota
+Изменить квоту трафика
+
+Noon
+Полдень
+
+
+
+/////// ui/BWView
+
+
+
+layout
+оформление
+
+
+
+/////// ui/CategoryAddWnd
+
+
+
+No changes to default location
+Стандартная локация не изменилась
+
+no file selected
+файл не выбран
+
+no folder selected
+папка не выбрана
+
+
+
+/////// ui/ChannelListView
+
+
+
+Flash Tray Icon
+Мигать иконкой в трее
+
+Show Tray Balloon
+Всплывающее сообщение в трее
+
+
+
+/////// ui/ChannelMemberPropWnd
+
+
+
+Channel is currently offline.
+Канал сейчас офлайн.
+
+No cached data for this user in this channel.
+Нет сохраненных данных об этом пользователе канала.
+
+Shared data is not cached locally for ignored users.
+Данные расшаренного не сохраняются локально для пользователей в игноре.
+
+This user does not have permission to share.
+У этого пользователя нет разрешения расшаривать.
+
+This user is not sharing anything.
+Этот пользователь ничего не расшаривает.
+
+Waiting for shared data, please stand
+Ожидаю данные расшаренного, подождите
+
+
+
+/////// ui/ChannelMemberRecvMsgWnd
+
+
+
+Received
+Получено
+
+at
+в
+
+
+
+/////// ui/ChannelMemberSendMsgWnd
+
+
+
+Message sent OK
+Сообщение успешно отправлено
+
+Message was not acknowledged
+Сообщение не было подтверждено
+
+Sending
+Шлю
+
+
+
+/////// ui/ChannelMsgAddWnd
+
+
+
+Add Forum Message to
+Добавить сообщение на форуме к
+
+Add Forum Reply to
+Добавить ответ на форуме к
+
+Currently sharing
+Сейчас расшаривает
+
+maximum capacity
+максимальный объем
+
+of
+из
+
+
+
+/////// ui/ChannelMsgView
+
+
+
+from
+от
+
+removed
+удалено
+
+
+
+/////// ui/ChannelMsgsView
+
+
+
+approve
+одобрить
+
+banned
+забаненный
+
+basic
+простой
+
+disapprove
+отклонить
+
+forum
+форум
+
+manager
+менеджер
+
+mod
+модератор
+
+normal
+обычный
+
+op
+оператор
+
+owner
+хозяин
+
+prompt
+запрос
+
+quiet
+тихий
+
+silent
+немой
+
+star
+звезда
+
+trusted
+проверенный
+
+vip
+vip
+
+
+
+/////// ui/ChannelSearchNewView
+
+
+
+All Channels
+Все каналы
+
+Channel Info
+Информация канала
+
+Searched
+Обыскано
+
+Send message to
+Отправить сообщение
+
+action
+действие
+
+bytes
+байт
+
+in
+через
+
+translate
+перевести
+
+type
+тип
+
+user
+пользователь
+
+users
+пользователи
+
+users so
+users so
+
+weblink
+веб-ссылка
+
+
+
+/////// ui/ChannelShareView
+
+
+
+Default Shared Items
+Стандартно расшаренные элементы
+
+Mirror what appears in the main Share view.
+Дублировать что находится в главном списке Расшаренного
+
+edit
+редактировать
+
+
+
+/////// ui/ChannelShareWebWnd
+
+
+
+Bad Characters
+Недопустимые символы
+
+Bad Protocol or Semicolon
+Недопустимый протокол или точка с запятой
+
+
+
+/////// ui/ChannelView
+
+
+
+Channel is offline.
+Канал в офлайне.
+
+Click here to add/remove files, links, text, and images
+Нажмите тут для добавления/удаления файлов, ссылок, текста и картинок
+
+Click the start button to join.
+Нажмите на кнопку старт, чтобы подсоединиться
+
+Edit This Page
+Редактировать страницу
+
+Meta-info not resolved yet
+Метаданных пока нету
+
+No secret key has been entered
+Секретный ключ не был введён
+
+Outgoing Stream Playlist
+Плейлист исходящего вещания
+
+Secret key OK
+Секретный ключ в порядке
+
+Unknown Name
+Неизвестное имя
+
+Waiting for channel info, please stand
+Ожидаю информацию канала, подождите
+
+
+
+/////// ui/ChannelsMainView
+
+
+
+Channel List
+Список каналов
+
+
+
+/////// ui/CheckUDWnd
+
+
+
+Error Checking For Updates
+Ошибка при проверке обновлений
+
+This is the newest version.
+Это последняя версия.
+
+Tixati Is Up To Date
+Нет новых обновлений Tixati
+
+
+
+/////// ui/ColorAdjView
+
+
+
+Abandoned Pieces Text
+Текст недостающих частей
+
+Active Channel
+Активный канал
+
+Active Channel Link
+Ссылка активного канала
+
+Auto BW Limit Ping Chart Current
+Автоогр. диаграмма пинга, текущ.
+
+Auto BW Limit Ping Chart High
+Автоогр. диаграмма пинга, высок.
+
+Auto BW Limit Ping Chart Low
+Автоогр. диаграмма пинга, низк.
+
+Background
+Фон
+
+Bandwidth Quota Counting Text
+
+
+Bandwidth Quota Idle Text
+
+
+Bandwidth Quota Over Limit Text
+
+
+Channel Active Xfer Link
+
+
+Channel Edit Link
+
+
+Channel Incoming BW Chart Data
+
+
+Channel Join
+Вход на канал
+
+Channel Leave
+Покидание канала
+
+Channel Link
+Ссылка на канал
+
+Channel Message Local User
+
+
+Channel Message User
+
+
+Channel Missing Lines
+
+
+Channel Note
+
+
+Channel Outgoing BW Chart Data
+
+
+Channel Regular Text
+
+
+Channel Timestamp
+
+
+Channel Visited Web Link
+
+
+Channel Web Link
+
+
+Channel Xfer Link
+
+
+Chart
+Диаграмма
+
+Chart Background
+Фон диаграммы
+
+Chart Bottom Line
+Нижняя черта диаграммы
+
+Chart Default Data
+Диаграмма данные по умолчанию
+
+Chart Disabled Background
+
+
+Chart Foreground
+
+
+Chart Legend Text
+
+
+Chart Middle Lines
+
+
+Chart Scale Text
+
+
+Chart Title
+
+
+Chart Top Line
+
+
+Complete Files Text
+
+
+Connecting Channel
+
+
+Connecting Seeds/Peers Text
+
+
+DHT In Bytes Chart
+
+
+DHT In Packets Chart
+
+
+DHT Orig Trans Chart
+
+
+DHT Out Bytes Chart
+
+
+DHT Out Packets Chart
+
+
+DHT Proc Trans Chart
+
+
+Data
+
+
+Day Line
+
+
+Day Text
+
+
+Disabled Background
+
+
+Download/Seed Special Status Text
+
+
+Download/Seed With Error Text
+
+
+Downloading Pieces Text
+
+
+Edit Box Background
+
+
+Edit Box Disabled Background
+
+
+Edit Box Selection Background
+
+
+Edit Box Selection Text
+
+
+Edit Box Text
+
+
+Files With Error Text
+
+
+For
+
+
+Foreground
+
+
+Forum Command Message
+
+
+Forum Disapproved Message
+
+
+Forum Message
+
+
+Forum Orphaned Message
+
+
+Forum Private Message
+
+
+Forum Removed Message
+
+
+Forum Unapproved Message
+
+
+Forum Unpublished Message
+
+
+Hour Line
+
+
+Hour Text
+
+
+IP Filter Auto-Updater Text
+
+
+IP Filter Problem Status Text
+
+
+IP Filter Text
+
+
+IP Filter Updating Status Text
+
+
+Ignored Offline User
+
+
+Ignored Online User
+
+
+Ignored Peer/Seed Text
+
+
+Ignored User Search Result
+
+
+Incoming BW Chart Channels Data
+
+
+Incoming BW Chart Xfers Data
+
+
+Incomplete Files Text
+
+
+List/Tree Background
+
+
+List/Tree Checkbox Checked Background
+
+
+List/Tree Checkbox Checked Border
+
+
+List/Tree Checkbox Checked Foreground
+
+
+List/Tree Checkbox Checked Hover Background
+
+
+List/Tree Checkbox Checked Hover Border
+
+
+List/Tree Checkbox Checked Hover Foreground
+
+
+List/Tree Checkbox Indeterminate Background
+
+
+List/Tree Checkbox Indeterminate Border
+
+
+List/Tree Checkbox Indeterminate Foreground
+
+
+List/Tree Checkbox Indeterminate Hover Background
+
+
+List/Tree Checkbox Indeterminate Hover Border
+
+
+List/Tree Checkbox Indeterminate Hover Foreground
+
+
+List/Tree Checkbox Unchecked Background
+
+
+List/Tree Checkbox Unchecked Border
+
+
+List/Tree Checkbox Unchecked Foreground
+
+
+List/Tree Checkbox Unchecked Hover Background
+
+
+List/Tree Checkbox Unchecked Hover Border
+
+
+List/Tree Checkbox Unchecked Hover Foreground
+
+
+List/Tree Disabled Background
+
+
+List/Tree Odd Row Background
+
+
+List/Tree Progress/Bitfield Background
+
+
+List/Tree Progress/Bitfield Foreground
+
+
+List/Tree Selection Background
+
+
+List/Tree Selection Text
+
+
+List/Tree Sorted Odd Row Background
+
+
+List/Tree Sorted Row Background
+
+
+List/Tree Text
+
+
+Loading Download/Seed Text
+
+
+Local User
+Локальный пользователь
+
+Minute Line
+
+
+Minute Text
+
+
+Misc Label Caution Text
+
+
+Misc Label Error Text
+
+
+Misc Label OK Text
+
+
+Never Connected Seeds/Peers Text
+
+
+New Empty Pieces Text
+
+
+Newly Gathered Channel
+
+
+Non-existent Files Text
+
+
+OS default
+
+
+Offline Channel
+
+
+Offline Download Text
+
+
+Offline Peers Text
+
+
+Offline Seed Text
+
+
+Offline Seeds Text
+
+
+Offline User
+
+
+Online Channel
+
+
+Online Peers Text
+
+
+Online Seeds Text
+
+
+Online User
+
+
+Outgoing BW Chart Channels Data
+
+
+Outgoing BW Chart Seeding Data
+
+
+Outgoing BW Chart Trading Data
+
+
+Peer Charity Unchoked Indicator Background
+
+
+Peer Charity Unchoked Indicator Foreground
+
+
+Peer Forced Choked Indicator Background
+
+
+Peer Forced Choked Indicator Foreground
+
+
+Peer Forced Unchoked Indicator Background
+
+
+Peer Forced Unchoked Indicator Foreground
+
+
+Peer Interested/Unchoked Indicator Background
+
+
+Peer Interested/Unchoked Indicator Foreground
+
+
+Peer Optimistic Unchoked Indicator Background
+
+
+Peer Optimistic Unchoked Indicator Foreground
+
+
+Peer Prop Incoming BW Chart File Data
+
+
+Peer Prop Incoming BW Chart Protocol Data
+
+
+Peer Prop Outgoing BW Chart File Data
+
+
+Peer Prop Outgoing BW Chart Protocol Data
+
+
+Peer Uninterested/Choked Indicator Background
+
+
+Peer Uninterested/Choked Indicator Foreground
+
+
+Queued Download Text
+
+
+Queued Seed Text
+
+
+RSS Active Feed Text
+
+
+RSS Item In Feed Text
+
+
+RSS Item Out Of Feed Text
+
+
+RSS Problem Status Text
+
+
+RSS Stopped Feed Text
+
+
+RSS Test Fail Item Text
+
+
+RSS Test Item Episode Substring Background
+
+
+RSS Test Item Exclude Substring Background
+
+
+RSS Test Item Match Substring Background
+
+
+RSS Test Pass Item Text
+
+
+RSS Updating Status Text
+
+
+Running Download Text
+
+
+Running Non-queueable Seed Text
+
+
+Running Seed Text
+
+
+Scheduler Active Task Text
+
+
+Scheduler Inactive Task Text
+
+
+Search Result
+
+
+Selection Background
+
+
+Selection Text
+
+
+Status Text
+
+
+Text View Background
+
+
+Text View Disabled Background
+
+
+Text View Selection Background
+
+
+Text View Selection Text
+
+
+Text View Text
+
+
+Tracker Error Status Text
+
+
+Tracker OK Status Text
+
+
+Tracker Working Status Text
+
+
+Tree Expander
+
+
+Tree Expander Mouse Button Down
+
+
+Tree Expander Mouse Hover
+
+
+Unused Channel
+
+
+Xfer Not
+
+
+Xfer Prop Incoming BW Chart File Data
+
+
+Xfer Prop Incoming BW Chart Protocol Data
+
+
+Xfer Prop Outgoing BW Chart File Data
+
+
+Xfer Prop Outgoing BW Chart Protocol Data
+
+
+nothing selected
+ничего не выбрано
+
+
+
+/////// ui/ConfigNotificationsWnd
+
+
+
+Rate Limit
+Ограничение скорости
+
+
+
+/////// ui/ConfigView
+
+
+
+base
+целое
+
+decimal
+десятичное
+
+incomplete-pieces
+неполные части
+
+separator
+разделитель
+
+use default templates
+используются стандартные шаблоны
+
+
+
+/////// ui/ConfigView_B
+
+
+
+HTTPS
+HTTPS
+
+Resolving
+Преобразую
+
+logging
+протоколирую
+
+no presets exist
+преднастроек нету
+
+
+
+/////// ui/ConfigView_D
+
+
+
+No interfaces found
+Не найдено интерфейсов
+
+customize
+настроить
+
+transfers
+передачи
+
+
+
+/////// ui/DupTorWnd
+
+
+
+has the same info-hash as existing transfer named
+имеет такой же инфо-хеш как и существующая перадача с названием
+
+
+
+/////// ui/EditDescWnd
+
+
+
+selected transfers
+выделенные передачи
+
+
+
+/////// ui/FontAdjView
+
+
+
+Button
+Кнопка
+
+Chat View
+Чат
+
+Code View
+Код
+
+List/Tree
+(Древовид.) Список
+
+System Default
+стандартный системный
+
+System Monospace Default
+стандартный моноширинный
+
+Text Entry
+Ввод текста
+
+Text View
+Текст
+
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog. 0123456789 Широкая электрификация южных губерний даст мощный толчок подъёму сельского хозяйства.
+
+
+Toolbar
+Панель инструментов
+
+
+
+/////// ui/HomeView
+
+
+
+Listening
+Слушаю
+
+Trying to
+Пытаюсь
+
+Unconfirmed
+Неподтверждён
+
+no port
+без порта
+
+
+
+/////// ui/LoadingProbWnd
+
+
+
+COMPLETE WITH
+ЗАВЕРШИЛОСЬ С
+
+Copied
+Скопировано
+
+Copy ERROR
+ОШИБКА копирования
+
+Copying
+Копирую
+
+Copying last successfully loaded config file to temporary file
+Копирую последний рабочий файл конфигурации во временной файл
+
+Making copy of broken config file for desktop
+Делаю копию неисправного файла конфигурации на рабочий стол
+
+Move ERROR
+ОШИБКА перемещения
+
+Moved
+Перемещено
+
+Moving temporary to current config file
+Перемещаю временной в текущий файл конфигурации
+
+PLEASE CLICK THE CLOSE BUTTON THEN MANUALLY RESTART TIXATI TO TRY AGAIN
+НАЖМИТЕ НА КНОПКУ ЗАКРЫТЬ И САМОСТОЯТЕЛЬНО ЗАПУСТИТЕ TIXATI, ЧТОБЫ ПОПРОБЫВАТЬ СНОВА
+
+Please
+Пожалуйста
+
+Please restart Tixati after clicking the Close button.
+Перезапустите Tixati после нажатия на кнопку Закрыть
+
+Remove ERROR
+ОШИБКА удаления
+
+Removed
+Удалено
+
+Removing
+Удаляю
+
+Removing current config file
+Удаляю текущий файл конфигурации
+
+User has selected
+Пользователь выбрал
+
+
+
+/////// ui/MainWindow
+
+
+
+Activity in
+Активность в
+
+BW
+Трафик
+
+BW Preset
+Преднастройка трафика
+
+Channel
+Канал
+
+Chatting in
+Переписывается в
+
+Contact Online
+Контакт онлайн
+
+Contacts Online
+Контакты офлайн
+
+DL
+Скач.
+
+Download Complete
+Загрузка завершена
+
+IN
+Вх.
+
+Items
+Элементы
+
+Limit
+Ограничение
+
+New forum message in
+Новое сообщение на форуме
+
+OUT
+Исх.
+
+Online
+Онлайн
+
+Portable
+Портативный
+
+Private message from
+Личное сообщение от
+
+is online
+вышел в онлайн
+
+
+
+/////// ui/MenuCustomizeWnd
+
+
+
+Editing Menu
+Редактирование меню
+
+
+
+/////// ui/OpenTorWnd
+
+
+
+Not enough bytes to create swarm
+Недостаточно байт
+
+free
+свободно
+
+links found
+ссылок найдено
+
+new seed
+новая раздача
+
+no files have been selected
+файлы не выбраны
+
+total size
+суммарный размер
+
+
+
+/////// ui/PreloadWnd
+
+
+
+Auto
+Авто
+
+Auto-select largest files and if only one remains move it to the outer download folder
+Автовыбор самых больших файлов и если остается только один, переместить его папкой выше.
+
+Automatic continue in
+Автоматически продолжаю через
+
+Download file from beginning to end
+Скачивание файла с начала до конца
+
+Download selected files in order
+Скачать выбранные файлы по порядку
+
+Expand All
+Развернуть все
+
+an
+TODO
+
+auto
+авто
+
+
+
+/////// ui/ProcessMenuCommand
+
+
+
+Customize
+Настроить
+
+Error in menu XML on line
+Ошибка в XML от меню на строке
+
+
+
+/////// ui/ProfileDWnd
+
+
+
+logging started
+начато протоколирование
+
+
+
+/////// ui/RSSDetailsView
+
+
+
+No Selection
+Не выбрано
+
+never
+никогда
+
+
+
+/////// ui/RSSView
+
+
+
+Move to
+Переместить в
+
+Open current MOC location
+Открыть текущую локацию Перем. по Заверш.
+
+Open current location
+Открыть текущую локацию
+
+multiple locations
+несколько локаций
+
+no move on complete
+не перемещать по завершении
+
+
+
+/////// ui/ShutdownWarnWnd
+
+
+
+Shutdown inhibited by OS
+Выключение блокируется системой
+
+Shutting down computer in
+Выключаю компьютер через
+
+
+
+/////// ui/TestConnPacerWnd
+
+
+
+press the start button to begin
+нажмите кнопку старт, чтобы начать
+
+testing
+тестирую
+
+
+
+/////// ui/TestRSSWnd
+
+
+
+Accept-Encoding
+Accept-Encoding
+
+Code
+Code
+
+Connecting
+Подключаюсь
+
+Download complete
+Скачивание завершилось
+
+Downloading feed items from
+Скачиваю элементы ленты с
+
+ERROR
+ОШИБКА
+
+Failed
+Не отработал
+
+GET
+GET
+
+Negotiating with
+Соединяюсь с
+
+No feed URLs
+Нет адресов лент
+
+No feed items were obtained from the given URLs.
+С заданных адресов не было получено элементов ленты
+
+Passed
+В порядке
+
+Starting
+Стартует
+
+Test completed
+Тест окончен
+
+Test stopped
+Тест остановлен
+
+The following
+Следующие
+
+There were
+По итогам
+
+User-Agent
+User-Agent
+
+Waiting for
+Ожидаю
+
+Waiting to
+Жду
+
+feed items have been obtained.
+элементов ленты получено.
+
+items DID NOT PASS the filter
+элементы ОТБРОШЕННЫЕ фильтром
+
+items PASSED the filter
+элементы ПРОПУЩЕННЫЕ фильтром
+
+items found
+элементов найдено
+
+items with no title.
+элементов без заголовка
+
+redirect to
+перенаправление на
+
+server IP is filtered
+IP сервера отфильтрован
+
+server reply overflow
+переполнение в ответе сервера
+
+server responded with code
+сервер ответил кодом
+
+
+
+/////// ui/TorDetailsView
+
+
+
+seed count exceeded
+кол-во раздающих превышен
+
+seeding ratio exceeded
+коэфф. раздачи превышен
+
+seeding time exceeded
+время раздачи превышено
+
+to go
+осталось
+
+
+
+/////// ui/TorFilesMenu
+
+
+
+Change location to
+Изменить локацию как
+
+Default Location
+Стандартная
+
+Files are in default location
+Файлы уже в стандартной локации
+
+Files will not be individually moved on completion.
+Файлы не будут индивидуально перемещены по завершении.
+
+Open current Move On Complete location
+Открыть текущую папку Перем. по Заверш.
+
+
+
+/////// ui/TorOptionsView
+
+
+
+local files not yet created
+локальные файлы еще не созданы
+
+no selection
+не выбрано
+
+
+
+/////// ui/TrackersReplaceWnd
+
+
+
+Match Test
+Тест поиска
+
+matching trackers were found.
+совпадений трекеров найдено.
+
+
+
+/////// ui/XfersView
+
+
+
+Change downloading location to
+Поменять локацию скачивания на
+
+Change seeding location to
+Поменять локацию раздач на
+
+Channel Default
+По умолчанию для каналов
+
+In Channels
+В каналах
+
+Share in default profile
+Расшаривать в стандартном профиле
+
+
+
+/////// ui/lang_startup
+
+
+
+Unknown author
+Неизвестный автор
+
+Unknown language file
+Неизвестный файл перевода
+
+
+
+/////// ui/lang_switch
+
+
+
+No External Language Loaded
+Внешний перевод не загружен
+
+Restart Tixati to apply the new language.
+Перезапустите Tixati, чтобы применить новый язык.
+
+
+
+/////// RootObject
+
+
+
+Error code
+Код ошибки
+
+FileTransfer
+FileTransfer
+
+Internal Error
+Внутренняя ошибка
+
+Internet
+Интернет
+
+Invalid Tixati archive file
+Неисправный пакетный файл Tixati
+
+Last Run Version
+Последняя запущенная версия
+
+Loading Channels
+Загрузка каналов
+
+Loading DHT
+Загрузка DHT
+
+Loading Interface
+Загрузка интерфейса
+
+Loading RSS
+Загрузка RSS
+
+Loading Scheduler
+Загрузка планировщика
+
+Loading Settings
+Загрузка настроек
+
+Loading Throttle
+Загркузка ограничителя
+
+Loading Transfers
+Загрузка передач
+
+P2P
+P2P
+
+Please save the config file and email it to
+Пожалуйста, сохраните конфигурационный файл и отправьте на почту
+
+Reading
+Читаю
+
+Scheduler requested shutdown
+Планировщик запросил выключение
+
+Shutting Down System
+Выключаю компьютер
+
+checking for updated version of
+проверяю на обновления
+
+creating channel from link
+создаю канал по ссылке
+
+decentralized sharing channel
+децентрализованный канал общения
+
+directory watcher error
+ошибка наблюдателя за папки
+
+early end of file reading
+ранний конец при чтении файла
+
+error checking for updated version
+ошибка при проверке на обновления
+
+error saving config data to file
+ошибка сохранения конфигурации в файл
+
+failed to open channel link
+не удалось открыть канал по ссылке
+
+file fmt internal error
+внутренняя ошибка формата файла
+
+loading DHT
+загружаю DHT
+
+loading RSS
+загружаю RSS
+
+loading channels
+загружаю каналы
+
+loading interface
+загружаю интерфейс
+
+loading scheduler
+загружаю планировщик
+
+loading settings
+загружаю настройки
+
+loading throttle
+загружаю ограничитель
+
+loading transfers
+загружаю передачи
+
+months
+месяц(ев)
+
+moving
+перемещаю
+
+opening
+открываю
+
+peer
+участник
+
+this version of Tixati is up to date
+эта версия Tixati актуальна
+
+updated version of Tixati is available
+доступна новая версия Tixati
+
+
+
+/////// acomponents/NotificationMenu
+
+
+
+Bell
+Колокол
+
+Bike Bell
+Велосипедный звонок
+
+Chime
+Звонок
+
+Duck
+Утка
+
+Gong
+Гонг
+
+Small Bell
+Колокольчик
+
+Tone
+Тон
+
+Xylo Down
+Ксилофон вниз
+
+Xylo Up
+Ксилофон вверх
+
+
+
+/////// channel/Channel
+
+
+
+Channel Log Level
+Детализация протокола каналов
+
+Channel Log Lines
+Число строк в протоколе каналов
+
+Comment
+Комментарий
+
+DHT search complete
+Поиск по DHT завершен
+
+Expires
+Истекает
+
+Found
+Найдено
+
+ID
+ID
+
+Join/leave notification off
+Оповещения входа/выхода отключены
+
+Join/leave notification on
+Оповещения входа/выхода включены
+
+Last Connected
+Последнее соединение
+
+Last Gathered
+Последнее получение
+
+Last Online
+Последний раз онлайн
+
+Last Running
+В последний раз работал
+
+Seeking peer
+Ищу участников
+
+Time stamps off
+Временные метки выкл.
+
+Time stamps on
+Временные метки вкл.
+
+backscroll
+строк
+
+bandwidth limit changed to
+ограничение скорости поменялось на
+
+bandwidth priority group changed to
+приоритетная группа скорости поменялась на
+
+bandwidth share changed to
+скорость расшаренного поменялась на
+
+channel disconnected, attempting to
+канал отключился, пытаюсь
+
+channel online
+канал онлайн
+
+forum messages
+форумные сообщение
+
+incoming
+входящее
+
+lines in backscroll buffer.
+строк в буфере истории протокола.
+
+local recommend level is
+локально рекомеднуемый уровень
+
+outgoing
+исходящее
+
+peers found
+участников найдено
+
+shared links
+расшаренных ссылок
+
+started
+стартовал
+
+starting DHT search
+начинаю поиск по DHT
+
+stop
+отстановить
+
+stopped
+остановлен
+
+total
+всего
+
+users last online of
+пользователи были в последний раз онлайн
+
+users online of
+пользователей онлайн
+
+waiting for meta info
+жду метаданные
+
+with ID
+с ID
+
+
+
+/////// channel/ChannelConnection
+
+
+
+PEX
+PEX
+
+PEX message ignored due to rate limit
+Сообщение PEX проигнорировано из-за ограничения
+
+Peer Log Level
+Детализация лога участников
+
+Peer Log Lines
+Число строк лога участников
+
+already connected
+уже подключен
+
+created from
+создан из
+
+excess connections
+превышение соединений
+
+ignored
+игнорирован
+
+incoming connection
+входящее соединение
+
+incoming connection rejected
+входящее соединение отброшено
+
+initiating connection
+инициирую соединение
+
+manually stopped
+остановлен вручную
+
+over max connections
+выше макс. соединений
+
+peer accepted incoming connection
+участник принял входящее соединение
+
+peer created from
+участник создан из
+
+received PEX message
+принял сообщение PEX
+
+rotating slowest connections
+ротация самых медленных соединений
+
+sending handshake
+отправляю рукопожатие
+
+
+
+/////// channel/ChannelConnections
+
+
+
+connections
+соединений
+
+online
+онлайн
+
+over limit
+сверх ограничения
+
+
+
+/////// channel/ChannelMember
+
+
+
+Error listening for stream client connections for
+
+
+Listening for stream client connections for
+
+
+Sharing
+Расшаривает
+
+Stopped listening for stream client connections for
+
+
+download links
+ссылок скачивания
+
+start
+старт
+
+text lines
+строк текста
+
+unknown channel
+неизвестный канал
+
+web links
+веб-ссылок
+
+
+
+/////// channel/ChannelMemberStreamPlayback
+
+
+
+Connection
+Соединение
+
+
+
+/////// channel/ChannelMembers
+
+
+
+exceeds channel limit
+превышает ограничение канала
+
+
+
+/////// channel/ChannelStreamFile
+
+
+
+Building hash
+Генерирую хеш
+
+Need to build hash set
+Надо сгенерировать набор хешей
+
+Need to scan
+Надо просканировать
+
+Next start at
+Следующее начало в
+
+Tixati Outgoing Stream Cache
+Кеш Tixati исходящего вещания
+
+Waiting to build hash
+Жду для генерации хеша
+
+invalid file path
+неверный путь к файлу
+
+no segments in file
+в файле нету сегментов
+
+unable to process file that is not
+не могу обработать файл, которым таковым не является
+
+
+
+/////// channel/ChannelStreamItems
+
+
+
+Hashing
+Хешируется
+
+Ready
+Готово
+
+Scanning
+Сканируется
+
+
+
+/////// channel/ChannelStreamPause
+
+
+
+Waiting
+Жду
+
+
+
+/////// channel/ChannelStreamURL
+
+
+
+CPU
+Процессор
+
+Live Stream
+Прямое вещание
+
+Retry in
+Попытка через
+
+Stream closed unexpectedly
+Вещание неожиданно закрылось
+
+Stream source timed out while sending
+Таймаут источника вещание при посылке
+
+direct connection
+прямое подключение
+
+local stream source
+локальный источник вещания
+
+
+
+/////// channel/Channels
+
+
+
+Empty URL
+Пустой адрес
+
+Invalid Hash
+Неверный хеш
+
+Invalid Protocol Name or Semicolon
+Неверное название протокола или точки с запятой
+
+Last Cleaned
+Последняя очистка
+
+Total Channels
+Всего каналов
+
+add
+добавить
+
+contacts
+контакты
+
+guest
+guest
+
+new
+новый
+
+peers processed
+участников обработано
+
+private
+личный
+
+remove
+удалить
+
+reply
+ответить
+
+total in list
+всего в списке
+
+
+
+/////// channel/Contact
+
+
+
+Last online
+В последний раз онлайн
+
+Online in
+Онлайн в
+
+Online in Channels
+Онлайн в каналах
+
+
+
+/////// channel/channelconstants
+
+
+
+Channel Hash
+Хеш канала
+
+InfoHash
+InfoHash
+
+No media player available to launch stream.
+Нет медиа-проигрывателя для запуска вещания.
+
+Problem launching temporary playlist file
+Проблема с запуском временного файла плейлиста
+
+Problem writing temporary playlist file
+Проблема с записью временного файла плейлиста
+
+channel
+канал
+
+hash-link
+хеш-ссылка
+
+waiting for more lines
+ожидаю следующих строк
+
+
+
+/////// dht/DHT
+
+
+
+DHT Log Level
+Детализация лога DHT
+
+DHT Log Lines
+Число строк в логе DHT
+
+DHT started
+DHT запущен
+
+DHT stopped
+DHT остановлен
+
+IPv4 socket not ready
+Сокет IPv4 не готов
+
+IPv4 socket ready
+Сокет IPv4 готов
+
+IPv6 socket not ready
+Сокет IPv6 не готов
+
+IPv6 socket ready
+Сокет IPv6 готов
+
+Started
+Запущен
+
+Stopped
+Остановлен
+
+UDP is disabled in proxy settings
+UDP выключен в настройках прокси
+
+current node ID
+ID текущего узла
+
+last node ID change
+
+
+local node ID set
+
+
+ping
+пинг
+
+pinging hint
+
+
+port unconfirmed
+неподтвержденный порт
+
+timed out waiting for response from
+таймаут при ожидании ответа от
+
+unconfirmed incoming port
+неподтвержденный вх. порт
+
+waiting for initial nodes from file transfer peers
+
+
+waiting for network port
+ожидаю сетевой порт
+
+waiting for port
+ожидаю порт
+
+
+
+/////// dht/DHTBucket
+
+
+
+table added node
+в таблицу добавлен узел
+
+
+
+/////// dht/DHTNode
+
+
+
+Expired
+Истёк
+
+Expires in
+Истекает через
+
+Uncertain
+Непонятно
+
+received ping error response
+получена ошибка в ответ на пинг
+
+received ping reply
+получен ответ на пинг
+
+refresh pinging
+
+
+timed out waiting for response
+таймаут при ожидании ответа
+
+
+
+/////// dht/DHTPeers
+
+
+
+Cached Peers
+Кешированные участники
+
+keys
+ключи
+
+
+
+/////// dht/DHTSearch
+
+
+
+IPv4
+IPv4
+
+IPv4 Node-gathering search
+Поиск IPv4 узлов
+
+IPv6 Node-gathering search
+Поиск IPv6 узлов
+
+node gathering search started
+Начат поиск узлов
+
+search complete
+поиск завершен
+
+search started
+поиск начался
+
+
+
+/////// dht/DHTSearchNode
+
+
+
+Announce Failed
+Анонс не удался
+
+Announced OK
+Анонс в порядке
+
+Searched OK
+Поиск в порядке
+
+announcing
+анонсирую
+
+in search
+в поиске
+
+port
+порт
+
+received
+получено
+
+received announce acknowledgement
+
+
+received announce failure response
+
+
+requesting nodes
+запрашиваю узлы
+
+requesting peers
+запрашиваю участников
+
+
+
+/////// dht/DHTSearchTable
+
+
+
+IPv4 nodes
+Узлы IPv4
+
+IPv6 nodes
+Узлы IPv6
+
+failed to resolve backup hint
+
+
+node-gathering search completed
+
+
+node-gathering search started
+
+
+trying backup hint
+
+
+trying search hint
+
+
+
+
+/////// dht/DHTTable
+
+
+
+Node Table
+Таблица узлов
+
+buckets
+ячеек
+
+reverse-splitting bucket
+
+
+splitting bucket
+
+
+
+
+/////// ipfilter/IPFilter
+
+
+
+Error reloading
+Ошибка загрузки
+
+Invalid URL
+Неправильный URL
+
+No context
+Нет контекста
+
+Unsupported protocol in URL
+Неподдерживаемый протокол в URL
+
+error reading file
+ошибка при чтении файла
+
+next update in
+следующее обновление через
+
+
+
+/////// misc/BWPresets
+
+
+
+AL
+АО
+
+AL Min/Ratio
+АО Мин./Коэфф.
+
+AL Ping Setup
+АО Настройка пинга
+
+AL RTT
+АО RTT
+
+AL Rules Setup
+АО Настройка правил
+
+
+
+/////// misc/BWQuotas
+
+
+
+Bandwidth Quota Log Level
+Детализация лога квоты трафика
+
+Bandwidth Quota Log Lines
+Число строк лога трафика
+
+clearing warning dialog
+очищаю оповещение о предупреждении
+
+counting
+учитываю
+
+loading from previous session
+загружаю с прошлой сессии
+
+no longer over limit
+больше не за пределами лимита
+
+not counting
+не учитываю
+
+remaining
+осталось
+
+reset
+сброшено
+
+restarting DHT
+перезапускаю DHT
+
+restarting channels
+перезапускаю каналы
+
+restarting feeds
+перезапускаю ленты
+
+restarting transfers
+перезапускаю передачи
+
+set bandwidth auto-limit to
+выставить автоограничение скорости как
+
+set bandwidth preset
+выставить преднастройку скорости
+
+set incoming bandwidth throttle to
+выставить ограничение входящего как
+
+set outgoing bandwidth throttle to
+выставить ограничение исходящего как
+
+showing warning dialog
+показывать окно предупреждения
+
+stopping DHT
+останавливаю DHT
+
+stopping channels
+останавливаю каналы
+
+stopping feeds
+останавливаю ленты
+
+stopping transfers
+останавливаю передачи
+
+
+
+/////// misc/Ports
+
+
+
+BitTorrent protocol
+Протокол BitTorrent
+
+IPv4 TCP is disabled for peer connections and trackers in proxy settings
+
+
+IPv4 UDP is disabled for peer connections and DHT in proxy settings
+
+
+IPv4 incoming TCP is disabled for peer connections in proxy settings
+
+
+IPv6 TCP is disabled for peer connections and trackers in proxy settings
+
+
+IPv6 UDP is disabled for peer connections and DHT in proxy settings
+
+
+IPv6 address family not supported on this computer
+
+
+IPv6 incoming TCP is disabled for peer connections in proxy settings
+
+
+IPv6 not supported by configured proxy server
+
+
+IPv6 not supported on this computer
+
+
+Incoming Connections Received
+
+
+NAT-PMP mapped
+
+
+NAT-PMP mapping
+
+
+NAT-PMP unmapped
+
+
+NAT-PMP unmapping
+
+
+No Incoming Port
+Нет входящего порта
+
+Ports Log Level
+Детализация лога портов
+
+Ports Log Lines
+Число строк лога портов
+
+Stopped listening on
+Перестал слушать на
+
+TCP port
+порт TCP
+
+UDP port
+порт UDP
+
+UPNP mapped
+
+
+UPNP mapping
+
+
+UPNP unmapped
+
+
+UPNP unmapping
+
+
+error listening on
+ошибка прослушивания на
+
+error setting up IPv4 UDP proxy connection
+
+
+error setting up IPv6 UDP proxy connection
+
+
+ignoring
+игнорирую
+
+listening on
+слушаю на
+
+mapping
+
+
+on gateway
+
+
+port mapping is selected, but there are no gateways with a private IP in this machine's routing table
+
+
+proxy approved IPv4 UDP relay at
+
+
+proxy approved IPv6 UDP relay at
+
+
+proxy connection closed while listening on
+
+
+relaying IPv4 UDP to proxy at
+
+
+relaying IPv6 UDP to proxy at
+
+
+retrying
+пытаюсь снова
+
+socket closed while listening on
+сокет был закрыт пока слушал на
+
+will be retried every
+новая попытка каждые
+
+
+
+/////// misc/ThrottleAdjuster
+
+
+
+average
+средне
+
+loading rules
+загружаю правила
+
+starting
+начинаю
+
+stopping
+останавливаюсь
+
+
+
+/////// rss/RSSFeed
+
+
+
+Feed Log Level
+
+
+Feed Log Lines
+
+
+Last update failed, next in
+
+
+Next update in
+
+
+No URLs entered
+
+
+created new feed
+
+
+loaded from previous session
+
+
+loading feed
+
+
+started feed
+
+
+stopped feed
+
+
+
+
+/////// rss/RSSFeedEntries
+
+
+
+Exceeds per episode max
+
+
+No meta-info link
+
+
+invalid title
+
+
+item already in feed
+
+
+item created
+
+
+item filtered
+
+
+items already in feed
+
+
+items blocked by filter
+
+
+items created
+
+
+items from server
+
+
+items passed filter
+
+
+
+
+/////// rss/RSSFeedEntry
+
+
+
+Bad magnet link
+Негожая магнет-ссылка
+
+Below minimum total file size
+Ниже минимума по суммарному размеру файлов
+
+Exceeds maximum file count
+Превышает максимальное число файлов
+
+Exceeds maximum total file size
+Превышает максимальный размер файлов
+
+Magnet Link
+Магнет-ссылка
+
+No Auto-Download
+Без автоскачивания
+
+No Links
+Нет ссылок
+
+No meta-info found
+Метаинформация не найдена
+
+Transfer Already Exists
+Передача уже существует
+
+Transfer Created
+Передача создана
+
+Web Link Only
+Только веб-ссылки
+
+bad magnet link
+негожая магнет-ссылка
+
+created transfer
+
+
+created transfer from magnet link
+
+
+did not create transfer, already exists
+
+
+error getting meta-info
+
+
+getting meta-info
+
+
+no auto download
+
+
+no auto-download, below minimum total file size
+
+
+no auto-download, exceeds maximum file count
+
+
+no auto-download, exceeds maximum total file size
+
+
+no auto-download, magnet link auto-download disabled
+
+
+no meta-info found
+
+
+
+
+/////// rss/RSSFeedLink
+
+
+
+Update cancelled
+Обновление отменено
+
+Updating
+Обновляю
+
+refresh in
+обновление через
+
+retry in
+попытка через
+
+sender
+отправитель
+
+starting update
+начинаю обновление
+
+update complete
+обновление завершено
+
+update failed
+обновление не удалось
+
+
+
+/////// scheduler/SchedulerTarget
+
+
+
+AL Off
+АО Выкл.
+
+AL On
+АО Вкл.
+
+Allow Suspend
+Разрешить спящий режим
+
+Auto Limit Off
+Выкл. автоограничение
+
+Auto Limit On
+Вкл. автоограничение
+
+BWPreset
+Преднастройка скорости
+
+Backup
+Архивация
+
+Backup Configuration Files
+Архивация конфиг. файлов
+
+Backup Configuration Files to
+Сохранить конфиг. файлы в
+
+Bandwidth Preset
+Преднастройка скорости
+
+Chan
+Канал
+
+Channel Message in
+Сообщение на канале
+
+Channel Topic in
+Описание канала
+
+DLs
+
+
+Exclude Category
+Исключить категорию
+
+Exclude Channel
+Исключить канал
+
+Exclude Feed
+Исключить ленту
+
+Exclude Transfer
+Исключить передачу
+
+Feed
+Лента
+
+Feeds
+Ленты
+
+IN Off
+
+
+IN On
+
+
+Incoming Throttle Off
+Выкл. ограничение входящего
+
+Incoming Throttle On
+Вкл. ограничение входящего
+
+Msg
+Сообщение
+
+New Xfers
+Новые передачи
+
+OUT Off
+
+
+OUT On
+
+
+OUT-S
+
+
+OUT-S Off
+
+
+OUT-S On
+
+
+OUT-T
+
+
+OUT-T Off
+
+
+OUT-T On
+
+
+Outgoing Throttle Off
+Выкл. ограничение исходящего
+
+Outgoing Throttle On
+Вкл. ограничение исходящего
+
+Outgoing Throttle Seeding Allocation Off
+Выкл. ограничение по исх. аллокации раздачи
+
+Outgoing Throttle Seeding Allocation On
+Вкл. ограничение по исх. аллокации раздачи
+
+Outgoing Throttle Trading Allocation Off
+Выкл. ограничение по исх. аллокации обмена
+
+Outgoing Throttle Trading Allocation On
+Вкл. ограничение по исх. аллокации обмена
+
+Rand Port
+Случайный порт
+
+Randomize Incoming Connection Port
+Выбрать случайный порт входящих соединений
+
+Refresh All RSS Feeds
+Обновить все RSS ленты
+
+Refresh Feeds
+Обновить все ленты
+
+Refresh RSS Feed
+Обновить RSS ленту
+
+Shut Down
+Выключить
+
+Targets
+Цели
+
+Task
+Задача
+
+Xfer
+Передача
+
+Xfers
+Передачи
+
+activating bandwidth throttle preset
+
+
+bandwidth auto limit off
+
+
+bandwidth auto limit on
+
+
+bandwidth auto limit on and target RTT set to
+
+
+channel message
+сообщение на канале
+
+channel topic
+описание канала
+
+closing Tixati
+закрываю Tixati
+
+error saving configuration archive
+
+
+incoming bandwidth limit off
+
+
+incoming bandwidth limit on
+
+
+incoming bandwidth limit on and set to
+
+
+outgoing bandwidth limit off
+
+
+outgoing bandwidth limit on
+
+
+outgoing bandwidth limit on and set to
+
+
+outgoing bandwidth seeding allocation off
+
+
+outgoing bandwidth seeding allocation on
+
+
+outgoing bandwidth seeding allocation on and set to
+
+
+outgoing bandwidth trading allocation off
+
+
+outgoing bandwidth trading allocation on
+
+
+outgoing bandwidth trading allocation on and set to
+
+
+randomly setting incoming port to
+
+
+refreshing feed
+
+
+running task actions
+
+
+saved configuration archive
+
+
+shutting down system
+
+
+starting DHT
+запускаю DHT
+
+starting category
+запускаю категорию
+
+starting channel
+запускаю канал
+
+starting feed
+запускаю ленту
+
+starting new feeds
+запускаю новые ленты
+
+starting new transfers
+запускаю новые передачи
+
+starting task affected targets
+запускаю цели затронутые задачей
+
+starting task targets
+запускаю цели задачи
+
+starting transfer
+запускаю передачу
+
+stopping category
+запускаю категорию
+
+stopping channel
+останавливаю канал
+
+stopping feed
+останавливаю ленту
+
+stopping new feeds
+останавливаю новые ленты
+
+stopping new transfers
+останавливаю новые передачи
+
+stopping task affected targets
+останавливаю цели затронутые задачей
+
+stopping task targets
+останавливаю цели задачи
+
+stopping transfer
+останавливаю передачу
+
+timestamp
+временная метка
+
+
+
+/////// scheduler/SchedulerTask
+
+
+
+Every day
+Ежедневно
+
+Fridays
+По пятницам
+
+Mondays
+По понедельникам
+
+Next run in
+Следующее высполнение через
+
+Saturdays
+По субботам
+
+Scheduler Log Level
+Детализация лога планировщика
+
+Scheduler Log Lines
+Число строк лога планировщика
+
+Sundays
+По воскресеньям
+
+Thursdays
+По четвергам
+
+Tuesdays
+По вторникам
+
+Wednesdays
+По средам
+
+nothing
+ничего
+
+running task
+выполяемая задача
+
+skipped missed task
+невыполненная пропущенная задача
+
+
+
+/////// webui/WebUI
+
+
+
+Failed to listen on
+Не удалось слушать на
+
+Listening on
+Слушаю на
+
+Listening socket failure on
+Ошибка сокета прослушивания на
+
+because this computer does not support IPv6
+потому что этот компьютер не поддерживает IPv6
+
+
+
+/////// webui/WebUIConnection
+
+
+
+lines
+строк
+
+
+
+/////// xfer/Categories
+
+
+
+in category
+в категории
+
+load
+загрузить
+
+save
+сохранить
+
+set
+выставить
+
+
+
+/////// xfer/OutputFile
+
+
+
+Allocating
+Аллоциирую
+
+Checking
+Проверяю
+
+Destination file too large
+Целевой файл слишком большой
+
+Error flushing destination file
+
+
+Error getting destination file info
+
+
+Error opening destination file
+
+
+Error reading destination file
+
+
+Error scanning source file
+
+
+Error seeking destination file
+
+
+Error sparse-testing destination file
+
+
+Error testing destination file
+
+
+Error writing destination file
+
+
+Internal move failure
+
+
+Need to check
+
+
+Seq
+Посл.
+
+Waiting to finalize
+
+
+Waiting to retry move after temporary error
+
+
+actual
+
+
+but file is
+
+
+cancelled file move
+
+
+changed path to
+
+
+due to error reading edge file
+
+
+edge file missing
+
+
+error allocating file
+
+
+error checking LMTime after opening
+
+
+error checking size after opening
+
+
+error creating directory
+
+
+error creating directory for destination file
+
+
+error flushing file while allocating
+
+
+error getting file info
+
+
+error moving
+
+
+error opening
+
+
+error opening file for allocation
+
+
+error reading
+
+
+error reading begin edge file
+
+
+error reading end edge file
+
+
+error scanning file for allocation
+
+
+error scanning file while allocating
+
+
+error seeking
+
+
+error seeking file for allocation
+
+
+error seeking file while allocating
+
+
+error sparse-testing file while allocating
+
+
+error writing
+
+
+error writing edge file
+
+
+error writing file while allocating
+
+
+existing directory with same name as file
+
+
+fast-moving file
+
+
+file LM time mismatch, expected
+
+
+file complete
+
+
+file created
+файл создан
+
+file download priority set to
+
+
+file missing
+нету файла
+
+file sequential mode set to
+
+
+file sequential mode set to off
+
+
+file sequential mode set to on
+
+
+file size mismatch, expected
+несоответсвие размера файла, ожидалось
+
+file too large
+файл слишком большой
+
+file too short
+файл слишком мал
+
+force check to override
+
+
+found new file with LM time
+
+
+hash-check requested
+
+
+left
+осталось
+
+lost begin edge piece
+
+
+lost end edge piece
+
+
+minutes after temporary error opening destination file for move
+
+
+moving to
+перемещаю в
+
+opened file for move after temporary errors
+
+
+post-complete redundant file hash-check
+
+
+reading file
+
+
+running per-file shell command on transfer completion
+
+
+running shell command on file completion
+
+
+size mismatch, expected
+несоответствие размеров, ожидалось
+
+source file too large
+исходный файл слишком большой
+
+will retry for up to
+новые попытки вплоть до
+
+
+
+/////// xfer/OutputFolders
+
+
+
+Mixed
+Смешанный
+
+fast-moving folder
+быстрое перемещение папки
+
+folder
+папка
+
+
+
+/////// xfer/Peer
+
+
+
+Bad Data
+Неверные данные
+
+Bad infohash in handshake
+Неверный infohash в рукопожатии
+
+Bad protocol id in handshake
+
+
+Block request buffer overflow
+
+
+Block request invalid length
+
+
+Block request invalid piece
+
+
+Block requests too scattered
+
+
+Both peers complete
+Оба участника завершены
+
+Client filtered locally
+Клиент отфильтрован локально
+
+Cookie
+Cookie
+
+Error Connecting
+Ошибка подключения
+
+HTTP no range support
+
+
+HTTP redirect does not match file path
+
+
+HTTP response invalid
+
+
+HTTP response overflow
+
+
+HTTP response size mismatch
+
+
+HTTP response unexpected
+
+
+HTTP server error
+
+
+IP Filtered
+Отфильтрованный IP
+
+IP protocol not allowed in settings
+IP протокол не разрешен в настройках
+
+Ignored
+Игнорирован
+
+Internal data req failed
+
+
+Internal data req mismatch
+
+
+Internal error
+Внутренняя ошибка
+
+Invalid block request
+
+
+Invalid incoming message size
+
+
+Invalid metadata msg type
+
+
+Invalid metadata piece index
+
+
+Invalid metadata total size
+
+
+Invalid port number
+
+
+Invalid web seed URL
+
+
+LC
+LC
+
+LI
+LI
+
+LQ
+LQ
+
+Meta web seed not needed
+
+
+Metadata DL internal error
+
+
+Metadata data msg size mismatch
+
+
+Metadata index mismatch
+
+
+Metadata missing total size
+
+
+Metadata not supported
+
+
+Metadata request overflow
+
+
+Metadata xfer not
+
+
+Oversize DHT port message
+
+
+Oversize extended handshake message
+
+
+Oversize peer exchange message
+
+
+Peer requested end block with offset past end of data
+
+
+Peer requested incomplete block
+
+
+Peer requested not announced block
+
+
+Proxy settings won't allow connection
+
+
+RC
+RC
+
+RI
+RI
+
+RQ
+RQ
+
+Received bad HAVE message
+
+
+Received bad HAVE message piece index
+
+
+Received bad bitfield
+
+
+Received bad block request
+
+
+Received bad block request cancellation
+
+
+Received invalid data block
+
+
+Received null data block
+
+
+Received unexpected bitfield
+
+
+Rejected data block
+
+
+Remote disconnected
+
+
+Self connect
+
+
+Timed out connecting
+
+
+Timed out logging in
+
+
+Too many unknown messages
+
+
+Transfering
+Передаю
+
+Unexpected metadata message
+
+
+Unknown metadata ext message
+
+
+Unsupported web seed protocol
+
+
+Weak crypto remote key
+
+
+Web seed can not connect without metadata
+
+
+bad HTTP chunked encoding
+
+
+bad HTTP redirect
+
+
+block received not in request stack
+
+
+cache block used to fill request for piece
+
+
+cache cleared
+кеш очищен
+
+cache cleared, deleted
+
+
+cache reading blocks from disk
+
+
+cache set to piece
+
+
+connection closed, reconnecting web
+
+
+discarding queued block request, remote has since sent HAVE message for piece
+
+
+discarding unknown message
+
+
+dropped redundant HAVE message for piece
+
+
+dropping block request received from complete remote
+
+
+dropping block request received while remote choked
+
+
+dropping block request received while remote not interested
+
+
+dropping block request that is already queued
+
+
+dropping block request, remote already claims to have piece
+
+
+dropping redundant metadata message for index
+
+
+expired local block request
+
+
+file not found on HTTP server
+
+
+local unchoked remote
+
+
+logged in
+подключен
+
+main UDP socket not ready
+
+
+no attached piece matches received block
+
+
+not authorized on HTTP server
+
+
+over rate limit
+
+
+pieces complete
+
+
+received bitfield
+получил битовое поле
+
+received block
+получил блок
+
+received block already downloaded from this peer
+получил блок, который уже был скачан у этого участник
+
+received block request
+получил запрос на блок
+
+received block request cancellation
+
+
+received cancellation for unmatched block request
+
+
+received keep-alive message
+
+
+received metadata for index
+
+
+received request for metadata at index
+
+
+rejected metadata request because we don't have complete metadata yet
+
+
+remote choked local
+
+
+remote dropped piece
+
+
+remote has piece
+
+
+remote interested in local
+
+
+remote not interested in local
+
+
+remote rejected request for metadata at index
+
+
+remote unchoked local
+
+
+requested metadata piece
+запросил 
+
+sent HTTP request
+отправил HTTP запрос
+
+sent bitfield
+отправил битовое поле
+
+unknown
+неизвестно
+
+
+
+/////// xfer/Peers
+
+
+
+available
+доступно
+
+fast reconnect
+быстрое переподсоединение
+
+peers connected
+участников подключено
+
+seeds connected
+раздающих подключено
+
+
+
+/////// xfer/PieceManager
+
+
+
+discarded
+отброшен
+
+for download
+для скачивания
+
+incomplete pieces from old disk cache
+неполных частей в старом дисковом кеше
+
+incomplete-pieces.
+неполных частей.
+
+initializing piece
+инициализирую часть
+
+loaded
+загружена
+
+not needed
+не нужна
+
+scanned
+просканирована
+
+
+
+/////// xfer/SLRD
+
+
+
+Secure Local Resource Discovery could not open multicast socket
+
+
+Secure Local Resource Discovery listening for UDP multicast on
+
+
+Secure Local Resource Discovery multicast socket closed
+
+
+Secure Local Resource Discovery stopped listening
+
+
+will retry every
+буду повторять каждые
+
+
+
+/////// xfer/Torrent
+
+
+
+Error downloading
+Ошибка скачивания
+
+Error opening meta-file
+Ошибка при открытии мета-файла
+
+Error parsing meta-file
+Ошибка разбора мета-файла
+
+Error reading URL file
+Ошибка чтения URL файла
+
+Error reading meta-file
+Ошибка чтения мета-файла
+
+Invalid file system in meta-file
+Неверная файловая система в метафайле
+
+Invalid hash data
+Неверные хеш данные
+
+Invalid piece length in meta-file
+Неверный размер частей в метафайле
+
+Meta-file not found
+Мета-файл не найден
+
+completed DHT search, found
+завершился поиск по DHT, найдено
+
+creating transfer from feed
+создаю передачу из ленты
+
+creating transfer from hash link
+создаю передачу из хеш ссылки
+
+creating transfer from local files
+создаю передачу из локальных файлов
+
+creating transfer from meta-file
+создаю передачу из мета-файла
+
+creation date
+дата создания
+
+cycled dead to seed standby queue
+
+
+cycled to seed standby queue
+перемещен в очередь ожидающих раздач
+
+date
+дата
+
+downloading initiated
+началось скачивание
+
+encoding
+кодировка
+
+entered queue
+теперь в очереди
+
+entered standby seed queue
+теперь в очереди ожидающих раздач
+
+info-hash set
+
+
+loading complete transfer
+загружаю завершенную передачу
+
+loading transfer
+подгружаю передачу
+
+piece length
+размер частей
+
+post-complete redundant hash-check for all files
+повторная проверка хешей всех файлов после завершения
+
+pushed dead to seed standby queue
+
+
+pushed to seed standby queue
+
+
+renamed to avoid conflict
+переименован во избежание конфликта
+
+running shell command on transfer completion
+
+
+seeding initiated
+раздача начата
+
+
+
+/////// xfer/Torrents
+
+
+
+SSDP Local Peer Discovery could not open multicast socket
+
+
+SSDP Local Peer Discovery listening for local UDP multicast on
+
+
+SSDP Local Peer Discovery multicast socket unexpectedly closed
+
+
+SSDP Local Peer Discovery stopped listening
+
+
+will retry in
+повтор через
+
+
+
+/////// xfer/Tracker
+
+
+
+Announce error from server
+Ошибка анонса от сервера
+
+Connect error from server
+Ошибка соединения с сервера
+
+HTTP responded with code
+HTTP ответ с кодом
+
+IPv4 disabled in settings
+IPv4 выключен в настройках
+
+IPv6 disabled in settings
+IPv6 выключен в настройках
+
+Invalid announce reply
+Неверный ответ на анонс
+
+Invalid connect reply
+Неверный ответ на подключение
+
+Invalid info hash
+Неверный info hash
+
+Invalid peer ID
+Неверный peer ID
+
+Invalid reply
+Неверный овтет
+
+Partial
+Частичный
+
+Sent announce, waiting for
+Отправил анонс, жду
+
+TTL
+TTL
+
+Timed out announcing
+Таймаут анонса
+
+Tracker IP filtered
+IP трекера отфильтрован
+
+Tracker failed with reason
+Трекер отказал по причине
+
+Tracker is skipped by individual tracker options
+Трекер пропущен по индивидуальным настрокам трекеров
+
+UDP socket unavailable
+UDP-сокет недоступен
+
+UDP trackers disabled in settings
+UDP-трекеры отключены в настройках
+
+Unsupported protocol
+Неподдерживаемый протокол
+
+completed
+завершен
+
+detected local port change, initiating tracker stop-start cycle
+обнаружена локальная смена порта, начинаю цикл остановки-запуска трекеров
+
+downloaders
+скачивающих
+
+failure reason
+причина отказа
+
+incomplete
+неполный
+
+interval
+интервал
+
+min interval
+мин. интервал
+
+paused
+приостановлен
+
+tracker HTTP code
+HTTP-код от трекера
+
+tracker HTTP request headers
+заголовки HTTP запроса трекеру
+
+tracker HTTP response body
+содержимое ответа по HTTP от трекера
+
+tracker HTTP response headers
+заголовки HTTP ответа трекера
+
+tracker UDP request
+UDP запрос трекеру
+
+tracker UDP response
+UDP ответ трекера
+
+tracker announcing
+анонсирую трекер
+
+tracker error
+ошибка трекера
+
+tracker id
+ID трекера
+
+tracker responded OK
+ответ трекера: ОК
+
+tracker stopped
+трекер остановлен
+
+
+
+/////// xfer/constants
+
+
+
+AN
+ВС
+
+Aggressive
+Агрессивно
+
+BN
+НС
+
+Peer Allowance
+Peer Allowance
+
+Priority Group
+Приоритетная группа
+
+UH
+СВ
+
+UL
+СН
+
+UMH
+ССВ
+
+Ultra Mega High
+Сверхсупервысокий
+
+VH
+ОВ
+
+VL
+ОН
+
