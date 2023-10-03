@@ -38,7 +38,7 @@ def widget_print(data, index = tk.END):
 def open_file_dialog():
     global category, parsed_data  # Сделаем category и parsed_data глобальными переменными
     file_types = [
-        ("Text Files (Tixati Language)", "*.txt"),
+        ("Tixati Language Files", "*.txt"),
         ("Json File", "*.json"),
         ("All Files", "*.*")
     ]
