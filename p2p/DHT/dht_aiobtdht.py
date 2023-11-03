@@ -6,7 +6,10 @@ import asyncio
 #from os import getrandom
 from aiobtdht import DHT
 from aioudp import UDPServer
+import socket
 
+ADDR = "0.0.0.0"
+PORT = 12346
 
 async def main(loop):
     initial_nodes = [
@@ -15,8 +18,15 @@ async def main(loop):
         ("82.221.103.244", 6881)  # router.utorrent.com
     ]
 
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind((ADDR, PORT))
+    s.listen(10)
+    s.setblocking(0)
+    s.close()
+
     udp = UDPServer()
-    udp.run("0.0.0.0", 12346, loop=loop)
+    udp.run(ADDR, PORT, loop=loop)
 
     dht = DHT(int("0x54A10C9B159FC0FBBF6A39029BCEF406904019E0", 16), server=udp, loop=loop)
 

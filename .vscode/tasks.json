@@ -4,7 +4,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Install requirements",
+			"label": "[Py3] Install requirements",
 			"type": "shell",
 			//"command": "pip install -Ur requirements.txt",
 			// ↓ Helps when SSL is broken for some reason ↓
@@ -12,7 +12,7 @@
 			"problemMatcher": [ "$tsc" ]
 		},
 		{
-			"label": "Install this requirements file",
+			"label": "[Py3] Install this requirements file",
 			"type": "shell",
 			//"command": "pip install -Ur requirements.txt",
 			// ↓ Helps when SSL is broken for some reason ↓
@@ -20,7 +20,7 @@
 			"problemMatcher": [ "$tsc" ]
 		},
 		{
-			"label": "Run main project file",
+			"label": "[Py3] Run main project file",
 			"command": "py -m torrent_trackers_checker",
 			"type": "shell",
 			"presentation": {
@@ -31,7 +31,7 @@
 			"problemMatcher": [ "$tsc" ]
 		},
 		{
-			"label": "Run this file",
+			"label": "[Py3] Run this file",
 			"command": "python \"${file}\"",
 			"type": "shell",
 			"presentation": {
@@ -46,14 +46,20 @@
 			}
 		},
 		{
-			"label": "Run pydoc",
+			"label": "[Py3] Run pydoc",
 			"command": "python -m pydoc torrent_trackers_checker",
 			"type": "shell",
 			"problemMatcher": [ "$tsc" ]
 		},
 		{
-			"label": "pip install datrie",
+			"label": "[Py3] pip install datrie",
 			"command": "pip install --upgrade setuptools\npip install --only-binary :all: mysqlclient\npip install datrie\npip install cpython",
+			"type": "shell",
+			"problemMatcher": [ "$tsc" ]
+		},
+		{
+			"label": "[Py3] upgrade pip",
+			"command": "python.exe -m pip install --upgrade pip",
 			"type": "shell",
 			"problemMatcher": [ "$tsc" ]
 		}
