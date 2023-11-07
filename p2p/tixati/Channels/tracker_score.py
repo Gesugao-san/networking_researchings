@@ -47,63 +47,63 @@ db_template = [
         'key': 'checks',
         'hint': 'Total number of checks of this host.',
         'type': int,
-        'default': 0
+        'default': None
     },
     {
         'category': 'Checks',
         'key': 'ok',
         'hint': 'Number of successful connections.',
         'type': int,
-        'default': 0
+        'default': None
     },
     {
         'category': 'Checks',
         'key': 'warn',
         'hint': 'Number of overloads and etc.',
         'type': int,
-        'default': 0
+        'default': None
     },
     {
         'category': 'Checks',
         'key': 'bad',
         'hint': 'Number of fatal errors or DNS failure.',
         'type': int,
-        'default': 0
+        'default': None
     },
     {
         'category': 'Protocols',
         'key': 'http',
         'hint': 'Indicates host supported protocol.',
         'type': int, # bool(int)
-        'default': 2 # "not checked yet"
+        'default': None
     },
     {
         'category': 'Protocols',
         'key': 'https',
         'hint': 'Indicates host supported protocol.',
         'type': int, # bool(int)
-        'default': 2 # "not checked yet"
+        'default': None
     },
     {
         'category': 'Protocols',
         'key': 'udp',
         'hint': 'Indicates host supported protocol. Preferred in most cases.',
         'type': int, # bool(int)
-        'default': 2 # "not checked yet"
+        'default': None
     },
     {
         'category': 'Protocols',
         'key': 'ws',
         'hint': 'Indicates host supported protocol.',
         'type': int, # bool(int)
-        'default': 2 # "not checked yet"
+        'default': None
     },
     {
         'category': 'Protocols',
         'key': 'wss',
         'hint': 'Indicates host supported protocol.',
         'type': int, # bool(int)
-        'default': 2 # "not checked yet"
+        'default': None
     },
     {
         'category': 'Fingerprint',
@@ -203,7 +203,7 @@ def db_get_default_line(template: dict):
 
 
 def db_sort_lines(lines: list):
-    lines.sort()
+    lines.sort(key=lambda l:l[1], reverse=False)
     return lines
 
 
@@ -214,14 +214,20 @@ def db_read_input(file: FileDescriptorOrPath):
 
     with open(file, 'r') as handler:
         for line_raw in handler:
+            line_raw = line_raw.strip()
+            line_raw = [None, line_raw]
+            if '://' in line_raw[1]:
+                line_raw = line_raw[1].split('://')
             lines_raw.append(line_raw)
-            break
+            #break
 
     lines_raw = db_sort_lines(lines_raw)
     #print('lines_raw', lines_raw)
 
     for line_raw in lines_raw:
-        line['url'] = line_raw.strip()
+        line['url'] = line_raw[1]
+        if line_raw[0]:
+            line[line_raw[0]] = int(True)
         lines.append(line)
     #print('lines', lines)
     return lines
@@ -262,7 +268,7 @@ def read_f(file: FileDescriptorOrPath):
 
             print(urldict)
             addresses_names.append(urldict)
-            break
+            #break
 
         addrs1_len = len(addresses_names)
         # using set() to remove duplicated from list
