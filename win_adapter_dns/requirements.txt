@@ -1,1 +1,6 @@
 pywin32  # win32api, win32con
+wmi
+#wmi-client-wrapper  # wmi-client-wrapper-py3
+# pbs
+# micropython-fcntl
+sh==1.12.14
