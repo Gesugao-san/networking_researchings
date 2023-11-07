@@ -14,7 +14,7 @@ def read_reg():
     # Open the network adapter key in the registry
     handle = win32api.RegOpenKeyEx(
         win32con.HKEY_LOCAL_MACHINE,
-        r"SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces",
+        r'SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces',
         0,
         win32con.KEY_ALL_ACCESS
     )

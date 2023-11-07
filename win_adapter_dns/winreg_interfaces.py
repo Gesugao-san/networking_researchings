@@ -24,10 +24,10 @@ def get_svalue(oKey: winreg.HKEYType, name: str):
     except FileNotFoundError:
         return None
 
-def read_reg(
+def get_values(
     registry: winreg.HKEYType,
     root_key: str,
-    keys_list: list,
+    keys: list,
     reserved: int = 0,
     access: int = 131097,
 ):
@@ -37,20 +37,17 @@ def read_reg(
         reserved,
         access
     )
-    data = {}
-    data2 = []
+    data = []
     print(r"*** Reading from %s ***" % aKey)
     aIndex = get_index(aKey)
     for i in range(0, aIndex):
         aValue_name = winreg.EnumKey(aKey, i)
         oKey = winreg.OpenKey(aKey, aValue_name)
-        data[i] = {aValue_name: {}}
         tmp = {aValue_name: {}}
-        for sName in keys_list:
+        for sName in keys:
             sValue = get_svalue(oKey, sName)
-            data[i][aValue_name][sName] = sValue
             tmp[aValue_name][sName] = sValue
-        data2.append(tmp)
+        data.append(tmp)
     winreg.CloseKey(aKey)
     print(r"*** End reading ***")
     return data
@@ -86,7 +83,7 @@ if __name__ == "__main__":
 
     aReg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
     #read_reg2(aReg)
-    data = read_reg(
+    data = get_values(
         aReg,
         r'SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards',
         ['Description', 'ServiceName']
