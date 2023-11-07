@@ -39,8 +39,8 @@ def read_reg(aReg: winreg.HKEYType):
         oKey = winreg.OpenKey(aKey, aValue_name)
         sValue = get_svalue(oKey, "DisplayName")
         print(sValue)
-    print(r"*** End reading ***")
     winreg.CloseKey(aKey)
+    print(r"*** End reading ***")
     return
 
 

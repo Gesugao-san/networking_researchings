@@ -3,6 +3,8 @@
 
 
 import winreg
+import json
+
 
 def line():
     return print('#'*10)
@@ -22,7 +24,38 @@ def get_svalue(oKey: winreg.HKEYType, name: str):
     except FileNotFoundError:
         return None
 
-def read_reg(aReg: winreg.HKEYType):
+def read_reg(
+    registry: winreg.HKEYType,
+    root_key: str,
+    keys_list: list,
+    reserved: int = 0,
+    access: int = 131097,
+):
+    aKey = winreg.OpenKey(
+        registry,
+        root_key,
+        reserved,
+        access
+    )
+    data = {}
+    data2 = []
+    print(r"*** Reading from %s ***" % aKey)
+    aIndex = get_index(aKey)
+    for i in range(0, aIndex):
+        aValue_name = winreg.EnumKey(aKey, i)
+        oKey = winreg.OpenKey(aKey, aValue_name)
+        data[i] = {aValue_name: {}}
+        tmp = {aValue_name: {}}
+        for sName in keys_list:
+            sValue = get_svalue(oKey, sName)
+            data[i][aValue_name][sName] = sValue
+            tmp[aValue_name][sName] = sValue
+        data2.append(tmp)
+    winreg.CloseKey(aKey)
+    print(r"*** End reading ***")
+    return data
+
+def read_reg2(aReg: winreg.HKEYType):
     aKey = winreg.OpenKey(
         aReg,
         r'SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards',
@@ -42,8 +75,8 @@ def read_reg(aReg: winreg.HKEYType):
         print(sValue, '	', end='')
         sValue = get_svalue(oKey, "ServiceName")
         print(sValue)
-    print(r"*** End reading ***")
     winreg.CloseKey(aKey)
+    print(r"*** End reading ***")
     return
 
 
@@ -52,7 +85,13 @@ if __name__ == "__main__":
     line()
 
     aReg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
-    read_reg(aReg)
+    #read_reg2(aReg)
+    data = read_reg(
+        aReg,
+        r'SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards',
+        ['Description', 'ServiceName']
+    )
+    print('data:', json.dumps(data, indent=2))
 
     line()
     print('stop')
