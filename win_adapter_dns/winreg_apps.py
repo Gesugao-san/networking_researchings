@@ -7,9 +7,18 @@ import winreg
 def line():
     return print('#'*10)
 
+def get_index(aKey: winreg.HKEYType):
+    for i in range(1024):
+        try:
+            winreg.EnumKey(aKey, i)
+        except EnvironmentError as e:
+            if not e.errno and not e.winerror: raise e
+            if (e.errno != 259) and (e.winerror != 259): raise e
+            return i
+
 def get_svalue(oKey: winreg.HKEYType, name: str):
     try:
-        return winreg.QueryValueEx(oKey, name)
+        return winreg.QueryValueEx(oKey, name)[0]
     except FileNotFoundError:
         return None
 
@@ -17,24 +26,20 @@ def get_svalue(oKey: winreg.HKEYType, name: str):
 def read_reg(aReg: winreg.HKEYType):
     aKey = winreg.OpenKey(
         aReg,
-        #r"SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces",
+        #r'SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces',
         r'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall',
         0,
         winreg.KEY_ALL_ACCESS
     )
     print(r"*** Reading from %s ***" % aKey)
-    for i in range(1024):
-        try:
-            aValue_name = winreg.EnumKey(aKey, i)
-            print(aValue_name, '	', end='')
-            oKey = winreg.OpenKey(aKey, aValue_name)
-            sValue = get_svalue(oKey, "DisplayName")
-            print(sValue)
-        except EnvironmentError as e:
-            print(r"*** End reading ***")
-            if not e.winerror: raise e
-            if e.winerror != 259: raise e
-            break
+    index = get_index(aKey)
+    for i in range(0, index):
+        aValue_name = winreg.EnumKey(aKey, i)
+        print(aValue_name, '	', end='')
+        oKey = winreg.OpenKey(aKey, aValue_name)
+        sValue = get_svalue(oKey, "DisplayName")
+        print(sValue)
+    print(r"*** End reading ***")
     winreg.CloseKey(aKey)
     return
 
